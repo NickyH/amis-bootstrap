@@ -1,11 +1,10 @@
 var owlLayersHtml;
 
 $(function(){
-
-  // is_jqm_loaded();
-
   insert_map();
-  $('#details-link').on('click', show_first_form);
+  insert_left();
+  insert_top();
+  // $('#details-link').on('click', show_first_form);
   $('#refresh-map').on('click', refresh_map);
   create_layers_carousel();
   $("#layers-button").on('click', layers_qtip);
@@ -14,28 +13,30 @@ $(function(){
   $("#map").on('click', showAssets_qtip);
   $(".arrow-history-tree").on('click', showHistoryTree_qtip);
 
-  $(window).hashchange(check_form_location);
+  // $(window).hashchange(check_form_location);
 
   $("#show-tab").on('click', show_active_tab);
   $("#show-tab").trigger('click'); //triggers click to show content on first tab on page load
 
   $("#select-layer-fake").on('click', show_fake_map);
+  $('#details-link').on('click', toggle_navbar);
+
 });
+
+function toggle_navbar()
+{
+  $('.icon-map').toggleClass('hidden');
+  $('.icon-form').toggleClass('hidden');
+  $('.tab-shape').toggleClass('hidden');
+  $('.left-bar-icons').toggleClass('hidden');
+  $('.pages-icons').toggleClass('hidden');
+}
 
 
 function show_fake_map()
 {
   $('#mapstatic').attr('src', "images/OsmMap_Feature.png")
   $('.qtip-layers-panel').qtip('api').hide();
-}
-
-function is_jqm_loaded()
-{
-    if ( $.mobile ) {
-     alert('loaded');
-  } else {
-    alert('not loaded');
-  }
 }
 
 function check_form_location()
@@ -504,7 +505,6 @@ function search_by_category_qtip()
 }
 
 
-
 $(function(){
   $("#map-link").on('click', refresh_map);
 });
@@ -530,6 +530,21 @@ function insert_map()
     $('#insert-map').html(data);
     });
   $('#insert-map').trigger('create');
+}
+
+function insert_left()
+{
+  $.get('left_bar.html', function(data) {
+    $('#insert-left').html(data);
+    });
+}
+
+function insert_top()
+{
+  $.get('top_bar.html', function(data) {
+    $('#insert-top').html(data);
+    });
+  $('#insert-top').trigger('create');
 }
 
 // inserts the first form into the form page on initial load of details page
