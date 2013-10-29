@@ -4,7 +4,6 @@ $(function(){
   insert_map();
   insert_left();
   insert_top();
-  // $('#details-link').on('click', show_first_form);
   $('#refresh-map').on('click', refresh_map);
   create_layers_carousel();
   $("#layers-button").on('click', layers_qtip);
@@ -12,8 +11,6 @@ $(function(){
   $("#search-by-address-button").on('click', searchByAddress_qtip);
   $("#map").on('click', showAssets_qtip);
   $(".arrow-history-tree").on('click', showHistoryTree_qtip);
-
-  // $(window).hashchange(check_form_location);
 
   $("#show-tab").on('click', show_active_tab);
   $("#show-tab").trigger('click'); //triggers click to show content on first tab on page load
@@ -727,5 +724,5 @@ function openActionRow(row) {
 
 function open_form_from_asset()
 {
-  show_first_form();
+  goto_forms();
 }
