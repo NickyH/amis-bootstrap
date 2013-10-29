@@ -23,6 +23,26 @@ $(function(){
 
 });
 
+function goto_forms()
+{
+  toggle_navbar();
+  $('#insert-map').empty();
+  $.get('forms/form_asset.html', function(data) {
+    $('#insert-form').html(data);
+    });
+  $('#insert-form').trigger('create');
+}
+
+function goto_map()
+{
+  toggle_navbar();
+  $('#insert-form').empty();
+  $.get('MapLayer.html', function(data) {
+    $('#insert-map').html(data);
+    });
+  $('#insert-map').trigger('create');
+}
+
 function toggle_navbar()
 {
   $('.icon-map').toggleClass('hidden');
