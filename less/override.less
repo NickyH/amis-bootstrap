@@ -2,13 +2,6 @@
 // @import "globals_dark.less"; // use for dark theme, and comment out globals_light.less
 @import "globals_light.less"; // use for light theme and comment out globals_dark.less
 
-
-//temp classes
-
-.temp-map {
-  opacity: 0.3;
-}
-
 //map styling
 
 #insert-map {
@@ -40,56 +33,9 @@ div {
   display: inline-block;
 }
 
-.ui-grid-a {
-  min-height: 1px;
-  width: 100% !important;
-  &.input-grid {
-    width: 100% !important;
-    textarea {
-      height: 100px;
-    }
-  }
-  &.category {
-    margin-bottom: 5px;
-  }
-}
-
-
-.input-grid {
-    .ui-block-b {
-      width: 48% !important;
-    }
-}
-
-.ui-grid-c {
-  &.input-grid {
-    width: 100% !important;
-  }
-  .ui-block-a {
-    &.inline-label {
-      width: 500px;
-    }
-  }
-}
-
-
-// layout
-
-.ui-mobile .ui-page {
-  @media @tabletLandscape {
-    min-height: @tabletLandscapeHeight !important;
-    min-width: @tabletLandscapeWidth !important;
-  }
-  @media @tabletPortrait {
-    min-height: @tabletPortraitHeight !important;
-    min-width: @tabletPortraitWidth !important;
-  }
-}
-
-
 //top bar
 
-.ui-grid-solo.top-bar {
+.top-bar {
   background : @grey-medium;
   width: 100%;
   height: @top-bar-height;
@@ -203,7 +149,7 @@ div {
 
 //left bar
 
-.ui-grid-solo.left-bar {
+.left-bar {
   width: @left-bar-width;
   background : @left-bar-colour;
   position: fixed;
@@ -214,10 +160,6 @@ div {
   box-shadow: inset -15px 0 5px -5px #606060;
   -moz-box-shadow: inset -15px 0 5px -5px #606060;
   -webkit-box-shadow: inset -15px 0 5px -5px #606060;
-}
-
-.ui-grid-solo.map-panel {
-  height: 768px !important;
 }
 
 .left-bar-icons {
@@ -294,10 +236,6 @@ div {
   background-color: @background-main;
 }
 
-.ui-content {
-  background-color: @background-main;
-}
-
 //form tabs
 
 .tab-bar-underlay {
@@ -308,36 +246,6 @@ div {
   height: 80px;
   background-color: @white-medium;
   z-index: 99 !important;
-}
-
-.ui-grid-solo.tab-bar.ui-navbar.ui-mini {
-  position: relative;
-  top: 0;
-  left: 0;
-  margin-left: 50px;
-  background-color: @form-tab-colour;
-  opacity: 0.7;
-  border-bottom-right-radius: 7px;
-  border-bottom-left-radius: 7px;
-  -moz-box-shadow: inset -4px -4px @grey-medium;
-  -webkit-box-shadow: inset -4px -4px @grey-medium;
-  box-shadow: inset -4px -4px @grey-medium;
-  z-index: 100 !important;
-  @media @tabletLandscape {
-    width: 700px;
-  }
-  @media @tabletPortrait {
-    width: 500px;
-  }
-  a {
-    width: 20%;
-    margin-left: 3%;
-    padding-top: 1.5%;
-  }
-  .ui-btn-text {
-    color: @black-medium;
-    text-wrap: normal;
-  }
 }
 
 .content_div {
@@ -387,22 +295,7 @@ div {
   a {
     margin-left: 0;
   }
-  .ui-btn {
-    margin-left: 0;
-  }
-  .ui-btn-inner {
-    padding: 0 !important;
-  }
 }
-
-a.ui-btn.ui-btn-inline.ui-btn-up-c {
-  margin-bottom: 0px !important;
-  margin-top: 0px !important;
-  &.pages-top {
-    margin-top: 50px;
-  }
-}
-
 
 // form numbering circle
 .number-circle {
@@ -446,6 +339,7 @@ a.ui-btn.ui-btn-inline.ui-btn-up-c {
     width: @widthLarge;
     margin-left: 120px;
     margin-top: 150px;
+    background-color: @background-main;
     }
   }
 
@@ -464,24 +358,6 @@ a.ui-btn.ui-btn-inline.ui-btn-up-c {
   padding: 20px;
 }
 
-.ui-field-contain div.ui-input-text {
-  margin-bottom: 20px; //spacing between text input boxes
-}
-
-input[type="date"] {
-  font: @input-form-font;
-  min-width: 100% !important;
-  height: 32px;
-}
-
-input[type="text"] {
-  font: @input-form-font;
-}
-
-select {
-  width: 107% !important;
-}
-
 //plceholder text
 
 ::-webkit-input-placeholder {
@@ -495,167 +371,6 @@ select {
 }
 :-ms-input-placeholder {
    font-family: @questrial;
-}
-
-.ui-input-text, .ui-shadow-inset, .ui-corner-all, .ui-btn-shadow, .ui-body-c, .ui-select {
-  border: 1px solid @input-border-colour;
-  width: 80%;
-  height: 40px;
-  background: @white;
-  border-radius: 8px;
-  margin: 10px auto 10px 10px;
-  &.ui-select {
-    margin-left: 0;
-    margin-top: 0;
-  }
-}
-
-.single-line-input, .dropdown-input {
-  width: 90%;
-  border-radius: 5px;
-  height: 26px;
-  margin-bottom: 10px;
-  float: right;
-  &.dropdown-input {
-    margin-bottom: 20px;
-  }
- &.half-line {
-  width: 30%;
-  float: left;
- }
-}
-
-.innertext {
-  margin-top: 10px;
-  margin-bottom: 5px;
-  vertical-align: middle;
-  &.required:before {
-    content: url(../images/red-star-fill-left.png);
-    zoom: 0.2;
-  }
-}
-
-
-.inline-label {
-  font: @form-label-font;
-  margin-right: 5px;
-  display: inline-block;
-  float: left;
-  width: 97%;
-  height: 32px;
-  border-top: @form-label-border;
-  border-left: @form-label-border;
-  border-bottom: @form-label-border;
-  background-color: @white-medium;
-  border-top-left-radius: 7px;
-  border-bottom-left-radius: 7px;
-  text-align: left;
-  text-indent: 10px;
-  &.pending {
-    background-color: @blue-light;
-    border: 1px solid @blue-medium;
-  }
-}
-
-.ui-grid-solo.input-grid {
-  textarea.single-line-input {
-    width: 95% !important;
-    float: left;
-    margin-left: 3px;
-    margin-top: 0;
-    min-height: 50px !important;
-  }
-}
-
-.textarea-group {
-  width: 100%;
-  .inline-label {
-    border-right: @form-label-border;
-    border-bottom-right-radius: 7px;
-    border-top-right-radius: 7px;
-    }
- }
-
-.input-grid {
-  width: 100%;
-}
-
-select.single-line-input {
-  -webkit-appearance: menu;
-    -moz-appearance: menu;
-    appearance: menu;
-  height: 34px !important;
-}
-
-label.select-label-hidden {
-  display: none;
-}
-
-div[data-role="fieldcontain"] {
-    width: 100% !important;
-}
-
-
-
-//form media queries
-
-
-@media @widthLarge {
-  .ui-grid-a > :nth-child(n) {
-  width: 49% !important;
-  display: inline-block;
-  float: left;
-  }
-}
-
-@media @widthMediumLarge {
-  .ui-block-a {
-    width: 100% !important;
-    .form-panel {
-      float: right;
-    }
-  }
-  .single-line-input {
-      height: 27px;
-      margin-top: -1px;
-    }
-  .ui-block-b {
-    width: 100% !important;
-    .form-panel {
-      float: right;
-    }
-  }
-  .input-grid {
-    .ui-block-a {
-      width: 49% !important;
-    }
-    .ui-block-a {
-      width: 49% !important;
-    }
-  }
-}
-
-@media @widthMedium {
-  .ui-block-a {
-    width: 100% !important;
-    .form-panel {
-      float: right;
-    }
-  }
-  .ui-block-b {
-    width: 100% !important;
-    .form-panel {
-      float: right;
-    }
-  }
-  .input-grid {
-    .ui-block-a {
-      width: 49% !important;
-    }
-    .ui-block-a {
-      width: 49% !important;
-    }
-  }
 }
 
 // form buttons
@@ -977,11 +692,6 @@ div[data-role="fieldcontain"] {
 
 
 // additional overrides for mockup prototype for conference
-
-.ui-mobile [data-role=page], .ui-mobile [data-role=dialog], .ui-page {
-  display: block !important;
-
-}
 
 .featureInfoGridPopup {
   display: block;
