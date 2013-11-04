@@ -574,15 +574,6 @@ function show_first_form()
   window.location = ('form.html'); //initial refresh
 }
 
-// inserts the form into the form page on initial load of details page
-function show_form()
-{
-  $.get('forms/form_asset.html', function(data) {
-    $('#insert-form').html(data);
-    });
-  $('#insert-form').trigger('create');
-}
-
 function refresh_map()
 {
   window.location = ('index.html');

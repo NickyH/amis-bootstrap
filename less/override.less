@@ -438,58 +438,16 @@ a.ui-btn.ui-btn-inline.ui-btn-up-c {
   background-color: @form-background-colour-light;
 }
 
-.ui-block-solo {
-  &.form-container {
-  display: inline;
-  float: left;
-  height: @heightTall;
-  width: 770px;
-  }
-}
-
-.ui-block-a {
+.container-fluid {
   &.form-container {
     display: inline;
     float: right;
     height: @heightTall;
     width: @widthLarge;
-    margin-left: 100px;
-    margin-top: 170px;
-    }
-  .single-line-input {
-    width: 90%;
-    display: inline-block;
+    margin-left: 120px;
+    margin-top: 150px;
     }
   }
-
-.ui-block-b {
-  .single-line-input {
-    width: 100%;
-    display: inline-block;
-    background-color: @white-medium;
-    text-indent: 3px;
-    }
-  }
-
-.ui-block-c {
-  .single-line-input {
-    display: inline-block;
-    }
-  &.inline-label {
-    display: inline-block;
-    float: right;
-    }
-}
-
-.ui-block-c {
-  .single-line-input {
-    display: inline-block;
-    }
-  &.inline-label {
-    display: inline-block;
-    float: right;
-    }
-}
 
 .form-panel
 {
@@ -499,26 +457,11 @@ a.ui-btn.ui-btn-inline.ui-btn-up-c {
   -moz-border-radius: 12px;
   -webkit-border-radius: 12px;
   box-shadow: 5px 5px 2px 2px @form-panel-outer-shadow;
-  margin: 50px 0px 7px 40px;
+  margin: 30px auto 7px 20px;
   display: inline-block;
-  &.form-panel-1 {
-    width: 70% !important;
-    min-height: 250px;
-    padding: 20px;
-    margin-right: 2% !important;
-  }
-  &.form-panel-2 {
-    width: 70% !important;
-    min-height: 250px;
-    padding: 20px;
-    margin-right: 2% !important;
-    margin-left: 1% !important;
-  }
-  &.form-panel-3 {
-    width: 91%;
-    height: 100%;
-    padding: 20px;
-  }
+  width: 90% !important;
+  min-height: 250px;
+  padding: 20px;
 }
 
 .ui-field-contain div.ui-input-text {
@@ -1106,4 +1049,34 @@ div[data-role="fieldcontain"] {
   width: 20px;
   margin-right: 10px;
   margin-left: 20px;
+}
+
+//bootstrap general overrides
+.input-group-addon {
+    min-width:200px;
+    text-align:left;
+    &.select-date {
+      min-width: 50px;
+    }
+}
+
+//bootstrap-select overrides
+
+.btn-group.bootstrap-select{
+  margin-bottom: 0;
+}
+
+.input-group {
+  margin-bottom: 10px;
+}
+
+.selectpicker {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+//bootstrap datepicker
+
+.add-date {
+  width: 50%;
 }
