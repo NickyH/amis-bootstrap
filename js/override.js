@@ -1,10 +1,11 @@
 var owlLayersHtml;
+console.log($('#owl-example'));
 
 $(function(){
   insert_map();
   insert_left();
   insert_top();
-  $('#refresh-map').on('click', refresh_map);
+
   create_layers_carousel();
   $("#insert-left").on('click', '#layers-button', layers_qtip);
   $("#insert-left").on('click', '#search-by-category-button', search_by_category_qtip);
@@ -15,7 +16,6 @@ $(function(){
   $("#show-tab").on('click', show_active_tab);
   $("#show-tab").trigger('click'); //triggers click to show content on first tab on page load
 
-  $("#select-layer-fake").on('click', show_fake_map);
   $('#details-link').on('click', toggle_navbar);
 
 });
@@ -452,7 +452,7 @@ function showHistoryTree_qtip()
 
 function toggle_arrow()
 {
-  $(".arrow-history-tree").toggleClass('active');
+  $(".arrow-history-tree").toggleClass('myactive');
 }
 
 

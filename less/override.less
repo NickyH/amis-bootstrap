@@ -27,12 +27,6 @@
   display: none;
 }
 
-// jquery mobile specific overrides
-
-div {
-  display: inline-block;
-}
-
 //top bar
 
 .top-bar {
@@ -124,7 +118,7 @@ div {
     transform: rotate(90deg);
     -ms-transform: rotate(90deg); /* IE 9 */
     -webkit-transform: rotate(90deg); /* Safari and Chrome */
-    &.active {
+    &.myactive {
       transform: rotate(0deg);
       -ms-transform: rotate(0deg); /* IE 9 */
       -webkit-transform: rotate(0deg); /* Safari and Chrome */
@@ -790,4 +784,11 @@ div {
 
 .add-date {
   width: 50%;
+}
+
+.panel-group {
+  div {
+    display: block !important;
+  }
+  width: 150px;
 }
