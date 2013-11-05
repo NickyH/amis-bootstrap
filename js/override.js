@@ -6,11 +6,11 @@ $(function(){
   insert_top();
   $('#refresh-map').on('click', refresh_map);
   create_layers_carousel();
-  $("#layers-button").on('click', layers_qtip);
-  $("#search-by-category-button").on('click', search_by_category_qtip);
-  $("#search-by-address-button").on('click', searchByAddress_qtip);
+  $("#insert-left").on('click', '#layers-button', layers_qtip);
+  $("#insert-left").on('click', '#search-by-category-button', search_by_category_qtip);
+  $("#insert-top").on('click', '#search-by-address-button', searchByAddress_qtip);
+  $("#insert-top").on('click', '.arrow-history-tree', showHistoryTree_qtip);
   $("#map").on('click', showAssets_qtip);
-  $(".arrow-history-tree").on('click', showHistoryTree_qtip);
 
   $("#show-tab").on('click', show_active_tab);
   $("#show-tab").trigger('click'); //triggers click to show content on first tab on page load
@@ -24,7 +24,7 @@ function goto_forms()
 {
   toggle_navbar();
   $('#insert-map').empty();
-  $.get('forms/form_asset.html', function(data) {
+  $.get('forms/form_cr.html', function(data) {
     $('#insert-form').html(data);
     });
   $('#insert-form').trigger('create');
