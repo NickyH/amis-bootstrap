@@ -547,105 +547,6 @@
 
 //collapsible layers menu
 
-.lyr {
-  width: 200px;
-  height: 20px;
-  list-style-type: none !important;
-  &.ctgry {
-    background-color: @category-header;
-    margin-bottom: 5px;
-    border-radius: 7px;
-    height: 30px;
-    }
-  li {
-    padding: 10px;
-  }
-  &.lyr1 {
-    background-color: @lyr1-colour;
-    margin-bottom: 5px;
-    border-radius: 7px;
-    height: 30px;
-  }
-  &.lyr2 {
-    background-color: @lyr2-colour;
-    margin-bottom: 5px;
-    border-radius: 7px;
-    height: 30px;
-  }
-  &.lyr3 {
-    background-color: @lyr3-colour;
-    margin-bottom: 5px;
-    border-radius: 7px;
-    height: 30px;
-  }
-  &.lyr4 {
-    background-color: @lyr4-colour;
-    margin-bottom: 5px;
-    border-radius: 7px;
-    height: 30px;
-  }
-  &.lyr5 {
-    background-color: @lyr5-colour;
-    margin-bottom: 10px;
-    border-radius: 7px;
-    height: 30px;
-  }
-  .lyr-left {
-    text-decoration: none;
-    color: @black !important;
-    margin-bottom: 5px;
-    border-bottom-left-radius: 7px;
-    border-top-left-radius: 7px;
-    height: 30px;
-    width: 50%;
-    float: left;
-    &.lyr1 {
-    background-color: @lyr1-colour;
-    }
-    &.lyr2 {
-    background-color: @lyr2-colour;
-    }
-    &.lyr3 {
-    background-color: @lyr3-colour;
-    }
-    &.lyr4 {
-    background-color: @lyr4-colour;
-    }
-    &.lyr5 {
-    background-color: @lyr5-colour;
-    }
-    .layer-text-left {
-      margin-top: 7px;
-      margin-left: -20px;
-    }
-    .category-text-left {
-      margin-top: 7px;
-      margin-left: -20px;
-      color: @white;
-    }
-  }
-  .lyr-right {
-    text-decoration: none;
-    color: @white-medium !important;
-    margin-bottom: 5px;
-    border-bottom-right-radius: 7px;
-    border-top-right-radius: 7px;
-    height: 30px;
-    width: 40px;
-    float: right;
-    background-color: @black-medium;
-    &.lyr-active {
-      background-color: green;
-      color: @white-medium;
-    }
-    .layer-text-right {
-      margin-top: 7px;
-      margin-right: 12px;
-      text-indent: -4px;
-    }
-  }
-}
-
 .owl-carousel {
   max-height: 200px !important;
   .panel-item {
@@ -659,12 +560,8 @@
   }
 }
 
-.panel-item {
-  &.category-panel {
-    ul {
-      padding-left: 0;
-    }
-  }
+.item {
+  width: 150px !important;
 }
 
 .nav-arrow {
@@ -785,6 +682,9 @@
 .add-date {
   width: 50%;
 }
+
+
+// bootstrap accordion overrides
 
 .panel-group {
   div {

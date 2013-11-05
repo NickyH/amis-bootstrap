@@ -1,5 +1,4 @@
 var owlLayersHtml;
-console.log($('#owl-example'));
 
 $(function(){
   insert_map();
