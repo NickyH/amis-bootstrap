@@ -537,6 +537,7 @@
   width: auto !important;
   margin-left: 6px;
   margin-right: 6px;
+  display: inline-block !important;
 }
 
 .owl-controls {
@@ -562,6 +563,18 @@
 
 .item {
   width: 150px !important;
+  display: inline-block !important;
+  li {
+    list-style: none;
+    background-color: @map-highlight-colour;
+    border-radius: 5px;
+    padding: 2px;
+    margin-top: 10px;
+    text-align: left;
+    a {
+      color: @white;
+    }
+  }
 }
 
 .nav-arrow {
@@ -695,7 +708,7 @@
 
 .panel-group {
   div {
-    display: block !important;
+    // display: block !important;
   }
   width: 150px;
 }

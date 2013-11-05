@@ -1,11 +1,17 @@
 var owlLayersHtml;
+var hidden;
 
 $(function(){
   insert_map();
   insert_left();
   insert_top();
   create_layers_carousel();
-  $('a[data-toggle="collapse"]').on('click', make_subcategory_visible);
+
+  $('a[data-toggle="collapse"]').on('click', make_category_visible);
+  $('.sub-category-body').on('click', make_subcategory_visible);
+
+  $('ul[id^="accordion"]').dcAccordion();
+
   $("#insert-left").on('click', '#layers-button', layers_qtip);
   $("#insert-left").on('click', '#search-by-category-button', search_by_category_qtip);
   $("#insert-top").on('click', '#search-by-address-button', searchByAddress_qtip);
@@ -19,9 +25,14 @@ $(function(){
 
 });
 
+function make_category_visible() {
+  category = ($(this).parent().parent().next().children('div:first-child').children('div:first-child'));
+  category.toggleClass('hidden');
+}
+
 function make_subcategory_visible() {
-  var hidden = ($(this).parent().parent().next().children('div:first-child').children('div:first-child'));
-  hidden.toggleClass('hidden');
+  subcategory = ($(this).first().find('.row'));
+  subcategory.toggleClass('hidden');
 }
 
 function goto_forms()
