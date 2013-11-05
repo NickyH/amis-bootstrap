@@ -4,8 +4,8 @@ $(function(){
   insert_map();
   insert_left();
   insert_top();
-
   create_layers_carousel();
+  $('a[data-toggle="collapse"]').on('click', make_subcategory_visible);
   $("#insert-left").on('click', '#layers-button', layers_qtip);
   $("#insert-left").on('click', '#search-by-category-button', search_by_category_qtip);
   $("#insert-top").on('click', '#search-by-address-button', searchByAddress_qtip);
@@ -18,6 +18,11 @@ $(function(){
   $('#details-link').on('click', toggle_navbar);
 
 });
+
+function make_subcategory_visible() {
+  var hidden = ($(this).parent().parent().next().children('div:first-child').children('div:first-child'));
+  hidden.toggleClass('hidden');
+}
 
 function goto_forms()
 {
@@ -715,4 +720,9 @@ function openActionRow(row) {
 function open_form_from_asset()
 {
   goto_forms();
+}
+
+function collapse_on_load()
+{
+  $('div[id^="collapse"]').collapse("hide");
 }

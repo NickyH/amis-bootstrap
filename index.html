@@ -44,26 +44,52 @@
                 <div class="panel panel-default">
                   <div class="panel-heading">
                     <h4 class="panel-title">
-                      <a data-toggle="collapse" data-parent="#ctgy1" href="#collapseOnectgy1">
+                      <a data-toggle="collapse" data-parent="#ctgy1" href="#collapseOne-1">
                         Catgry 1
                       </a>
                     </h4>
                   </div>
-                  <div id="collapseOnectgy1" class="panel-collapse collapse in">
-                    <div class="panel-body">
-                      Anim pariatur cliche
+                  <div id="collapseOne-1" class="panel-collapse collapse in">
+                    <div class="panel-body sub-category-body">
+
+                      <!--sub category level 1-->
+                      <div class="panel panel-default hidden">
+                        <div class="panel-heading">
+                          <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#subctgy1" href="#collapseSubOne-1">
+                              Sub-Catgry 1
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapseSubOne-1" class="panel-collapse collapse">
+                          <div class="panel-body">
+
+                            <!-- checkbox -->
+                              <div class="row">
+                                <div class="input-group">
+                                  <span class="input-group-addon layers">
+                                    <input type="checkbox">
+                                  </span>
+                                  <input type="text" class="form-control">
+                                </div>
+                              <!-- end checkbox-->
+
+                          </div>
+                        </div>
+                      </div>
+
                     </div>
                   </div>
                 </div>
                 <div class="panel panel-default">
                   <div class="panel-heading">
                     <h4 class="panel-title">
-                      <a data-toggle="collapse" data-parent="#ctgy1" href="#collapseTwoctgy1">
+                      <a data-toggle="collapse" data-parent="#ctgy1" href="#collapseTwo-1">
                         Catgry 2
                       </a>
                     </h4>
                   </div>
-                  <div id="collapseTwoctgy1" class="panel-collapse collapse">
+                  <div id="collapseTwo-1" class="panel-collapse collapse">
                     <div class="panel-body">
                       Anim pariatur cl
                     </div>
@@ -72,14 +98,28 @@
                 <div class="panel panel-default">
                   <div class="panel-heading">
                     <h4 class="panel-title">
-                      <a data-toggle="collapse" data-parent="#ctgy1" href="#collapseThreectgy1">
+                      <a data-toggle="collapse" data-parent="#ctgy1" href="#collapseThree-1">
                         Catgry 3
                       </a>
                     </h4>
                   </div>
-                  <div id="collapseThreectgy1" class="panel-collapse collapse">
+                  <div id="collapseThree-1" class="panel-collapse collapse">
                     <div class="panel-body">
                       Anim pariatur cliche
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#ctgy4" href="#collapseFour-1">
+                        Catgry 4
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseFour-1" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      Anim pariatur cl
                     </div>
                   </div>
                 </div>
@@ -94,12 +134,12 @@
                 <div class="panel panel-default">
                   <div class="panel-heading">
                     <h4 class="panel-title">
-                      <a data-toggle="collapse" data-parent="#ctgy2" href="#collapseOnectgy2">
+                      <a data-toggle="collapse" data-parent="#ctgy2" href="#collapseOne-2">
                         Catgry 1
                       </a>
                     </h4>
                   </div>
-                  <div id="collapseOnectgy2" class="panel-collapse collapse">
+                  <div id="collapseOne-2" class="panel-collapse collapse">
                     <div class="panel-body">
                       Anim pariatur cliche
                     </div>
@@ -108,12 +148,12 @@
                 <div class="panel panel-default">
                   <div class="panel-heading">
                     <h4 class="panel-title">
-                      <a data-toggle="collapse" data-parent="#ctgy2" href="#collapseTwoctgy2">
+                      <a data-toggle="collapse" data-parent="#ctgy2" href="#collapseTwo-2">
                         Catgry 2
                       </a>
                     </h4>
                   </div>
-                  <div id="collapseTwoctgy2" class="panel-collapse collapse">
+                  <div id="collapseTwo-2" class="panel-collapse collapse">
                     <div class="panel-body">
                       Anim pariatur cl
                     </div>
@@ -122,12 +162,12 @@
                 <div class="panel panel-default">
                   <div class="panel-heading">
                     <h4 class="panel-title">
-                      <a data-toggle="collapse" data-parent="#ctgy2" href="#collapseThreectgy2">
+                      <a data-toggle="collapse" data-parent="#ctgy2" href="#collapseThree-2">
                         Catgry 3
                       </a>
                     </h4>
                   </div>
-                  <div id="collapseThreectgy2" class="panel-collapse collapse">
+                  <div id="collapseThree-2" class="panel-collapse collapse">
                     <div class="panel-body">
                       Anim pariatur cliche
                     </div>
@@ -151,12 +191,7 @@
     <script src="../js/bootstrap-datepicker.js"></script>
 
     <script>
-      $('#collapseOnectgy1').collapse("hide");
-      $('#collapseTwoctgy1').collapse("hide");
-      $('#collapseThreectgy1').collapse("hide");
-      $('#collapseOnectgy2').collapse("hide");
-      $('#collapseTwoctgy2').collapse("hide");
-      $('#collapseThreectgy2').collapse("hide");
+      collapse_on_load();
     </script>
 
   </body>
