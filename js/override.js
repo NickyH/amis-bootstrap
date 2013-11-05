@@ -10,7 +10,7 @@ $(function(){
   $('a[data-toggle="collapse"]').on('click', make_category_visible);
   $('.sub-category-body').on('click', make_subcategory_visible);
 
-  $('ul[id^="accordion"]').dcAccordion();
+  $('ul[id^="accordion-"]').dcAccordion();
 
   $("#insert-left").on('click', '#layers-button', layers_qtip);
   $("#insert-left").on('click', '#search-by-category-button', search_by_category_qtip);
