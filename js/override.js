@@ -7,9 +7,6 @@ $(function(){
   insert_top();
   create_layers_carousel();
 
-  $('a[data-toggle="collapse"]').on('click', make_category_visible);
-  $('.sub-category-body').on('click', make_subcategory_visible);
-
   $('ul[id^="accordion-"]').dcAccordion();
 
   $("#insert-left").on('click', '#layers-button', layers_qtip);
@@ -24,16 +21,6 @@ $(function(){
   $('#details-link').on('click', toggle_navbar);
 
 });
-
-function make_category_visible() {
-  category = ($(this).parent().parent().next().children('div:first-child').children('div:first-child'));
-  category.toggleClass('hidden');
-}
-
-function make_subcategory_visible() {
-  subcategory = ($(this).first().find('.row'));
-  subcategory.toggleClass('hidden');
-}
 
 function goto_forms()
 {
@@ -731,9 +718,4 @@ function openActionRow(row) {
 function open_form_from_asset()
 {
   goto_forms();
-}
-
-function collapse_on_load()
-{
-  $('div[id^="collapse"]').collapse("hide");
 }
