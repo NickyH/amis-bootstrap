@@ -22,10 +22,8 @@ $(function(){
 });
 
 function change_subcategory_style() {
-  var list = $('.list');
-  var parent = $('.list').parent();
-  parent.css('background-color','white');
-  list.next().css('color','black');
+  var list = $('.layer').children();
+  $('.glyphicon').css('color', 'white');
 }
 
 function goto_forms()
