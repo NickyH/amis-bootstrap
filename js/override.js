@@ -21,14 +21,27 @@ $(function(){
 });
 
 function checkbox_when_clicked() {
+  console.log('my function');
   var checkbox = $(this).children().first().children().first();
+  if ($(checkbox).parent().hasClass('no-deselect')) {
+    return false;
+  }
   $(checkbox).prop('checked', !checkbox.prop("checked"));
 }
 
 function layer_active_clicked() {
-  $('.make-active').removeClass('active');
   var activate = $(this);
-  $(activate).toggleClass('active');
+  if ($(activate).hasClass('active')) {
+    return false;
+  }
+  else {
+    $('.make-active').removeClass('active');
+    $('.input-group').removeClass('no-deselect');
+    $(activate).toggleClass('active');
+    $(this).parent().children().first().addClass('no-deselect');
+    var checkbox = $(this).parent().children().first().children().first();
+    $(checkbox).prop('checked', !checkbox.prop("checked"));
+  }
 }
 
 function goto_forms()
