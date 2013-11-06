@@ -48,7 +48,7 @@ function goto_forms()
 {
   toggle_navbar();
   $('#insert-map').empty();
-  $.get('forms/form_cr.html', function(data) {
+  $.get('forms/form_asset.html', function(data) {
     $('#insert-form').html(data);
     });
   $('#insert-form').trigger('create');

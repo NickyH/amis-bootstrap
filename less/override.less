@@ -401,6 +401,7 @@
   }
 }
 
+
 // qtip styling
 
 .qtip {
@@ -706,7 +707,7 @@
 
 //bootstrap general overrides
 .input-group-addon {
-  min-width:150px;
+  min-width:200px;
   text-align:left;
   &.layers {
     min-width: 30px;
@@ -725,11 +726,15 @@
 
 .input-group {
   margin-bottom: 10px;
+
 }
 
-.input-group-addon, .input-group-btn, .input-group, .form-control {
+.item {
+  .input-group-addon, .input-group-btn, .input-group, .form-control {
   display: inline-block;
+  }
 }
+
 
 .selectpicker {
   border-bottom-left-radius: 0;
@@ -747,7 +752,7 @@
 
 .panel-group {
   div {
-    // display: block !important;
+    display: block !important;
   }
   width: 150px;
 }
