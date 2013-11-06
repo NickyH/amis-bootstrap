@@ -444,8 +444,8 @@
   }
 }
 .qtip, .qtip-modal {
-  max-width: 950px !important;
-  width: 880px;
+  max-width: 900px !important;
+  width: 780px;
   min-height: 50px;
   .address-panel {
     max-width: 300px !important;
@@ -453,7 +453,7 @@
     }
   .layers-panel {
     @media @tabletLandscapeWidth {
-      max-width: 800px !important;
+      max-width: 780px !important;
       margin-left: 50px;
     }
     @media @tabletPortraitWidth {
@@ -485,10 +485,12 @@
 }
 
 .qtip-content {
-  width: auto;
-  min-height: 250px;
+  width: 100%;
+  min-height: 300px;
   max-height: 350px;
   margin: 10px !important;
+  padding-left: 70px;
+  padding-right: 100px;
 }
 
 .layer-text-category {
@@ -501,50 +503,38 @@
   }
 }
 
-
 //owl
-
-#owl-example .panel-item {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  text-align: left;
-  font: @layers-header-font;
-  text-indent: 20px;
-  width: 200px !important;
-}
 
 .invisible {
   visibility: hidden;
   min-width: 100px !important;
 }
 
-.owl-wrapper {
-  white-space: nowrap !important;
-  width: 900px !important;
-  margin-top: 20px;
-}
-
-.owl-wrapper-outer {
-  height: 100% !important;
-}
-
-.owl-carousel .owl-theme {
-  max-height: 400px !important;
-  opacity: 1;
-}
-
-.owl-item {
-  width: auto !important;
-  margin-left: 6px;
-  margin-right: 6px;
-  display: inline-block !important;
-}
-
 .owl-controls {
   &.clickable {
   display: block;
   }
+}
+
+.owl-next {
+  position: relative;
+  top: -100px;
+  right: -330px;
+}
+
+.owl-prev {
+  position: relative;
+  top: -100px;
+  left: -320px;
+}
+
+.owl-pagination {
+  position: relative;
+  top: -10px;
+}
+
+.layers-owl-wrapper {
+  width: 630px;
 }
 
 //collapsible layers menu
@@ -563,8 +553,9 @@
 }
 
 .item {
-  width: 200px !important;
-  display: inline-block !important;
+  // width: auto;
+  // display: inline-block !important;
+  height: 100%;
   li {
     width: 200px;
     background-color: @map-highlight-colour;
@@ -581,6 +572,8 @@
 }
 
 .dcjq-parent-li {
+  margin-left: 0;
+  margin-right: 0;
   ul {
     background-color: lighten( @map-highlight-colour, 10% );
   }

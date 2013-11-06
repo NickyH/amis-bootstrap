@@ -18,6 +18,14 @@ $(function(){
   $("#show-tab").on('click', show_active_tab);
   $("#show-tab").trigger('click'); //triggers click to show content on first tab on page load
   $('#details-link').on('click', toggle_navbar);
+
+  $(".next").click(function(){
+    owl.trigger('owl.next');
+  })
+  $(".prev").click(function(){
+    owl.trigger('owl.prev');
+  })
+
 });
 
 function checkbox_when_clicked() {
@@ -105,22 +113,27 @@ function create_layers_carousel()
   owlLayersHtml = $("#owl-example").owlCarousel({
 
     // Most important owl features
-    items : 5,
-    // itemsDesktop : [1199,4],
-    // itemsDesktopSmall : [980,3],
-    // itemsTablet: [768,2],
-    // itemsTabletSmall: false,
-    // itemsMobile : [479,1],
-    // singleItem : false,
+    items : 3,
+    itemsDesktop : [1199,3],
+    itemsDesktopSmall : [980,3],
+    itemsTablet: [768,2],
+    itemsTabletSmall: false,
+    itemsMobile : [479,1],
+    singleItem : false,
+    itemsScaleUp : false,
 
     //Basic Speeds
     slideSpeed : 200,
+    paginationSpeed : 800,
+    rewindSpeed : 1000,
 
     //Autoplay
     autoPlay : false,
+    stopOnHover : false,
 
     // Navigation
-    navigation : false,
+    navigation : true,
+    navigationText : ["prev","next"],
     rewindNav : true,
     scrollPerPage : false,
 
@@ -135,7 +148,9 @@ function create_layers_carousel()
 
     // CSS Styles
     baseClass : "owl-carousel",
-    theme : "owl-theme",
+
+    //Auto height
+    autoHeight : false,
 
     //Transitions
     transitionStyle : false,
