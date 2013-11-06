@@ -40,7 +40,7 @@ function layer_active_clicked() {
     $(activate).toggleClass('active');
     $(this).parent().children().first().addClass('no-deselect');
     var checkbox = $(this).parent().children().first().children().first();
-    $(checkbox).prop('checked', !checkbox.prop("checked"));
+    $(checkbox).prop('checked', true);
   }
 }
 
