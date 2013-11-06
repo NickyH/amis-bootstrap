@@ -579,14 +579,26 @@
   }
 }
 
+.dcjq-parent-li {
+  ul {
+    background-color: lighten( @map-highlight-colour, 10% );
+  }
+  li {
+    background-color: lighten( @map-highlight-colour, 10% );
+  }
+}
+
 .input-group.list {
     padding-left: 5px;
   }
 
 .make-active {
   background-color: green;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
   color: @white;
   float: right;
+  height: 26px;
   width: 30px;
   padding: 5px;
   .glyphicon {

@@ -6,9 +6,8 @@ $(function(){
   insert_left();
   insert_top();
   create_layers_carousel();
-
+  change_subcategory_style();
   $('ul[id^="accordion-"]').dcAccordion();
-
   $("#insert-left").on('click', '#layers-button', layers_qtip);
   $("#insert-left").on('click', '#search-by-category-button', search_by_category_qtip);
   $("#insert-top").on('click', '#search-by-address-button', searchByAddress_qtip);
@@ -21,6 +20,13 @@ $(function(){
   $('#details-link').on('click', toggle_navbar);
 
 });
+
+function change_subcategory_style() {
+  var list = $('.list');
+  var parent = $('.list').parent();
+  parent.css('background-color','white');
+  list.next().css('color','black');
+}
 
 function goto_forms()
 {
