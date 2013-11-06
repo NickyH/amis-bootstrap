@@ -1,29 +1,34 @@
 var owlLayersHtml;
-var hidden;
 
+
+//dom ready functions
 $(function(){
   insert_map();
   insert_left();
   insert_top();
   create_layers_carousel();
   $('.layer').on('click', checkbox_when_clicked);
+  $('.make-active').on('click', layer_active_clicked);
   $('ul[id^="accordion-"]').dcAccordion();
   $("#insert-left").on('click', '#layers-button', layers_qtip);
   $("#insert-left").on('click', '#search-by-category-button', search_by_category_qtip);
   $("#insert-top").on('click', '#search-by-address-button', searchByAddress_qtip);
   $("#insert-top").on('click', '.arrow-history-tree', showHistoryTree_qtip);
   $("#map").on('click', showAssets_qtip);
-
   $("#show-tab").on('click', show_active_tab);
   $("#show-tab").trigger('click'); //triggers click to show content on first tab on page load
-
   $('#details-link').on('click', toggle_navbar);
-
 });
 
 function checkbox_when_clicked() {
   var checkbox = $(this).children().first().children().first();
   $(checkbox).prop('checked', !checkbox.prop("checked"));
+}
+
+function layer_active_clicked() {
+  $('.make-active').removeClass('active');
+  var activate = $(this);
+  $(activate).toggleClass('active');
 }
 
 function goto_forms()

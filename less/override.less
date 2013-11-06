@@ -599,7 +599,7 @@
   }
 
 .make-active {
-  background-color: green;
+  background-color: @black-medium;
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
   color: @white;
@@ -609,7 +609,10 @@
   padding: 5px;
   .glyphicon {
     margin-left: 5px;
-      }
+  }
+  &.active {
+    background-color: @layer-active;
+  }
 }
 
 .nav-arrow {
