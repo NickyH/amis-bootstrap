@@ -6,7 +6,7 @@ $(function(){
   insert_left();
   insert_top();
   create_layers_carousel();
-  change_subcategory_style();
+  $('.layer').on('click', checkbox_when_clicked);
   $('ul[id^="accordion-"]').dcAccordion();
   $("#insert-left").on('click', '#layers-button', layers_qtip);
   $("#insert-left").on('click', '#search-by-category-button', search_by_category_qtip);
@@ -21,9 +21,9 @@ $(function(){
 
 });
 
-function change_subcategory_style() {
-  var list = $('.layer').children();
-  $('.glyphicon').css('color', 'white');
+function checkbox_when_clicked() {
+  var checkbox = $(this).children().first().children().first();
+  $(checkbox).prop('checked', !checkbox.prop("checked"));
 }
 
 function goto_forms()
