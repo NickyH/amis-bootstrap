@@ -2,6 +2,13 @@
 // @import "globals_dark.less"; // use for dark theme, and comment out globals_light.less
 @import "globals_light.less"; // use for light theme and comment out globals_dark.less
 
+//body
+
+body {
+  background-color: @white-medium;
+}
+
+
 //map styling
 
 #insert-map {
@@ -330,8 +337,8 @@
     display: inline;
     float: right;
     height: @heightTall;
-    width: @widthLarge;
-    margin-left: 120px;
+    width: 100%;
+    padding-left: 120px;
     margin-top: 170px;
     background-color: @background-main;
     }
@@ -350,6 +357,7 @@
   width: 90% !important;
   min-height: 250px;
   padding: 5px;
+  float: left;
 }
 
 //plceholder text
