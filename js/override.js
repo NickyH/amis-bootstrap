@@ -48,7 +48,7 @@ function goto_forms()
 {
   toggle_navbar();
   $('#insert-map').empty();
-  $.get('forms/form_asset.html', function(data) {
+  $.get('forms/form_cr.html', function(data) {
     $('#insert-form').html(data);
     });
   $('#insert-form').trigger('create');
@@ -600,7 +600,7 @@ function insert_top()
 // inserts the first form into the form page on initial load of details page
 function show_first_form()
 {
-  $.get('forms/form_asset.html', function(data) {
+  $.get('forms/form_cr.html', function(data) {
     $('#insert-form').html(data);
     });
   $('#insert-form').trigger('create');

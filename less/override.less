@@ -295,8 +295,8 @@
 .number-circle {
   display: inline-block;
   position: relative;
-  top: -35px;
-  left: 100%;
+  top: -20px;
+  left: 98%;
   width: 30px;
   height: 30px;
   border-radius: 30px;
@@ -349,7 +349,7 @@
   display: inline-block;
   width: 90% !important;
   min-height: 250px;
-  padding: 20px;
+  padding: 5px;
 }
 
 //plceholder text
@@ -734,15 +734,19 @@
 
 //bootstrap general overrides
 .input-group-addon {
-  min-width:200px;
-  text-align:left;
+  // min-width:50px;
+  text-align:right;
   &.layers {
     min-width: 30px;
   }
 }
 
 .input-group-addon.add-on.select-date {
-  min-width: 2%;
+  // min-width: 2%;
+}
+
+.form-control {
+  float: right;
 }
 
 //bootstrap-select overrides
@@ -765,19 +769,6 @@
 input[type="checkbox"] {
   margin-left: 10px;
 }
-
-
-.selectpicker {
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-}
-
-//bootstrap datepicker
-
-.add-date {
-  width: 50%;
-}
-
 
 // bootstrap accordion overrides
 
