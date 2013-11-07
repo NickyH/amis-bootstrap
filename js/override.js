@@ -18,14 +18,6 @@ $(function(){
   $("#show-tab").on('click', show_active_tab);
   $("#show-tab").trigger('click'); //triggers click to show content on first tab on page load
   $('#details-link').on('click', toggle_navbar);
-
-  $(".next").click(function(){
-    owl.trigger('owl.next');
-  })
-  $(".prev").click(function(){
-    owl.trigger('owl.prev');
-  })
-
 });
 
 function checkbox_when_clicked() {
@@ -133,7 +125,7 @@ function create_layers_carousel()
 
     // Navigation
     navigation : true,
-    navigationText : ["prev","next"],
+    navigationText : false,
     rewindNav : true,
     scrollPerPage : false,
 
@@ -155,6 +147,8 @@ function create_layers_carousel()
     //Transitions
     transitionStyle : false,
     })
+  $('.owl-prev').addClass('arrow-left');
+  $('.owl-next').addClass('arrow-right');
 }
 
 

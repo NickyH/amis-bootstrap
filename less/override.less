@@ -485,12 +485,12 @@
 }
 
 .qtip-content {
-  width: 100%;
+  width: auto;
   min-height: 300px;
   max-height: 350px;
   margin: 10px !important;
   padding-left: 70px;
-  padding-right: 100px;
+  padding-right: 50px;
 }
 
 .layer-text-category {
@@ -516,17 +516,39 @@
   }
 }
 
+.owl-theme .owl-controls .owl-buttons div {
+  background: none;
+  border-radius: 0;
+}
+
 .owl-next {
   position: relative;
-  top: -100px;
+  top: -250px;
   right: -330px;
 }
 
 .owl-prev {
   position: relative;
-  top: -100px;
-  left: -320px;
+  top: -250px;
+  left: -340px;
 }
+
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 70px solid transparent;
+  border-bottom: 70px solid transparent;
+  border-left: 30px solid @black-medium;
+}
+
+.arrow-left {
+  width: 0;
+  height: 0;
+  border-top: 70px solid transparent;
+  border-bottom: 70px solid transparent;
+  border-right:30px solid @black-medium;
+}
+
 
 .owl-pagination {
   position: relative;
@@ -535,6 +557,11 @@
 
 .layers-owl-wrapper {
   width: 630px;
+}
+
+.owl-wrapper-outer {
+  margin-right: auto;
+  margin-left: auto;
 }
 
 //collapsible layers menu
@@ -610,23 +637,22 @@
   }
 }
 
-.nav-arrow {
-  &.arrow-left {
-    img {
-      -webkit-transform: rotate(180deg); /* Safari and Chrome */
-      width: 50px;
-      margin-right: 20px;
-      }
-    }
-  &.arrow-right {
-    img {
-      -webkit-transform: rotate(0deg); /* Safari and Chrome */
-      width: 50px;
-      margin-left: 20px;
-      }
-    }
-  }
-
+// .nav-arrow {
+//   &.arrow-left {
+//     img {
+//       -webkit-transform: rotate(180deg); /* Safari and Chrome */
+//       width: 50px;
+//       margin-right: 20px;
+//       }
+//     }
+//   &.arrow-right {
+//     img {
+//       -webkit-transform: rotate(0deg); /* Safari and Chrome */
+//       width: 50px;
+//       margin-left: 20px;
+//       }
+//     }
+//   }
 
 // additional overrides for mockup prototype for conference
 
