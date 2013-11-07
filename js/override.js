@@ -131,7 +131,7 @@ function create_layers_carousel()
 
     //Pagination
     pagination : true,
-    paginationNumbers: false,
+    paginationNumbers: true,
 
     // Responsive
     responsive: true,
