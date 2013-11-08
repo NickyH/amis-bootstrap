@@ -2,13 +2,6 @@
 // @import "globals_dark.less"; // use for dark theme, and comment out globals_light.less
 @import "globals_light.less"; // use for light theme and comment out globals_dark.less
 
-//body
-
-body {
-  background-color: @white-medium;
-}
-
-
 //map styling
 
 #insert-map {
@@ -17,7 +10,6 @@ body {
   top: 100px;
   width: 904px;
   height: auto;
-
 }
 
 #map {
@@ -309,7 +301,7 @@ body {
   border-radius: 30px;
   -moz-border-radius: 30px;
   -webkit-border-radius: 30px;
-  background-color: @grey-medium;
+  background-color: darken(@form-panel-colour, 10%);
   border: 1px solid @form-highlight-colour;
   margin: 0;
   padding-top: 0;
@@ -328,6 +320,36 @@ body {
   }
 }
 
+.text-circle {
+  display: inline-block;
+  position: relative;
+  top: -20px;
+  left: 80%;
+  width: fit-content;
+  white-space: nowrap;
+  height: 30px;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  background-color: darken(@form-panel-colour, 10%);
+  border: 1px solid @form-highlight-colour;
+  margin: 0;
+  padding-top: 0;
+  padding-left: 2%;
+  padding-right: 4%;
+  z-index: 2;
+}
+
+.text-in-circle {
+  position: relative;
+  margin-top: 7px;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: center;
+  font-style: italic;
+  font-family: 'arial', san-serif;
+}
+
 #details-page {
   background-color: @form-background-colour-light;
 }
@@ -336,10 +358,10 @@ body {
   &.form-container {
     display: inline;
     float: right;
-    height: @heightTall;
+    height: 100%;
     width: 100%;
     padding-left: 120px;
-    margin-top: 170px;
+    padding-top: 170px;
     background-color: @background-main;
     }
   }
@@ -352,7 +374,7 @@ body {
   -moz-border-radius: 12px;
   -webkit-border-radius: 12px;
   box-shadow: 5px 5px 2px 2px @form-panel-outer-shadow;
-  margin: 30px auto 7px 20px;
+  margin: 30px auto 40px 20px;
   display: inline-block;
   width: 90% !important;
   min-height: 250px;
@@ -408,7 +430,6 @@ body {
     }
   }
 }
-
 
 // qtip styling
 
