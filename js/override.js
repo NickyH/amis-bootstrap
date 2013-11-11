@@ -1,4 +1,5 @@
 var owlLayersHtml;
+var topOffset = 170;
 
 //dom ready functions
 $(function(){
@@ -66,7 +67,7 @@ function toggle_navbar()
   $('.icon-form').toggleClass('hidden');
   $('.tab-shape').toggleClass('hidden');
   $('.left-bar-icons').toggleClass('hidden');
-  $('.pages-icons').toggleClass('hidden');
+  $('.oval-text').toggleClass('hidden');
 }
 
 
@@ -80,33 +81,33 @@ function check_form_location()
 {
   var href = $(this).attr('data-href');
   if (href === '#details_bookmark') {
-    var scrollAmount = ($(href).offset().top) - 200;
+    var scrollAmount = ($(href).offset().top) - topOffset;
     $('html, body').animate({scrollTop: scrollAmount }, 1500);
-    $('.tab img').removeClass('current');
+    $('.oval').removeClass('current');
     $('#tab1').addClass('current');
   }
   if (href === '#contact_bookmark') {
-    var scrollAmount = ($(href).offset().top) - 200;
+    var scrollAmount = ($(href).offset().top) - topOffset;
     $('html, body').animate({ scrollTop: scrollAmount }, 1000);
-    $('.tab img').removeClass('current');
+    $('.oval').removeClass('current');
     $('#tab2').addClass('current');
   }
   if (href === '#notes_bookmark') {
-    var scrollAmount = ($(href).offset().top) - 200;
+    var scrollAmount = ($(href).offset().top) - topOffset;
     $('html, body').animate({ scrollTop: scrollAmount }, 1000);
-    $('.tab img').removeClass('current');
+    $('.oval').removeClass('current');
     $('#tab3').addClass('current');
   }
   if (href === '#location_bookmark') {
-    var scrollAmount = ($(href).offset().top) - 200;
+    var scrollAmount = ($(href).offset().top) - topOffset;
     $('html, body').animate({ scrollTop: scrollAmount }, 1000);
-    $('.tab img').removeClass('current');
+    $('.oval').removeClass('current');
     $('#tab4').addClass('current');
   }
   if (href === '#referral_bookmark') {
-    var scrollAmount = ($(href).offset().top) - 200;
+    var scrollAmount = ($(href).offset().top) - topOffset;
     $('html, body').animate({ scrollTop: scrollAmount }, 1000);
-    $('.tab img').removeClass('current');
+    $('.oval').removeClass('current');
     $('#tab5').addClass('current');
   }
 }

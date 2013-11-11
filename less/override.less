@@ -209,13 +209,10 @@ body {
 
 .pages-icons {
   width: 120px;
-  &.pages-top {
-    margin-top: 50px;
   }
-  &.current {
-    background-color: #272828;
-    opacity: 0.7;
-  }
+
+.pages-top {
+  margin-top: 50px !important;
 }
 
 // forms
@@ -283,9 +280,9 @@ body {
   }
 }
 
-.tab-bar .tab:hover {
-  background-color: @tab-fill-hover;
-}
+// .tab-bar .tab:hover {
+//   background-color: @tab-fill-hover;
+// }
 
 .tab {
   width: 120px;
@@ -790,7 +787,6 @@ body {
 
 .input-group {
   margin-bottom: 10px;
-
 }
 
 .item {
@@ -848,3 +844,65 @@ select[data-required="true"] ~ .btn-group.bootstrap-select.show-tick.form-contro
 li.required {
   color: red !important;
 }
+
+.glyphicon-ok {
+  &.panel-ok {
+  float: right;
+  color: green;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-right: 20px;
+  font-size: 30px;
+  }
+}
+
+.glyphicon-remove {
+  &.panel-cross {
+    float: right;
+    color: red;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    font-size: 30px;
+  }
+}
+
+.oval {
+  width: 80px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: @form-highlight-colour;
+  border: 3px solid @white-medium;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 5px;
+  text-align: center;
+  span {
+    color: @black-medium;
+    font-size: 12px;
+  }
+  &.current {
+  border: 3px solid @form-border-required;
+  box-shadow: 3px 3px 2px @black-medium;
+  }
+}
+
+a.oval-text:after {
+    content: url('../images/icons/pages-line-white.png') no-repeat;
+    text-align: center;
+    display: block;
+    position: relative;
+}
+
+a.oval-last:after {
+    content: "";
+}
+
+.nav li {
+  height: 50px;
+  a {
+    margin: 0;
+    padding: 0;
+  }
+}
+
