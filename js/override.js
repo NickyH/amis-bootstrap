@@ -1,6 +1,5 @@
 var owlLayersHtml;
 
-
 //dom ready functions
 $(function(){
   insert_map();
@@ -15,13 +14,10 @@ $(function(){
   $("#insert-top").on('click', '#search-by-address-button', searchByAddress_qtip);
   $("#insert-top").on('click', '.arrow-history-tree', showHistoryTree_qtip);
   $("#map").on('click', showAssets_qtip);
-  $("#show-tab").on('click', show_active_tab);
-  $("#show-tab").trigger('click'); //triggers click to show content on first tab on page load
   $('#details-link').on('click', toggle_navbar);
 });
 
 function checkbox_when_clicked() {
-  console.log('my function');
   var checkbox = $(this).children().first().children().first();
   if ($(checkbox).parent().hasClass('no-deselect')) {
     return false;
@@ -82,20 +78,30 @@ function show_fake_map()
 
 function check_form_location()
 {
-  if (document.location.hash === '#details_bookmark') {
-    $('html, body').animate({ scrollTop: 50});
+  var href = $(this).attr('data-href');
+  if (href === '#details_bookmark') {
+    var scrollAmount = ($(href).offset().top) - 200;
+    $('html, body').animate({scrollTop: scrollAmount }, 1500);
     $('.tab img').removeClass('current');
     $('#tab1').addClass('current');
   }
-  else if (document.location.hash === '#location_bookmark') {
-    $('html, body').animate({ scrollTop: 400});
+  if (href === '#contact_bookmark') {
+    var scrollAmount = ($(href).offset().top) - 200;
+    $('html, body').animate({ scrollTop: scrollAmount }, 1500);
     $('.tab img').removeClass('current');
     $('#tab2').addClass('current');
   }
-  else if (document.location.hash === '#notes_bookmark') {
-    $('html, body').animate({ scrollTop: 1200});
+  if (href === '#notes_bookmark') {
+    var scrollAmount = ($(href).offset().top) - 200;
+    $('html, body').animate({ scrollTop: scrollAmount }, 1500);
     $('.tab img').removeClass('current');
     $('#tab3').addClass('current');
+  }
+  if (href === '#location_bookmark') {
+    var scrollAmount = ($(href).offset().top) - 200;
+    $('html, body').animate({ scrollTop: scrollAmount }, 1500);
+    $('.tab img').removeClass('current');
+    $('#tab4').addClass('current');
   }
 }
 

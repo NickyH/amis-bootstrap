@@ -793,10 +793,9 @@
   .input-group-addon, .input-group-btn, .input-group, .form-control {
   display: inline-block;
   }
-}
-
-input[type="checkbox"] {
+  input[type="checkbox"] {
   margin-left: 10px;
+  }
 }
 
 // bootstrap accordion overrides
@@ -812,4 +811,22 @@ input[type="checkbox"] {
   &.sub-category-body {
   padding: 0;
   }
+}
+
+//form validation with parsely js
+
+input[data-required="true"] {
+  border-color: red;
+}
+
+select[data-required="true"] {
+  border-color: red;
+}
+
+textarea[data-required="true"] {
+  border: 1px solid red !important;
+}
+
+li.regexp {
+  color: red !important;
 }
