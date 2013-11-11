@@ -820,21 +820,29 @@ body {
 //form validation with parsely js
 
 input[data-required="true"] {
-  border: 1px solid red !important;
   background-color: @form-background-required !important;
-
+  border: 1px solid @form-border-required !important;
 }
 
 select[data-required="true"] {
-  border: 1px solid red !important;
   background-color: @form-background-required !important;
-
+  border: 1px solid @form-border-required !important;
+  button {
+    background-color: @form-background-required !important;
+    border: 1px solid @form-border-required !important;
+  }
 }
 
 textarea[data-required="true"] {
-  border: 1px solid red !important;
   background-color: @form-background-required !important;
   border: 1px solid @form-border-required !important;
+}
+
+select[data-required="true"] ~ .btn-group.bootstrap-select.show-tick.form-control {
+  button{
+    background-color: @form-background-required !important;
+    border: 1px solid @form-border-required !important;
+  }
 }
 
 li.required {
