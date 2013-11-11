@@ -401,6 +401,26 @@ body {
 // form buttons
 
 .form-buttons {
+  .form-title {
+    position: relative ;
+    left: 180px;
+    margin-top: 30px;
+    display: inline-block;
+    font: @form-header-font;
+    font-weight: bold;
+    @media @widthMedium {
+      display: none;
+    }
+    @media @widthNarrow {
+      display: none;
+    }
+    @media @widthMediumLarge {
+      font: @form-header-font-small;
+      font-weight: bold;
+      max-width: 25%;
+      left: 150px;
+    }
+  }
   width: 100%;
   display: block;
   float: right;
@@ -417,12 +437,16 @@ body {
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 20px;
-
     margin-left: 20px;
     margin-top: 15px;
     margin-bottom: 10px;
     margin-right: 20px;
     font: @form-button-font;
+    color: @white-medium;
+    @media @widthMediumLarge {
+      height: 30px;
+      min-width: 120px;
+    }
     &.save-button {
     background-color: @save-button-colour;
     }
