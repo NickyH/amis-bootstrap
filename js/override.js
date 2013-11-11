@@ -18,6 +18,14 @@ $(function(){
   $('#details-link').on('click', toggle_navbar);
 });
 
+function check_panel_valid() {
+  var icon = $(this).children().last();
+  var panelValid = $(this).parsley( 'isValid' );
+  if (panelValid) {
+    $(icon).removeClass('glyphicon-remove panel-remove').addClass('glyphicon-ok panel-ok');
+  }
+}
+
 function checkbox_when_clicked() {
   var checkbox = $(this).children().first().children().first();
   if ($(checkbox).parent().hasClass('no-deselect')) {
