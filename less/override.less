@@ -2,6 +2,10 @@
 // @import "globals_dark.less"; // use for dark theme, and comment out globals_light.less
 @import "globals_light.less"; // use for light theme and comment out globals_dark.less
 
+body {
+  background-color: @white-medium;
+}
+
 //map styling
 
 #insert-map {
@@ -816,17 +820,23 @@
 //form validation with parsely js
 
 input[data-required="true"] {
-  border-color: red;
+  border: 1px solid red !important;
+  background-color: @form-background-required !important;
+
 }
 
 select[data-required="true"] {
-  border-color: red;
+  border: 1px solid red !important;
+  background-color: @form-background-required !important;
+
 }
 
 textarea[data-required="true"] {
   border: 1px solid red !important;
+  background-color: @form-background-required !important;
+  border: 1px solid @form-border-required !important;
 }
 
-li.regexp {
+li.required {
   color: red !important;
 }

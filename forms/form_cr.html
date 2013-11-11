@@ -35,7 +35,7 @@
                 <div class="form-group">
                   <label class="col-sm-4 control-label">Incident Date</label>
                   <div class="col-sm-8">
-                    <input type="date" class="form-control" autofocus>
+                    <input type="date" class="form-control" data-required="true">
                   </div>
                 </div>
 
@@ -101,7 +101,7 @@
                 <div class="form-group">
                   <label class="col-sm-4 control-label">Location Description</label>
                   <div class="col-sm-8">
-                    <textarea class="form-control" rows="3" data-trigger="change" data-required="true" pattern="^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1}([ -])*\d{1}[A-Z]{1}\d{1}$"></textarea>
+                    <textarea class="form-control" rows="3" data-trigger="keyup" data-required="true" pattern="^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1} *\d{1}[A-Z]{1}\d{1}$"></textarea>
                   </div>
                 </div>
 
@@ -298,7 +298,7 @@
     <!-- end form row 4 -->
 
     <!-- form row 5 -->
-    <div class="row">
+    <div class="row" id="referral_bookmark">
       <div class="col-12">
         <div class="row-fluid">
 
@@ -381,7 +381,7 @@
 </div>
 
 <script>
-$( '#test' ).parsley( 'validate');
+$( '.form-horizontal .container' ).parsley( 'validate');
 $('.selectpicker').selectpicker({ size: 5 });
 $('.date').datepicker();
 $('#bookmark-nav').on('click', 'a', check_form_location);

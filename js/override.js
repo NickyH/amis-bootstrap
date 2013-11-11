@@ -87,21 +87,27 @@ function check_form_location()
   }
   if (href === '#contact_bookmark') {
     var scrollAmount = ($(href).offset().top) - 200;
-    $('html, body').animate({ scrollTop: scrollAmount }, 1500);
+    $('html, body').animate({ scrollTop: scrollAmount }, 1000);
     $('.tab img').removeClass('current');
     $('#tab2').addClass('current');
   }
   if (href === '#notes_bookmark') {
     var scrollAmount = ($(href).offset().top) - 200;
-    $('html, body').animate({ scrollTop: scrollAmount }, 1500);
+    $('html, body').animate({ scrollTop: scrollAmount }, 1000);
     $('.tab img').removeClass('current');
     $('#tab3').addClass('current');
   }
   if (href === '#location_bookmark') {
     var scrollAmount = ($(href).offset().top) - 200;
-    $('html, body').animate({ scrollTop: scrollAmount }, 1500);
+    $('html, body').animate({ scrollTop: scrollAmount }, 1000);
     $('.tab img').removeClass('current');
     $('#tab4').addClass('current');
+  }
+  if (href === '#referral_bookmark') {
+    var scrollAmount = ($(href).offset().top) - 200;
+    $('html, body').animate({ scrollTop: scrollAmount }, 1000);
+    $('.tab img').removeClass('current');
+    $('#tab5').addClass('current');
   }
 }
 
