@@ -18,6 +18,23 @@ $(function(){
   $('#details-link').on('click', toggle_navbar);
 });
 
+function add_cross_to_required_forms() {
+  var required;
+  var allPanels = $('.form-horizontal');
+  $(allPanels).each(function() {
+    required = false
+      $(this).find('.form-control').each(function() {
+        if ($(this).attr('data-required')) {
+          required = true
+        }
+      });
+    if (required) {
+      console.log($(this).find('.insert-cross-icon'));
+      $(this).find('.insert-cross-icon').addClass('glyphicon-remove panel-cross');
+    }
+  });
+}
+
 function check_panel_valid() {
   var icon = $(this).children().last();
   var panelValid = $(this).parsley( 'isValid' );
