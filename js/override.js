@@ -32,26 +32,42 @@ function add_cross_to_required_forms() {
       });
     if (required) {
       $(this).find('.insert-cross-icon').addClass('glyphicon-remove panel-cross');
-      ovalName = '#' + $(this).parents("div[id^='bookmark_']" ).attr('id');
-      change_oval_colour = $("[data-href=" + ovalName + "]");
-      if ($(change_oval_colour).attr('data-href') === ovalName ) {
-        console.log($(change_oval_colour));
-        $(change_oval_colour).children('div').addClass('incomplete');
-      }
+      toggle_oval_colour( $(this), 'incomplete' );
     }
   });
 }
 
+function toggle_oval_colour( thisObj, className) {
+  ovalName = '#' + $(thisObj).parents("div[id^='bookmark_']" ).attr('id');
+      change_oval_colour = $("[data-href=" + ovalName + "]");
+      if ($(change_oval_colour).attr('data-href') === ovalName ) {
+        $(change_oval_colour).children('div').removeClass('incomplete complete').addClass(className);
+      }
+}
+
 function check_panel_valid() {
   var icon = $(this).children().last();
-  console.log(this);
+  var rowValid = false;
+  var checkRows;
   var panelValid = $(this).parsley( 'isValid' );
   if (panelValid) {
     $(icon).removeClass('glyphicon-remove panel-remove glyphicon-ok panel-ok').addClass('glyphicon-ok panel-ok');
+
+    checkRows = $(this).parent().parent().parent('.row-fluid').children().children('.form-panel');
+    // checkRows = $(this).parent().parent().parent('.row-fluid');
+    console.log(checkRows);
+    $(checkRows).each(function() {
+        if ($(this).parsley( 'isValid' )) {
+          console.log('valid');
+        }
+      });
+       // toggle_oval_colour( $(this), 'complete' );
   }
+
   if (panelValid === false) {
     $(icon).removeClass('glyphicon-remove panel-remove glyphicon-ok panel-ok').addClass('glyphicon-remove panel-remove');
   }
+
 }
 
 function checkbox_when_clicked() {
