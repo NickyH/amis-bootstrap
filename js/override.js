@@ -39,7 +39,10 @@ function check_panel_valid() {
   var icon = $(this).children().last();
   var panelValid = $(this).parsley( 'isValid' );
   if (panelValid) {
-    $(icon).removeClass('glyphicon-remove panel-remove').addClass('glyphicon-ok panel-ok');
+    $(icon).removeClass('glyphicon-remove panel-remove glyphicon-ok panel-ok').addClass('glyphicon-ok panel-ok');
+  }
+  if (panelValid === false) {
+    $(icon).removeClass('glyphicon-remove panel-remove glyphicon-ok panel-ok').addClass('glyphicon-remove panel-remove');
   }
 }
 

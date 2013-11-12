@@ -387,9 +387,10 @@
 
 <script>
 add_cross_to_required_forms();
+$('.form-horizontal').on('keyup', this, check_panel_valid);
+$('.form-horizontal').on('click', this, check_panel_valid);
 $( '.form-horizontal .container' ).parsley( 'validate');
 $('.selectpicker').selectpicker({ size: 5 });
 $('.date').datepicker();
 $('#bookmark-nav').on('click', 'a', check_form_location);
-$('.form-horizontal').on('click', this, check_panel_valid);
 </script>
