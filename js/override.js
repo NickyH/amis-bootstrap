@@ -37,6 +37,7 @@ function add_cross_to_required_forms() {
 
 function check_panel_valid() {
   var icon = $(this).children().last();
+  console.log(this);
   var panelValid = $(this).parsley( 'isValid' );
   if (panelValid) {
     $(icon).removeClass('glyphicon-remove panel-remove glyphicon-ok panel-ok').addClass('glyphicon-ok panel-ok');

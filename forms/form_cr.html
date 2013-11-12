@@ -102,7 +102,7 @@
                 <div class="form-group">
                   <label class="col-sm-4 control-label">Location Description</label>
                   <div class="col-sm-8">
-                    <textarea class="form-control" rows="3" data-trigger="keyup" data-required="true" pattern="^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1} *\d{1}[A-Z]{1}\d{1}$"></textarea>
+                    <textarea class="form-control" rows="3" data-trigger="keyup" data-required="true"></textarea>
                   </div>
                 </div>
 
@@ -388,7 +388,7 @@
 <script>
 add_cross_to_required_forms();
 $('.form-horizontal').on('keyup', this, check_panel_valid);
-$('.form-horizontal').on('click', this, check_panel_valid);
+$('.form-horizontal').on('change', this, check_panel_valid);
 $( '.form-horizontal .container' ).parsley( 'validate');
 $('.selectpicker').selectpicker({ size: 5 });
 $('.date').datepicker();
