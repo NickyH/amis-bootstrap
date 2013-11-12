@@ -895,7 +895,7 @@ li.required {
   width: 80px;
   height: 30px;
   border-radius: 50%;
-  background-color: @form-highlight-colour;
+  background-color: @white-medium;
   border: 3px solid @white-medium;
   margin-right: auto;
   margin-left: auto;
@@ -908,6 +908,12 @@ li.required {
   &.current {
   border: 3px solid @form-border-required;
   box-shadow: 3px 3px 2px @black-medium;
+  }
+  &.incomplete {
+    background-color: red;
+  }
+  &.complete {
+    background-color: green;
   }
 }
 
@@ -922,11 +928,17 @@ a.oval-last:after {
     content: "";
 }
 
-.nav li {
-  height: 50px;
-  a {
+.left-nav {
+  margin-top: 50px;
+  li {
+    height: 60px;
+    cursor: pointer;
+    a {
     margin: 0;
     padding: 0;
+    text-decoration: none;
+    }
   }
+
 }
 

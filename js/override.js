@@ -20,6 +20,8 @@ $(function(){
 
 function add_cross_to_required_forms() {
   var required;
+  var ovalName;
+  var change_oval_colour;
   var allPanels = $('.form-horizontal');
   $(allPanels).each(function() {
     required = false
@@ -29,8 +31,13 @@ function add_cross_to_required_forms() {
         }
       });
     if (required) {
-      console.log($(this).find('.insert-cross-icon'));
       $(this).find('.insert-cross-icon').addClass('glyphicon-remove panel-cross');
+      ovalName = '#' + $(this).parents("div[id^='bookmark_']" ).attr('id');
+      change_oval_colour = $("[data-href=" + ovalName + "]");
+      if ($(change_oval_colour).attr('data-href') === ovalName ) {
+        console.log($(change_oval_colour));
+        $(change_oval_colour).children('div').addClass('incomplete');
+      }
     }
   });
 }
@@ -109,31 +116,31 @@ function show_fake_map()
 function check_form_location()
 {
   var href = $(this).attr('data-href');
-  if (href === '#details_bookmark') {
+  if (href === '#bookmark_details') {
     var scrollAmount = ($(href).offset().top) - topOffset;
     $('html, body').animate({scrollTop: scrollAmount }, 1500);
     $('.oval').removeClass('current');
     $('#tab1').addClass('current');
   }
-  if (href === '#contact_bookmark') {
+  if (href === '#bookmark_contact') {
     var scrollAmount = ($(href).offset().top) - topOffset;
     $('html, body').animate({ scrollTop: scrollAmount }, 1000);
     $('.oval').removeClass('current');
     $('#tab2').addClass('current');
   }
-  if (href === '#notes_bookmark') {
+  if (href === '#bookmark_notes') {
     var scrollAmount = ($(href).offset().top) - topOffset;
     $('html, body').animate({ scrollTop: scrollAmount }, 1000);
     $('.oval').removeClass('current');
     $('#tab3').addClass('current');
   }
-  if (href === '#location_bookmark') {
+  if (href === '#bookmark_location') {
     var scrollAmount = ($(href).offset().top) - topOffset;
     $('html, body').animate({ scrollTop: scrollAmount }, 1000);
     $('.oval').removeClass('current');
     $('#tab4').addClass('current');
   }
-  if (href === '#referral_bookmark') {
+  if (href === '#bookmark_referral') {
     var scrollAmount = ($(href).offset().top) - topOffset;
     $('html, body').animate({ scrollTop: scrollAmount }, 1000);
     $('.oval').removeClass('current');
