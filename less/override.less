@@ -901,19 +901,26 @@ li.required {
   margin-left: auto;
   padding-top: 5px;
   text-align: center;
+  box-shadow: 1px 1px 1px @black;
   span {
     color: @black-medium;
     font-size: 12px;
   }
   &.current {
   border: 3px solid @form-border-required;
-  box-shadow: 3px 3px 2px @black-medium;
+  box-shadow: 2px 2px 2px @black;
   }
   &.incomplete {
-    background-color: red;
+    background-color: #db130e;
+    span {
+      color: @white-medium;
+    }
   }
   &.complete {
-    background-color: green;
+    background-color: #25af38;
+    span {
+      color: @white-medium;
+    }
   }
 }
 
