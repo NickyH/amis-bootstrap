@@ -142,30 +142,32 @@ function show_fake_map()
 
 function check_form_location()
 {
-  var href = $(this).attr('data-href');
-  if (href === '#bookmark_details') {
-    var scrollAmount = ($(href).offset().top) - topOffset;
-    $('html, body').animate({scrollTop: scrollAmount }, 1500);
-    $('.oval').removeClass('current');
-    $('#tab1').addClass('current');
-  }
-  if (href === '#bookmark_contact') {
-    var scrollAmount = ($(href).offset().top) - topOffset;
-    $('html, body').animate({ scrollTop: scrollAmount }, 1000);
-    $('.oval').removeClass('current');
-    $('#tab2').addClass('current');
-  }
-  if (href === '#bookmark_notes') {
-    var scrollAmount = ($(href).offset().top) - topOffset;
-    $('html, body').animate({ scrollTop: scrollAmount }, 1000);
-    $('.oval').removeClass('current');
-    $('#tab3').addClass('current');
-  }
-  if (href === '#bookmark_location') {
-    var scrollAmount = ($(href).offset().top) - topOffset;
-    $('html, body').animate({ scrollTop: scrollAmount }, 1000);
-    $('.oval').removeClass('current');
-    $('#tab4').addClass('current');
+  if (!$('#bookmark-nav ul').hasClass('disabled')) {
+    var href = $(this).attr('data-href');
+    if (href === '#bookmark_details') {
+      var scrollAmount = ($(href).offset().top) - topOffset;
+      $('html, body').animate({scrollTop: scrollAmount }, 1500);
+      $('.oval').removeClass('current');
+      $('#tab1').addClass('current');
+    }
+    if (href === '#bookmark_contact') {
+      var scrollAmount = ($(href).offset().top) - topOffset;
+      $('html, body').animate({ scrollTop: scrollAmount }, 1000);
+      $('.oval').removeClass('current');
+      $('#tab2').addClass('current');
+    }
+    if (href === '#bookmark_notes') {
+      var scrollAmount = ($(href).offset().top) - topOffset;
+      $('html, body').animate({ scrollTop: scrollAmount }, 1000);
+      $('.oval').removeClass('current');
+      $('#tab3').addClass('current');
+    }
+    if (href === '#bookmark_location') {
+      var scrollAmount = ($(href).offset().top) - topOffset;
+      $('html, body').animate({ scrollTop: scrollAmount }, 1000);
+      $('.oval').removeClass('current');
+      $('#tab4').addClass('current');
+    }
   }
 }
 
