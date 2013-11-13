@@ -219,6 +219,7 @@ body {
   margin-top: 20px;
   background-color: @form-highlight-colour;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .pages-icons {
@@ -960,6 +961,15 @@ a.oval-last:after {
     text-decoration: none;
     }
   }
+}
 
+#bookmark-nav ul {
+  &.disabled {
+    opacity: 0.2;
+    a {
+      cursor: auto;
+      pointer-events: none;
+    }
+  }
 }
 

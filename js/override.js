@@ -18,6 +18,14 @@ $(function(){
   $('#details-link').on('click', toggle_navbar);
 });
 
+
+function toggle_referral() {
+  $('.row').toggleClass('hidden');
+  $('html body').animate({ scrollTop: 0 });
+  $('#bookmark_referral').toggleClass('hidden');
+  $('#bookmark-nav ul').toggleClass('disabled');
+}
+
 function add_cross_to_required_forms() {
   var required;
   var ovalName;
@@ -158,12 +166,6 @@ function check_form_location()
     $('html, body').animate({ scrollTop: scrollAmount }, 1000);
     $('.oval').removeClass('current');
     $('#tab4').addClass('current');
-  }
-  if (href === '#bookmark_referral') {
-    var scrollAmount = ($(href).offset().top) - topOffset;
-    $('html, body').animate({ scrollTop: scrollAmount }, 1000);
-    $('.oval').removeClass('current');
-    $('#tab5').addClass('current');
   }
 }
 
