@@ -48,20 +48,23 @@ function toggle_oval_colour( thisObj, className) {
 function check_panel_valid() {
   var icon = $(this).children().last();
   var rowValid = false;
-  var checkRows;
   var panelValid = $(this).parsley( 'isValid' );
   if (panelValid) {
     $(icon).removeClass('glyphicon-remove panel-remove glyphicon-ok panel-ok').addClass('glyphicon-ok panel-ok');
 
-    checkRows = $(this).parent().parent().parent('.row-fluid').children().children('.form-panel');
-    // checkRows = $(this).parent().parent().parent('.row-fluid');
-    console.log(checkRows);
-    $(checkRows).each(function() {
-        if ($(this).parsley( 'isValid' )) {
-          console.log('valid');
-        }
-      });
-       // toggle_oval_colour( $(this), 'complete' );
+    $(this).parent().parent().parent().find('.form-panel').each(function() {
+      if (!$(this).children('form').parsley('isValid')) {
+        rowValid = false;
+        return rowValid
+      }
+      else {
+        rowValid = true;
+      }
+    });
+
+    if (rowValid) {
+      toggle_oval_colour( (this), 'complete' );
+    }
   }
 
   if (panelValid === false) {
