@@ -4,6 +4,7 @@
 
 body {
   background-color: @white-medium;
+  font-family: @font;
 }
 
 //map styling
@@ -172,7 +173,7 @@ body {
     height: 80px;
     margin-left: 20px;
     background-color: @map-icon-colour !important;
-    margin-top: 20px;
+    margin-top: 10px;
     &.inactive {
     display: none;
     }
@@ -182,7 +183,7 @@ body {
     height: 80px;
     margin-left: 20px;
     background-color: @form-icon-colour !important;
-    margin-top: 20px;
+    margin-top: 10px;
     &.inactive {
     display: none;
     }
@@ -220,6 +221,7 @@ body {
   background-color: @form-highlight-colour;
   border-radius: 5px;
   cursor: pointer;
+  box-shadow: 2px 2px @black;
 }
 
 .pages-icons {
@@ -451,6 +453,8 @@ body {
     min-width: 160px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
+    box-shadow: 2px 2px 2px @grey-medium;
+    border: 1px solid @grey-medium;
     border-radius: 20px;
     margin-left: 20px;
     margin-top: 15px;
@@ -916,26 +920,20 @@ li.required {
   margin-left: auto;
   padding-top: 5px;
   text-align: center;
-  box-shadow: 1px 1px 1px @black;
+  box-shadow: 2px 2px 2px @black;
   span {
     color: @black-medium;
-    font-size: 12px;
+    font-size: 13px;
   }
   &.current {
-  border: 3px solid @form-border-required;
-  box-shadow: 2px 2px 2px @black;
+  background-color: @form-border-required;
+  box-shadow: 3px 3px 3px @black;
   }
   &.incomplete {
-    background-color: #db130e;
-    span {
-      color: @white-medium;
-    }
+    border: 4px solid @cancel-button-colour;
   }
   &.complete {
-    background-color: #25af38;
-    span {
-      color: @white-medium;
-    }
+    border: 4px solid @save-button-colour;
   }
 }
 

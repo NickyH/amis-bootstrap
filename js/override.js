@@ -49,6 +49,7 @@ function toggle_referral() {
   $('html body').animate({ scrollTop: 0 });
   $('#bookmark_referral').toggleClass('hidden');
   $('#bookmark-nav ul').toggleClass('disabled');
+  oval_border_highlight('#tab1');
 }
 
 function add_cross_to_required_forms() {
@@ -137,6 +138,15 @@ function goto_forms()
     $('#insert-form').html(data);
     });
   $('#insert-form').trigger('create');
+}
+
+function insert_inspection_form()
+{
+  console.log('inspection');
+  $('#insert-form').empty();
+  $.get('forms/form_inspect.html', function(data) {
+    $('#insert-form').html(data);
+    });
 }
 
 function goto_map()
