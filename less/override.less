@@ -222,6 +222,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   box-shadow: 2px 2px @black;
+  -webkit-box-shadow: 2px 2px @black;
   &.current {
     background-color: @form-highlight-colour;
     -moz-transform: scaleX(-1);
@@ -283,6 +284,7 @@ body {
   background-color: @tab-fill;
   text-decoration: none;
   box-shadow: 2px 2px 5px 1px @grey-dark;
+  -webkit-box-shadow: 2px 2px 5px 1px @grey-dark;
   .ui-btn-text {
     font: @form-tab-font !important;
   }
@@ -305,10 +307,6 @@ body {
   box-shadow: none;
   }
 }
-
-// .tab-bar .tab:hover {
-//   background-color: @tab-fill-hover;
-// }
 
 .tab {
   width: 120px;
@@ -401,6 +399,7 @@ body {
   -moz-border-radius: 12px;
   -webkit-border-radius: 12px;
   box-shadow: 5px 5px 2px 2px @form-panel-outer-shadow;
+  -webkit-box-shadow: 5px 5px 2px 2px @form-panel-outer-shadow;
   margin: 30px auto 40px 20px;
   display: inline-block;
   width: 90% !important;
@@ -476,6 +475,7 @@ body {
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     box-shadow: 2px 2px 2px @grey-medium;
+    -webkit-box-shadow: 2px 2px 2px @grey-medium;
     border: 1px solid @grey-medium;
     border-radius: 20px;
     margin-left: 20px;
@@ -483,7 +483,7 @@ body {
     margin-bottom: 10px;
     margin-right: 20px;
     font: @form-button-font;
-    color: @white-medium;
+    color: @white;
     @media @widthMediumLarge {
       height: 30px;
       min-width: 120px;
@@ -854,6 +854,12 @@ body {
   float: right;
 }
 
+// webkit overrides
+
+input[type="date"] {
+  -webkit-appearance: none;
+}
+
 //bootstrap-select overrides
 
 .btn-group.bootstrap-select{
@@ -953,6 +959,7 @@ li.required {
   padding-top: 5px;
   text-align: center;
   box-shadow: 2px 2px 2px @black;
+  -webkit-box-shadow: 2px 2px 2px @black;
   span {
     color: @black-medium;
     font-size: 13px;
@@ -960,6 +967,7 @@ li.required {
   &.current {
   background-color: @form-highlight-colour;
   box-shadow: 3px 3px 3px @black;
+  -webkit-box-shadow: 3px 3px 3px @black;
   }
   &.incomplete {
     border: 4px solid @cancel-button-colour;
