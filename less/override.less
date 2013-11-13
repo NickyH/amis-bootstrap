@@ -168,15 +168,21 @@ body {
   -webkit-box-shadow: 2px 1px @grey-darker;
   box-shadow: 2px 1px @grey-darker;
   &.map-icon {
+    width: 80px;
+    height: 80px;
+    margin-left: 20px;
     background-color: @map-icon-colour !important;
-    margin-top: 120px;
+    margin-top: 20px;
     &.inactive {
     display: none;
     }
   }
   &.detail-icon {
+    width: 80px;
+    height: 80px;
+    margin-left: 20px;
     background-color: @form-icon-colour !important;
-    margin-top: 120px;
+    margin-top: 20px;
     &.inactive {
     display: none;
     }
@@ -205,6 +211,14 @@ body {
     background-color: @map-icon-inactive !important;
     }
   }
+}
+
+.referral-icon {
+  width: 50px;
+  margin-left: 35px;
+  margin-top: 20px;
+  background-color: @form-highlight-colour;
+  border-radius: 5px;
 }
 
 .pages-icons {
