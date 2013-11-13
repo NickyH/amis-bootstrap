@@ -18,6 +18,31 @@ $(function(){
   $('#details-link').on('click', toggle_navbar);
 });
 
+function oval_border_highlight(tab_id) {
+  $('.oval').removeClass('current');
+  $(tab_id).addClass('current');
+}
+
+function get_page_position() {
+  var details = $('#bookmark_details').offset().top;
+  var contact = $('#bookmark_contact').offset().top;
+  var notes = $('#bookmark_notes').offset().top;
+  var location = $('#bookmark_location').offset().top;
+
+  if ($(window).scrollTop() >= (details - topOffset -50 ) ) {
+    oval_border_highlight('#tab1');
+  }
+  if ($(window).scrollTop() >= (contact - topOffset -50) ) {
+    oval_border_highlight('#tab2');
+  }
+  if ($(window).scrollTop() >= (notes - topOffset -50) ) {
+    oval_border_highlight('#tab3');
+  }
+  if ($(window).scrollTop() >= (location - topOffset -50) ) {
+    oval_border_highlight('#tab4');
+  }
+
+}
 
 function toggle_referral() {
   $('.row').toggleClass('hidden');
@@ -147,26 +172,22 @@ function check_form_location()
     if (href === '#bookmark_details') {
       var scrollAmount = ($(href).offset().top) - topOffset;
       $('html, body').animate({scrollTop: scrollAmount }, 1500);
-      $('.oval').removeClass('current');
-      $('#tab1').addClass('current');
+      oval_border_highlight('#tab1');
     }
     if (href === '#bookmark_contact') {
       var scrollAmount = ($(href).offset().top) - topOffset;
       $('html, body').animate({ scrollTop: scrollAmount }, 1000);
-      $('.oval').removeClass('current');
-      $('#tab2').addClass('current');
+      oval_border_highlight('#tab2');
     }
     if (href === '#bookmark_notes') {
       var scrollAmount = ($(href).offset().top) - topOffset;
       $('html, body').animate({ scrollTop: scrollAmount }, 1000);
-      $('.oval').removeClass('current');
-      $('#tab3').addClass('current');
+      oval_border_highlight('#tab3');
     }
     if (href === '#bookmark_location') {
       var scrollAmount = ($(href).offset().top) - topOffset;
       $('html, body').animate({ scrollTop: scrollAmount }, 1000);
-      $('.oval').removeClass('current');
-      $('#tab4').addClass('current');
+      oval_border_highlight('#tab4');
     }
   }
 }
