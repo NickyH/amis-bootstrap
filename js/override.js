@@ -50,6 +50,7 @@ function toggle_referral() {
   $('#bookmark_referral').toggleClass('hidden');
   $('#bookmark-nav ul').toggleClass('disabled');
   oval_border_highlight('#tab1');
+  $('.referral-icon').toggleClass('current');
 }
 
 function add_cross_to_required_forms() {
@@ -142,7 +143,6 @@ function goto_forms()
 
 function insert_inspection_form()
 {
-  console.log('inspection');
   $('#insert-form').empty();
   $.get('forms/form_inspect.html', function(data) {
     $('#insert-form').html(data);
