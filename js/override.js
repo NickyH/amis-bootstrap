@@ -16,7 +16,13 @@ $(function(){
   $("#insert-top").on('click', '.arrow-history-tree', showHistoryTree_qtip);
   $("#map").on('click', showAssets_qtip);
   $('#details-link').on('click', toggle_navbar);
+  $('li.dcjq-parent-li').on('click', event, mimic_anchor_click);
 });
+
+function mimic_anchor_click(event) {
+  if( event.target !== this ) return; //prevents trigger on other targets ie bubbling
+  $(this).children('a').trigger('click');
+}
 
 function select_all() {
   $(this).parent().children('.selectpicker').selectpicker('selectAll');

@@ -335,8 +335,6 @@
 
             </div>
 
-
-
           </div>
           <!-- end form panel 1 -->
 
@@ -550,15 +548,15 @@
 </div>
 
 <script>
-add_cross_to_required_forms();
-$('.form-horizontal').on('keyup', this, check_panel_valid);
-$('.form-horizontal').on('change', this, check_panel_valid);
-$( '.form-horizontal .container' ).parsley( 'validate');
-$('.selectpicker').selectpicker({ size: 5 });
-$('.date').datepicker();
-$('#bookmark-nav').on('click', 'a', check_form_location);
-$('.referral-icon').on('click', toggle_referral);
-$('.form-container').on('DOMMouseScroll mousewheel touchend', get_page_position);
-$('.select-all').on('click', select_all);
-$('.select-none').on('click', select_none);
+  add_cross_to_required_forms();
+  $('.form-horizontal').on('keyup', this, check_panel_valid);
+  $('.form-horizontal').on('change', this, check_panel_valid);
+  $( '.form-horizontal .container' ).parsley( 'validate');
+  $('.selectpicker').selectpicker({ size: 5 });
+  $('.date').datepicker();
+  $('#bookmark-nav').on('click', 'a', check_form_location);
+  $('.referral-icon').on('click', toggle_referral);
+  $('.form-container').on('DOMMouseScroll mousewheel touchend', get_page_position);
+  $('.select-all').on('click', select_all);
+  $('.select-none').on('click', select_none);
 </script>
