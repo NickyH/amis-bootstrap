@@ -363,6 +363,12 @@ body {
   padding-left: 2%;
   padding-right: 4%;
   z-index: 2;
+  &.incomplete {
+    border: 3px solid @cancel-button-colour;
+  }
+  &.complete {
+    border: 3px solid @save-button-colour;
+  }
 }
 
 .text-in-circle {

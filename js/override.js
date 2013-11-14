@@ -16,7 +16,7 @@ $(function(){
   $("#insert-top").on('click', '.arrow-history-tree', showHistoryTree_qtip);
   $("#map").on('click', showAssets_qtip);
   $('#details-link').on('click', toggle_navbar);
-  $('li.dcjq-parent-li').on('click', event, mimic_anchor_click);
+  $('li.dcjq-parent-li').on('click', mimic_anchor_click);
 });
 
 function mimic_anchor_click(event) {
@@ -80,17 +80,25 @@ function add_cross_to_required_forms() {
       });
     if (required) {
       $(this).find('.insert-cross-icon').addClass('glyphicon-remove panel-cross');
+      // $(this).parent().find('.text-circle').addClass('incomplete');
       toggle_oval_colour( $(this), 'incomplete' );
+      toggle_panel_num_colour( $(this), 'incomplete' );
     }
   });
 }
 
 function toggle_oval_colour( thisObj, className) {
+  $(thisObj).parent().find('.text-circle').removeClass('incomplete complete').addClass(className);
   ovalName = '#' + $(thisObj).parents("div[id^='bookmark_']" ).attr('id');
       change_oval_colour = $("[data-href=" + ovalName + "]");
       if ($(change_oval_colour).attr('data-href') === ovalName ) {
         $(change_oval_colour).children('div').removeClass('incomplete complete').addClass(className);
       }
+}
+
+function toggle_panel_num_colour( thisObj, className) {
+  console.log($(thisObj).parent().find('.text-circle'));
+  $(thisObj).parent().find('.text-circle').removeClass('incomplete complete').addClass(className);
 }
 
 function check_panel_valid() {
@@ -99,7 +107,7 @@ function check_panel_valid() {
   var panelValid = $(this).parsley( 'isValid' );
   if (panelValid) {
     $(icon).removeClass('glyphicon-remove panel-remove glyphicon-ok panel-ok').addClass('glyphicon-ok panel-ok');
-
+    toggle_panel_num_colour( (this), 'complete' );
     $(this).parent().parent().parent().find('.form-panel').each(function() {
       if (!$(this).children('form').parsley('isValid')) {
         rowValid = false;
