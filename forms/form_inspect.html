@@ -52,6 +52,7 @@
                   <label class="col-sm-4 control-label">Type</label>
                   <div class="col-sm-8">
                     <select class="selectpicker show-tick form-control" title='Select...' data-required="true" data-live-search="true">
+                      <option data-hidden="true"></option>
                       <option>General Inspection</option>
                       <option>Other</option>
                     </select>
@@ -70,21 +71,8 @@
                       <option>Graffiti</option>
                       <option>Kerb & Channel</option>
                     </select>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Schedule</label>
-                  <div class="col-sm-8">
-                    <select class="selectpicker form-control" multiple title='Select...' data-required="true" data-live-search="true">
-                      <option>Inspection - Area 1 Class A</option>
-                      <option>Inspection - Area 1 Class B</option>
-                      <option>Inspection - Area 2 Class A</option>
-                      <option>Inspection - Area 2 Class B</option>
-                      <option>Inspection - Area 3 Class A</option>
-                      <option>Inspection - Area 3 Class B</option>
-                      <option>Inspection - Area 7 Class C_D</option>
-                    </select>
+                    <span class='btn btn-default select-none'>Select None</span>
+                    <span class='btn btn-primary select-all'>Select All</span>
                   </div>
                 </div>
 
@@ -109,9 +97,27 @@
               <form class="form-horizontal container" role="form">
 
                 <div class="form-group">
+                  <label class="col-sm-4 control-label">Schedule</label>
+                  <div class="col-sm-8">
+                    <select class="selectpicker form-control" multiple title='Select...' data-required="true" data-live-search="true">
+                      <option>Inspection - Area 1 Class A</option>
+                      <option>Inspection - Area 1 Class B</option>
+                      <option>Inspection - Area 2 Class A</option>
+                      <option>Inspection - Area 2 Class B</option>
+                      <option>Inspection - Area 3 Class A</option>
+                      <option>Inspection - Area 3 Class B</option>
+                      <option>Inspection - Area 7 Class C_D</option>
+                    </select>
+                    <span class='btn btn-default select-none'>Select None</span>
+                    <span class='btn btn-primary select-all'>Select All</span>
+                  </div>
+                </div>
+
+                <div class="form-group">
                   <label class="col-sm-4 control-label">Asset Status</label>
                   <div class="col-sm-8">
                     <select class="selectpicker show-tick form-control" title='Select...' data-required="true" data-live-search="true">
+                      <option data-hidden="true"></option>
                       <option>1</option>
                       <option>2</option>
                       <option>3</option>
@@ -123,13 +129,13 @@
                   <label class="col-sm-4 control-label">Structure Type</label>
                   <div class="col-sm-8">
                     <select class="selectpicker show-tick form-control" title='Select...' data-required="true" data-live-search="true">
+                      <option data-hidden="true"></option>
                       <option>1</option>
                       <option>2</option>
                       <option>3</option>
                     </select>
                   </div>
                 </div>
-
 
                 <div class="form-group">
                   <label class="col-sm-4 control-label">ID</label>
@@ -156,6 +162,7 @@
                   <label class="col-sm-4 control-label">Level</label>
                   <div class="col-sm-8">
                     <select class="selectpicker show-tick form-control" title='Select...' data-required="true" data-live-search="true">
+                      <option data-hidden="true"></option>
                       <option>1</option>
                       <option>2</option>
                       <option>3</option>
@@ -187,6 +194,7 @@
                   <label class="col-sm-4 control-label">Planned</label>
                   <div class="col-sm-8">
                     <select class="selectpicker show-tick form-control" title='Select...' data-required="true" data-live-search="true">
+                      <option data-hidden="true"></option>
                       <option>1</option>
                       <option>2</option>
                       <option>3</option>
@@ -198,6 +206,7 @@
                   <label class="col-sm-4 control-label">Estimate No.</label>
                   <div class="col-sm-8">
                     <select class="selectpicker show-tick form-control" title='Select...' data-required="true" data-live-search="true">
+                      <option data-hidden="true"></option>
                       <option>1</option>
                       <option>2</option>
                       <option>3</option>
@@ -257,6 +266,7 @@
                   <label class="col-sm-4 control-label">Estimate Approval Status</label>
                   <div class="col-sm-8">
                     <select class="selectpicker show-tick form-control" title='Select...' data-required="true" data-live-search="true">
+                      <option data-hidden="true"></option>
                       <option>1</option>
                       <option>2</option>
                       <option>3</option>
@@ -509,7 +519,8 @@
               <div class="form-group">
                   <label class="col-sm-4 control-label">Contact</label>
                   <div class="col-sm-8">
-                    <select class="selectpicker form-control" multiple title='Select...'>
+                    <select class="selectpicker form-control" title='Select...'>
+                      <option data-hidden="true"></option>
                       <option>Contact 1</option>
                       <option>Contact 2</option>
                       <option>Contact 3</option>
@@ -548,4 +559,6 @@ $('.date').datepicker();
 $('#bookmark-nav').on('click', 'a', check_form_location);
 $('.referral-icon').on('click', toggle_referral);
 $('.form-container').on('DOMMouseScroll mousewheel touchend', get_page_position);
+$('.select-all').on('click', select_all);
+$('.select-none').on('click', select_none);
 </script>

@@ -655,10 +655,10 @@ body {
   border-right:30px solid @black-medium;
 }
 
-
 .owl-pagination {
   position: relative;
   top: -30px;
+  margin-top: 30px;
 }
 
 .owl-theme .owl-controls .owl-page span.owl-numbers {
@@ -1010,4 +1010,24 @@ a.oval-last:after {
     }
   }
 }
+
+.btn {
+  &.select-all {
+    height: 20px !important;
+    line-height: 5px;
+    float: left;
+    margin-top: 5px;
+    font-size: 12px;
+  }
+  &.select-none {
+    height: 20px !important;
+    line-height: 5px;
+    float: right;
+    margin-top: 5px;
+    font-size: 12px;
+    margin-left: 20px;
+  }
+}
+
+
 

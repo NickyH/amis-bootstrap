@@ -18,6 +18,14 @@ $(function(){
   $('#details-link').on('click', toggle_navbar);
 });
 
+function select_all() {
+  $(this).parent().children('.selectpicker').selectpicker('selectAll');
+}
+
+function select_none() {
+  $(this).parent().children('.selectpicker').selectpicker('deselectAll');
+}
+
 function oval_border_highlight(tab_id) {
   $('.oval').removeClass('current');
   $(tab_id).addClass('current');
@@ -41,7 +49,6 @@ function get_page_position() {
   if ($(window).scrollTop() >= (location - topOffset -50) ) {
     oval_border_highlight('#tab4');
   }
-
 }
 
 function toggle_referral() {
