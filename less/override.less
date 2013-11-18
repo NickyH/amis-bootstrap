@@ -442,7 +442,7 @@ body {
     padding-left: 40px;
     position: relative;
     left: 180px;
-    margin-top: 30px;
+    margin-top: 10px;
     display: inline-block;
     font: @form-header-font;
     font-weight: bold;
@@ -514,6 +514,17 @@ body {
   background-color: @form-highlight-colour;
   margin-right: 10px;
   border-radius: 2px;
+}
+
+.status {
+  color: red;
+  font-size: 12px;
+  white-space: pre;
+  line-height: 12px;
+}
+
+.status:before {
+  content: '\A';
 }
 
 // qtip styling
