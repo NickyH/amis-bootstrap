@@ -126,6 +126,7 @@ function check_panel_valid() {
 
   if (panelValid === false) {
     $(icon).removeClass('glyphicon-remove panel-remove glyphicon-ok panel-ok').addClass('glyphicon-remove panel-remove');
+    toggle_panel_num_colour( $(this), 'incomplete' );
   }
 
 }
