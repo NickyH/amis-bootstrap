@@ -53,8 +53,8 @@
                     <select class="selectpicker show-tick form-control" title='' data-required="true" data-live-search="true" value="05-SR-CP">
                       <option data-hidden="true"></option>
                       <option>05-SR-CP</option>
-                      <option>2</option>
-                      <option>3</option>
+                      <option>06-SR-CP</option>
+                      <option>07-SR-CP</option>
                     </select>
                   </div>
                 </div>
@@ -62,7 +62,7 @@
                 <div class="form-group">
                   <label class="col-sm-4 control-label">Type</label>
                   <div class="col-sm-8">
-                    <select class="selectpicker show-tick form-control" title='' data-required="true" data-live-search="true">
+                    <select class="selectpicker show-tick form-control" title='' data-required="true" data-live-search="true" value="Footpath, Kerb & Channel">
                       <option data-hidden="true"></option>
                       <option>1</option>
                       <option>2</option>
@@ -74,7 +74,7 @@
                 <div class="form-group">
                   <label class="col-sm-4 control-label">Priority</label>
                   <div class="col-sm-8">
-                    <select class="selectpicker show-tick form-control" title='' data-required="true" data-live-search="true">
+                    <select class="selectpicker show-tick form-control" title='' data-required="true" data-live-search="true" value="FP_KC - 5D">
                       <option data-hidden="true"></option>
                       <option>1</option>
                       <option>2</option>
@@ -197,7 +197,7 @@
                 <div class="form-group">
                   <label class="col-sm-4 control-label">Type</label>
                   <div class="col-sm-8">
-                    <select class="selectpicker show-tick form-control" title='' data-live-search="true">
+                    <select id="temp" class="selectpicker show-tick form-control" title='' data-live-search="true" value="Resident">
                       <option data-hidden="true"></option>
                       <option>1</option>
                       <option>2</option>
@@ -862,4 +862,9 @@ $('.date').datepicker();
 $('#bookmark-nav').on('click', 'a', check_form_location);
 $('.referral-icon').on('click', toggle_referral);
 $('.form-container').on('DOMMouseScroll mousewheel', get_page_position);
+
+$('.selectpicker').each(function() {
+  var selectValue = $(this).attr('value');
+  $(this).next().children('.btn').children('.filter-option').html(selectValue);
+});
 </script>
