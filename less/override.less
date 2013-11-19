@@ -1081,9 +1081,84 @@ a.oval-last:after {
   }
 }
 
-
 tr:first-child th {
   font-size: 13px;
   color: white;
   background-color: black;
 }
+
+// datetimepicker overrides
+// http://trentrichardson.com/examples/timepicker/
+
+.ui-timepicker-div .ui-widget-header {
+  margin-bottom:8px;
+}
+.ui-timepicker-div dl {
+  text-align:left;
+  dt {
+    float:left;
+    clear:left;
+    padding:0 0 0 5px;
+  }
+  dd {
+    margin:0 10px 10px 45%;
+  }
+}
+.ui-timepicker-div td {
+  font-size:90%;
+}
+.ui-tpicker-grid-label {
+  background:none;
+  border:none;
+  margin:0;
+  padding:0;
+}
+.ui-timepicker-rtl {
+  direction:rtl;
+  dl {
+    text-align:right;
+    padding:0 5px 0 0;
+    dt {
+      float:right;
+      clear:right;
+    }
+    dd {
+      margin:0 45% 10px 10px;
+    }
+  }
+}
+
+// my datetime overrides
+.ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all {
+  z-index: 20 !important;
+}
+
+.ui-widget-header {
+  border: 1px solid @form-highlight-colour;
+  background: fade(@form-highlight-colour, 70%);
+}
+
+.ui-widget {
+  font-family: @questrial;
+}
+
+.ui-state-highlight {
+  border: 1px solid @form-highlight-colour;
+  background: @form-highlight-colour;
+}
+
+ .ui-datepicker-days-cell-over  .ui-datepicker-today {
+  border: 1px solid @form-highlight-colour;
+  background: @form-highlight-colour;
+ }
+
+.ui-state-highlight {
+  border: 1px solid @form-highlight-colour !important;
+  background: fade(@form-highlight-colour, 10%) !important;
+}
+
+// custom calendar icon to date fields
+.glyphicon-calendar {
+
+}
+
