@@ -19,6 +19,13 @@ $(function(){
   $('li.dcjq-parent-li').on('click', mimic_anchor_click);
 });
 
+function change_selectpicker_values() {
+    $('.selectpicker').each(function() {
+    var selectValue = $(this).attr('value');
+    $(this).next().children('.btn').children('.filter-option').html(selectValue);
+  });
+}
+
 function mimic_anchor_click(event) {
   if( event.target !== this ) return; //prevents trigger on other targets ie bubbling
   $(this).children('a').trigger('click');

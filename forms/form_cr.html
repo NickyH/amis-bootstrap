@@ -862,9 +862,5 @@ $('.date').datepicker();
 $('#bookmark-nav').on('click', 'a', check_form_location);
 $('.referral-icon').on('click', toggle_referral);
 $('.form-container').on('DOMMouseScroll mousewheel', get_page_position);
-
-$('.selectpicker').each(function() {
-  var selectValue = $(this).attr('value');
-  $(this).next().children('.btn').children('.filter-option').html(selectValue);
-});
+change_selectpicker_values()
 </script>
