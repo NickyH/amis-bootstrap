@@ -1,7 +1,7 @@
 <div class="content_div">
 
   <div class="form-buttons">
-    <div class="form-title"><img class="form-head-icon" src="images/icons/icon_request_black.png"><span>Customer Request</span><span class="status">Status: Received</span></div>
+    <div class="form-title"><img class="form-head-icon" src="images/icons/icon_request_black.png"><span>Defect</span><span class="status">Status: Programmed</span></div>
     <input type="submit" value="Cancel" class="form-button cancel-button" data-role="button" />
     <input type="submit" value="Save" class="form-button save-button" data-role="button" />
   </div>
@@ -27,30 +27,16 @@
 
               <form class="form-horizontal container" role="form">
                 <div class="form-group">
-                  <label class="col-sm-4 control-label">Customer Requ. ID</label>
+                  <label class="col-sm-4 control-label">Defect ID</label>
                   <div class="col-sm-8">
                     <input type="text" class="form-control" disabled value="1023.763">
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label class="col-sm-4 control-label">Received Date</label>
-                  <div class="col-sm-8">
-                    <input type="datetime-local" class="form-control">
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Incident Date</label>
-                  <div class="col-sm-8">
-                    <input type="datetime-local" class="form-control">
-                  </div>
-                </div>
-
-                <div class="form-group">
                   <label class="col-sm-4 control-label">Category</label>
                   <div class="col-sm-8">
-                    <select class="selectpicker show-tick form-control" title='' data-required="true" data-live-search="true" value="05-SR-CP">
+                    <select class="selectpicker show-tick form-control" title='' data-live-search="true" value="06_FP_KC" disabled>
                       <option data-hidden="true"></option>
                       <option>05-SR-CP</option>
                       <option>2</option>
@@ -60,21 +46,16 @@
                 </div>
 
                 <div class="form-group">
-                  <label class="col-sm-4 control-label">Type</label>
+                  <label class="col-sm-4 control-label">Location Description</label>
                   <div class="col-sm-8">
-                    <select class="selectpicker show-tick form-control" title='' data-required="true" data-live-search="true">
-                      <option data-hidden="true"></option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                    </select>
+                    <textarea class="form-control" rows="3" data-trigger="keyup" disabled></textarea>
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label class="col-sm-4 control-label">Priority</label>
+                  <label class="col-sm-4 control-label">Responsibility Of</label>
                   <div class="col-sm-8">
-                    <select class="selectpicker show-tick form-control" title='' data-required="true" data-live-search="true">
+                    <select class="selectpicker show-tick form-control" title='' data-live-search="true" disabled>
                       <option data-hidden="true"></option>
                       <option>1</option>
                       <option>2</option>
@@ -86,7 +67,7 @@
                 <div class="form-group">
                   <label class="col-sm-4 control-label">Created By</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" data-required="true">
+                    <input type="text" class="form-control" value="Sam Lanza" disabled>
                   </div>
                 </div>
 
@@ -118,39 +99,75 @@
               <form class="form-horizontal container" role="form">
 
                 <div class="form-group">
-                  <label class="col-sm-4 control-label">Assigned Date</label>
+                  <label class="col-sm-4 control-label">Defect Code</label>
                   <div class="col-sm-8">
-                    <input type="datetime-local" class="form-control">
+                    <select class="selectpicker show-tick form-control" title='' data-live-search="true" data-required="true">
+                      <option data-hidden="true"></option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                    </select>
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label class="col-sm-4 control-label">Assigned To</label>
+                  <label class="col-sm-4 control-label">Class</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control">
+                    <select class="selectpicker show-tick form-control" title='' data-live-search="true" data-required="true">
+                      <option data-hidden="true"></option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                    </select>
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label class="col-sm-4 control-label">Location Description</label>
+                  <label class="col-sm-4 control-label">Severity</label>
                   <div class="col-sm-8">
-                    <textarea class="form-control" rows="3" data-trigger="keyup" data-required="true"></textarea>
+                    <select class="selectpicker show-tick form-control" title='' data-live-search="true" data-required="true">
+                      <option data-hidden="true"></option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                    </select>
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label class="col-sm-4 control-label">Incident Description</label>
+                  <label class="col-sm-4 control-label">Priority</label>
+                  <div class="col-sm-8">
+                    <select class="selectpicker show-tick form-control" title='' data-live-search="true" data-required="true">
+                      <option data-hidden="true"></option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Unit/Quantity</label>
+                  <div class="col-sm-4">
+                    <select class="selectpicker show-tick form-control" title='' data-live-search="true" data-required="true">
+                      <option data-hidden="true"></option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-4">
+                    <input type="number" class="form-control" data-required="true" value="1.00">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Defect Notes</label>
                   <div class="col-sm-8">
                     <textarea class="form-control" rows="4"></textarea>
                   </div>
                 </div>
 
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Instructions</label>
-                  <div class="col-sm-8">
-                    <textarea class="form-control" rows="4"></textarea>
-                  </div>
-                </div>
                 <span class="glyphicon insert-cross-icon"></span>
               </form>
 
@@ -174,29 +191,15 @@
               <!-- numbered circle in each form panel-->
               <div class="text-circle">
                 <div class="text-in-circle">
-                  Contact
+                  Condition
                 </div>
               </div>
 
               <form class="form-horizontal container" role="form">
 
                 <div class="form-group">
-                  <label class="col-sm-4 control-label">Contact ID</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" disabled value="0000.00">
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Reference No.</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" disabled value="0000.00">
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Type</label>
-                  <div class="col-sm-8">
+                  <label class="col-sm-4 control-label">Select Condition</label>
+                  <div class="col-sm-6">
                     <select class="selectpicker show-tick form-control" title='' data-live-search="true">
                       <option data-hidden="true"></option>
                       <option>1</option>
@@ -204,52 +207,15 @@
                       <option>3</option>
                     </select>
                   </div>
-                </div>
-
-                 <div class="form-group">
-                  <label class="col-sm-4 control-label">Select Customer</label>
-                  <div class="col-sm-8">
-                    <select class="selectpicker show-tick form-control" title='' data-live-search="true">
-                      <option data-hidden="true"></option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                    </select>
+                  <div class="col-sm-2">
+                    <span class='btn btn-default condition'>Add</span>
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label class="col-sm-4 control-label">Nature/Source</label>
-                  <div class="col-sm-4">
-                    <select class="selectpicker show-tick form-control" title='Nature' data-live-search="true">
-                      <option data-hidden="true"></option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                    </select>
-                  </div>
-                  <div class="col-sm-4">
-                    <select class="selectpicker show-tick form-control" title='Source' data-live-search="true">
-                      <option data-hidden="true"></option>
-                      <option>Email</option>
-                      <option>Fax</option>
-                      <option>Phone</option>
-                      <option>Mail</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Date Contacted</label>
+                  <label class="col-sm-4 control-label">Condition Notes</label>
                   <div class="col-sm-8">
-                    <input type="datetime-local" class="form-control">
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Comments</label>
-                  <div class="col-sm-8">
-                    <textarea type="text" class="form-control" rows="3"></textarea>
+                    <textarea type="text" class="form-control" rows="5"></textarea>
                   </div>
                 </div>
 
@@ -268,88 +234,58 @@
               <!-- numbered circle in each form panel-->
               <div class="text-circle">
                 <div class="text-in-circle">
-                  Contact
+                  Condition History
                 </div>
               </div>
 
               <form class="form-horizontal container" role="form">
 
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Contact Name</label>
+                <div class="form-group" role="search">
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" placeholder="Search">
+                  </div>
                   <div class="col-sm-2">
-                    <select class="selectpicker form-control show-tick" title='Title'>
-                      <option data-hidden="true"></option>
-                      <option>Ms</option>
-                      <option>Mrs</option>
-                      <option>Miss</option>
-                      <option>Mr</option>
-                    </select>
+                    <button type="search" class="btn btn-default">Search</button>
                   </div>
-                  <div class="col-sm-3">
-                    <input type="text" class="form-control" placeholder="First">
-                  </div>
-                  <div class="col-sm-3">
-                    <input type="text" class="form-control" placeholder="Last">
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Street Address</label>
-                  <div class="col-sm-8">
+                  <div class="col-sm-4">
                     <input type="text" class="form-control">
                   </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Suburb</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
+                  <div class="col-sm-2">
+                    <button type="submit" class="btn btn-default">Select</button>
                   </div>
                 </div>
 
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Postcode/State</label>
-                  <div class="col-sm-4">
-                    <input type="text" class="form-control" placeholder="Postcode">
-                  </div>
-                  <div class="col-sm-4">
-                  <select class="selectpicker form-control show-tick" title='State'>
-                      <option data-hidden="true"></option>
-                      <option>ACT</option>
-                      <option>NSW</option>
-                      <option>NT</option>
-                      <option>QLD</option>
-                      <option>SA</option>
-                      <option>TAS</option>
-                      <option>VIC</option>
-                      <option>WA</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Work/Home Phone</label>
-                  <div class="col-sm-4">
-                    <input type="text" class="form-control" placeholder="Work">
-                  </div>
-                  <div class="col-sm-4">
-                    <input type="text" class="form-control" placeholder="Home">
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Mobile</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Email</label>
-                  <div class="col-sm-8">
-                    <input type="email" class="form-control">
-                  </div>
-                </div>
+                <table class="table table-condensed table-striped">
+                  <thead>
+                    <tr>
+                      <th>Defect</th>
+                      <th>Condition Code</th>
+                      <th>Condition Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1035.35</td>
+                      <td>1035.35</td>
+                      <td>Pot hole</td>
+                    </tr>
+                    <tr>
+                      <td>1035.35</td>
+                      <td>1035.35</td>
+                      <td>Pot hole</td>
+                    </tr>
+                    <tr>
+                      <td>1035.35</td>
+                      <td>1035.35</td>
+                      <td>Pot hole</td>
+                    </tr>
+                    <tr>
+                      <td>1035.35</td>
+                      <td>1035.35</td>
+                      <td>Pot hole</td>
+                    </tr>
+                </tbody>
+                </table>
 
                 <span class="glyphicon insert-cross-icon"></span>
               </form>

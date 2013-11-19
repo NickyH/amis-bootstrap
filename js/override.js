@@ -186,6 +186,14 @@ function insert_inspection_form()
     });
 }
 
+function insert_defect_form()
+{
+  $('#insert-form').empty();
+  $.get('forms/form_defect.html', function(data) {
+    $('#insert-form').html(data);
+    });
+}
+
 function goto_map()
 {
   toggle_navbar();

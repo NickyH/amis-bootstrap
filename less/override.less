@@ -414,15 +414,21 @@ body {
   -webkit-border-radius: 12px;
   box-shadow: 5px 5px 2px 2px @form-panel-outer-shadow;
   -webkit-box-shadow: 5px 5px 2px 2px @form-panel-outer-shadow;
-  margin: 30px auto 40px 20px;
+  margin: 30px auto 40px 30px;
   display: inline-block;
   width: 90% !important;
   min-height: 250px;
   padding: 5px;
   float: left;
   &.full-width {
-    width: 95% !important;
+    @media @widthMediumLarge {
+      width: 90% !important;
+    }
+    @media @widthLarge {
+      width: 95% !important;
+    }
   }
+
 }
 
 //plceholder text
@@ -890,6 +896,11 @@ input[type="date"] {
   margin-bottom: 0;
 }
 
+.bootstrap-select.btn-group > .disabled {
+  background-color: #eee;
+
+}
+
 .input-group {
   margin-bottom: 10px;
 }
@@ -1060,10 +1071,15 @@ a.oval-last:after {
     float: right;
     margin-left: 20px;
   }
+  &.condition {
+    margin-top: 0;
+    margin-left: 0;
+  }
 }
 
-thead {
-  td {
-    font-weight: bold;
-  }
+
+tr:first-child th {
+  font-size: 13px;
+  color: white;
+  background-color: black;
 }
