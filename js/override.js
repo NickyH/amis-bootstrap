@@ -61,7 +61,6 @@ function toggle_referral() {
   $('.row').toggleClass('hidden');
   $('html body').animate({ scrollTop: 0 });
   $('#bookmark_referral').toggleClass('hidden');
-  $('#bookmark-nav ul').toggleClass('disabled');
   oval_border_highlight('#tab1');
   $('.referral-icon').toggleClass('current');
 }
