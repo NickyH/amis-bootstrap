@@ -80,7 +80,6 @@ function add_cross_to_required_forms() {
       });
     if (required) {
       $(this).find('.insert-cross-icon').addClass('glyphicon-remove panel-cross');
-      // $(this).parent().find('.text-circle').addClass('incomplete');
       toggle_oval_colour( $(this), 'incomplete' );
       toggle_panel_num_colour( $(this), 'incomplete' );
     }
@@ -105,7 +104,9 @@ function check_panel_valid() {
   var icon = $(this).children().last();
   var rowValid = false;
   var panelValid = $(this).parsley( 'isValid' );
-  if (panelValid) {
+  var required = check_this_panel_required( $(this) );
+  console.log("required = " + required);
+  if (panelValid && required ) {
     $(icon).removeClass('glyphicon-remove panel-remove glyphicon-ok panel-ok').addClass('glyphicon-ok panel-ok');
     toggle_panel_num_colour( (this), 'complete' );
     $(this).parent().parent().parent().find('.form-panel').each(function() {
@@ -127,6 +128,20 @@ function check_panel_valid() {
     $(icon).removeClass('glyphicon-remove panel-remove glyphicon-ok panel-ok').addClass('glyphicon-remove panel-remove');
   }
 
+}
+
+function check_this_panel_required(thisObj) {
+  console.log(thisObj);
+  var thisPanel = $(thisObj);
+  var required = false
+  $(thisPanel).each(function() {
+    $(this).find('.form-control').each(function() {
+      if ($(this).attr('data-required')) {
+        required = true
+        }
+      });
+    });
+  return required;
 }
 
 function checkbox_when_clicked() {
