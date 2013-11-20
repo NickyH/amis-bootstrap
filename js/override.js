@@ -19,8 +19,8 @@ $(function(){
   $('li.dcjq-parent-li').on('click', mimic_anchor_click);
 });
 
-function table_search(thisObj) {
-var $rows = $('#table tr');
+function table_search(thisObj, tableID) {
+var $rows = $("#"+tableID+" tr");
 
       var val = '^(?=.*\\b' + $.trim($(thisObj).val()).split(/\s+/).join('\\b)(?=.*\\b') + ').*$',
           reg = RegExp(val, 'i'),
@@ -125,9 +125,10 @@ function toggle_panel_num_colour( thisObj, className) {
 }
 
 function check_panel_valid() {
-  console.log($(this).children('.form-group').find('#search10'));
-  if ($(this).children('.form-group').find('#search10').attr('id') === 'search10') {
-    table_search($(this).children('.form-group').find('#search10'));
+  if ($(this).children('.form-group').find('.search')) {
+    var tableID = $(this).children('.form-group').find('.search').parents('.form-horizontal').children('table').attr('id');
+    var thisObj = $(this).children('.form-group').find('.search');
+    table_search(thisObj, tableID);
     return;
   }
   var icon = $(this).children().last();
