@@ -30,7 +30,7 @@ var $rows = $('#table tr');
           text = $(this).text().replace(/\s+/g, ' ');
           return !reg.test(text);
       }).hide();
-
+      $('thead tr').show();
 }
 
 function calendar_icon_click() {
