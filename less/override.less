@@ -1106,6 +1106,35 @@ tr:first-child th {
   background-color: black;
 }
 
+// file upload styling
+
+input[type="file"] {
+  position: relative;
+  opacity: 0;
+  z-index: 2;
+}
+
+.file-select {
+  width: auto;
+  background-color: @file-upload-light;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-left: 15px;
+  margin-right: 15px;
+  color: @black;
+  font-weight: bold;
+}
+
+.btn.attachment {
+  height: 30px;
+  float: right;
+  font-weight: bold;
+
+}
+
 // datetimepicker overrides
 // http://trentrichardson.com/examples/timepicker/
 
@@ -1207,3 +1236,9 @@ textarea[disabled],
 button[disabled] {
   color: lighten(@black, 50%);
 }
+
+
+
+
+
+
