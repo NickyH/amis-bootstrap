@@ -902,8 +902,7 @@ input[type="date"] {
 }
 
 .bootstrap-select.btn-group > .disabled {
-  background-color: #eee;
-
+  background-color: #eee !important;
 }
 
 .input-group {
@@ -964,6 +963,13 @@ select[data-required="true"] ~ .btn-group.bootstrap-select.show-tick.form-contro
     background-color: @form-background-required !important;
     border: 1px solid @form-border-required !important;
   }
+}
+
+input[disabled],
+select[disabled],
+textarea[disabled],
+button[disabled] {
+  color: lighten(@black, 50%);
 }
 
 li.required {
