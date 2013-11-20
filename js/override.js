@@ -19,6 +19,20 @@ $(function(){
   $('li.dcjq-parent-li').on('click', mimic_anchor_click);
 });
 
+function table_search(thisObj) {
+var $rows = $('#table tr');
+
+      var val = '^(?=.*\\b' + $.trim($(thisObj).val()).split(/\s+/).join('\\b)(?=.*\\b') + ').*$',
+          reg = RegExp(val, 'i'),
+          text;
+
+      $rows.show().filter(function() {
+          text = $(this).text().replace(/\s+/g, ' ');
+          return !reg.test(text);
+      }).hide();
+
+}
+
 function calendar_icon_click() {
   $(this).parent().children('.form-control').datetimepicker('show');
 }
@@ -111,11 +125,15 @@ function toggle_panel_num_colour( thisObj, className) {
 }
 
 function check_panel_valid() {
+  console.log($(this).children('.form-group').find('#search10'));
+  if ($(this).children('.form-group').find('#search10').attr('id') === 'search10') {
+    table_search($(this).children('.form-group').find('#search10'));
+    return;
+  }
   var icon = $(this).children().last();
   var rowValid = false;
   var panelValid = $(this).parsley( 'isValid' );
   var required = check_this_panel_required( $(this) );
-  console.log("required = " + required);
   if (panelValid && required ) {
     $(icon).removeClass('glyphicon-remove panel-remove glyphicon-ok panel-ok').addClass('glyphicon-ok panel-ok');
     toggle_panel_num_colour( (this), 'complete' );

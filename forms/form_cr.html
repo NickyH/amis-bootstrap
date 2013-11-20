@@ -410,7 +410,7 @@
 
                 <div class="form-group" role="search">
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" placeholder="Search">
+                    <input id="search10" type="text" class="form-control" placeholder="Search">
                   </div>
                   <div class="col-sm-2">
                     <button type="search" class="btn btn-default">Search</button>
@@ -423,7 +423,7 @@
                   </div>
                 </div>
 
-                <table class="table table-condensed table-striped">
+                <table id="table" class="table table-condensed table-striped">
                   <thead>
                     <tr>
                       <th>Contact ID</th>
@@ -436,68 +436,67 @@
                       <th>Mobile</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr>
-                      <td>1035.35</td>
-                      <td>1035.35</td>
-                      <td>Julia</td>
-                      <td>Blogg</td>
-                      <td>14/10/2012</td>
-                      <td>98567492</td>
-                      <td>94358327</td>
-                      <td>0416496845</td>
-                    </tr>
-                    <tr>
-                      <td>1934.56</td>
-                      <td>1035.35</td>
-                      <td>Gerald</td>
-                      <td>Lim</td>
-                      <td>04/01/2013</td>
-                      <td>98567492</td>
-                      <td>94358327</td>
-                      <td>0412059483</td>
-                    </tr>
-                    <tr>
-                      <td>4857.45</td>
-                      <td>1035.35</td>
-                      <td>Jospeh</td>
-                      <td>Koll</td>
-                      <td>05/05/2012</td>
-                      <td>98567492</td>
-                      <td>94358327</td>
-                      <td>0418384736</td>
-                    </tr>
-                    <tr>
-                      <td>5834.67</td>
-                      <td>1035.35</td>
-                      <td>Samantha</td>
-                      <td>Rickson</td>
-                      <td>12/10/2012</td>
-                      <td>98567492</td>
-                      <td>94358327</td>
-                      <td>0413958473</td>
-                    </tr>
-                    <tr>
-                      <td>4857.45</td>
-                      <td>1035.35</td>
-                      <td>Daniella</td>
-                      <td>Olivetti</td>
-                      <td>05/05/2012</td>
-                      <td>98567492</td>
-                      <td>94358327</td>
-                      <td>0418384736</td>
-                    </tr>
-                    <tr>
-                      <td>5834.67</td>
-                      <td>1035.35</td>
-                      <td>Gregory</td>
-                      <td>Heath</td>
-                      <td>10/05/2012</td>
-                      <td>98567492</td>
-                      <td>94353432</td>
-                      <td>0413958473</td>
-                    </tr>
-                </tbody>
+                  <tr>
+                    <td>1035.35</td>
+                    <td>1035.35</td>
+                    <td>Julia</td>
+                    <td>Blogg</td>
+                    <td>14/10/2012</td>
+                    <td>98567492</td>
+                    <td>94358327</td>
+                    <td>0416496845</td>
+                  </tr>
+                  <tr>
+                    <td>1934.56</td>
+                    <td>1035.35</td>
+                    <td>Gerald</td>
+                    <td>Lim</td>
+                    <td>04/01/2013</td>
+                    <td>98567492</td>
+                    <td>94358327</td>
+                    <td>0412059483</td>
+                  </tr>
+                  <tr>
+                    <td>4857.45</td>
+                    <td>1035.35</td>
+                    <td>Jospeh</td>
+                    <td>Koll</td>
+                    <td>05/05/2012</td>
+                    <td>98567492</td>
+                    <td>94358327</td>
+                    <td>0418384736</td>
+                  </tr>
+                  <tr>
+                    <td>5834.67</td>
+                    <td>1035.35</td>
+                    <td>Samantha</td>
+                    <td>Rickson</td>
+                    <td>12/10/2012</td>
+                    <td>98567492</td>
+                    <td>94358327</td>
+                    <td>0413958473</td>
+                  </tr>
+                  <tr>
+                    <td>4857.45</td>
+                    <td>1035.35</td>
+                    <td>Daniella</td>
+                    <td>Olivetti</td>
+                    <td>05/05/2012</td>
+                    <td>98567492</td>
+                    <td>94358327</td>
+                    <td>0418384736</td>
+                  </tr>
+                  <tr>
+                    <td>5834.67</td>
+                    <td>1035.35</td>
+                    <td>Gregory</td>
+                    <td>Heath</td>
+                    <td>10/05/2012</td>
+                    <td>98567492</td>
+                    <td>94353432</td>
+                    <td>0413958473</td>
+                  </tr>
+
                 </table>
 
                 <span class="glyphicon insert-cross-icon"></span>
@@ -912,4 +911,5 @@ $('.insert-picker').datetimepicker({
 
 $('.input-group-addon').on('click', calendar_icon_click); //activate calendar on icon click
 
+// $('#search').on('keyup', table_search);
 </script>
