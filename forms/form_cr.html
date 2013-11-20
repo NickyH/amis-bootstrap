@@ -84,7 +84,7 @@
                 <div class="form-group">
                   <label class="col-sm-4 control-label">Priority</label>
                   <div class="col-sm-8">
-                    <select class="selectpicker show-tick form-control" title='' data-required="true" data-live-search="true" value="FP_KC - 5D">
+                    <select class="selectpicker show-tick form-control" title='' data-required="true" data-live-search="true" value="FP_KC - 5D" disabled>
                       <option data-hidden="true"></option>
                       <option>1</option>
                       <option>2</option>
@@ -96,7 +96,7 @@
                 <div class="form-group">
                   <label class="col-sm-4 control-label">Created By</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" data-required="true">
+                    <input type="text" class="form-control" data-required="true" disabled>
                   </div>
                 </div>
 
@@ -417,7 +417,6 @@
                 <table id="table-filter-1" class="table table-condensed table-striped">
                   <thead>
                     <tr>
-                      <th>Contact ID</th>
                       <th>Ref. No.</th>
                       <th>First Name</th>
                       <th>Last Name</th>
@@ -429,7 +428,6 @@
                   </thead>
                   <tr>
                     <td>1035.35</td>
-                    <td>1035.35</td>
                     <td>Julia</td>
                     <td>Blogg</td>
                     <td>14/10/2012</td>
@@ -438,7 +436,6 @@
                     <td>0416496845</td>
                   </tr>
                   <tr>
-                    <td>1934.56</td>
                     <td>1035.35</td>
                     <td>Gerald</td>
                     <td>Lim</td>
@@ -448,7 +445,6 @@
                     <td>0412059483</td>
                   </tr>
                   <tr>
-                    <td>4857.45</td>
                     <td>1035.35</td>
                     <td>Joseph</td>
                     <td>Koll</td>
@@ -458,7 +454,6 @@
                     <td>0418384736</td>
                   </tr>
                   <tr>
-                    <td>5834.67</td>
                     <td>1035.35</td>
                     <td>Samantha</td>
                     <td>Rickson</td>
@@ -468,7 +463,6 @@
                     <td>0413958473</td>
                   </tr>
                   <tr>
-                    <td>4857.45</td>
                     <td>1035.35</td>
                     <td>Daniella</td>
                     <td>Olivetti</td>
@@ -478,7 +472,6 @@
                     <td>0418384736</td>
                   </tr>
                   <tr>
-                    <td>5834.67</td>
                     <td>1035.35</td>
                     <td>Gregory</td>
                     <td>Heath</td>
@@ -655,7 +648,6 @@
                 <table id="table-filter-2" class="table table-condensed table-striped">
                   <thead>
                     <tr>
-                      <th>Note ID</th>
                       <th>Ref. No.</th>
                       <th>First Name</th>
                       <th>Last Name</th>
@@ -668,7 +660,6 @@
                   <tbody>
                     <tr>
                       <td>1035.35</td>
-                      <td>1035.35</td>
                       <td>Julia</td>
                       <td>Blogg</td>
                       <td>14/10/2012</td>
@@ -677,7 +668,6 @@
                       <td>0416496845</td>
                     </tr>
                     <tr>
-                      <td>1934.56</td>
                       <td>1035.35</td>
                       <td>Gerald</td>
                       <td>Lim</td>
@@ -687,7 +677,6 @@
                       <td>0412059483</td>
                     </tr>
                     <tr>
-                      <td>4857.45</td>
                       <td>1035.35</td>
                       <td>Joseph</td>
                       <td>Koll</td>
@@ -697,7 +686,6 @@
                       <td>0418384736</td>
                     </tr>
                     <tr>
-                      <td>5834.67</td>
                       <td>1035.35</td>
                       <td>Samantha</td>
                       <td>Rickson</td>
@@ -707,7 +695,6 @@
                       <td>0413958473</td>
                     </tr>
                     <tr>
-                      <td>4857.45</td>
                       <td>1035.35</td>
                       <td>Daniella</td>
                       <td>Olivetti</td>
@@ -717,7 +704,6 @@
                       <td>0418384736</td>
                     </tr>
                     <tr>
-                      <td>5834.67</td>
                       <td>1035.35</td>
                       <td>Gregory</td>
                       <td>Heath</td>
@@ -883,6 +869,7 @@ $('.date').datepicker();
 $('#bookmark-nav').on('click', 'a', check_form_location);
 $('.referral-icon').on('click', toggle_referral);
 $('.form-container').on('DOMMouseScroll mousewheel', get_page_position);
+
 change_selectpicker_values()
 
 $('.insert-picker').datetimepicker({

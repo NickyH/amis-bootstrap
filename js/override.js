@@ -1,5 +1,6 @@
 var owlLayersHtml;
 var topOffset = 170;
+var scrolling = false;
 
 //dom ready functions
 $(function(){
@@ -18,6 +19,10 @@ $(function(){
   $('#details-link').on('click', toggle_navbar);
   $('li.dcjq-parent-li').on('click', mimic_anchor_click);
 });
+
+// function rotate_ovals_while_scroll() {
+//   $('div .oval').toggleClass('rotate');
+// }
 
 function table_search(thisObj, tableID) {
 var $rows = $("#"+tableID+" tr");
@@ -63,6 +68,7 @@ function oval_border_highlight(tab_id) {
 }
 
 function get_page_position() {
+  // rotate_ovals_while_scroll()
   var details = $('#bookmark_details').offset().top;
   var contact = $('#bookmark_contact').offset().top;
   var notes = $('#bookmark_notes').offset().top;
