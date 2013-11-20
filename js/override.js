@@ -68,7 +68,6 @@ function oval_border_highlight(tab_id) {
 }
 
 function get_page_position() {
-  // rotate_ovals_while_scroll()
   var details = $('#bookmark_details').offset().top;
   var contact = $('#bookmark_contact').offset().top;
   var notes = $('#bookmark_notes').offset().top;
@@ -126,7 +125,6 @@ function toggle_oval_colour( thisObj, className) {
 }
 
 function toggle_panel_num_colour( thisObj, className) {
-  console.log($(thisObj).parent().find('.text-circle'));
   $(thisObj).parent().find('.text-circle').removeClass('incomplete complete').addClass(className);
 }
 
@@ -135,7 +133,6 @@ function check_panel_valid() {
     var tableID = $(this).children('.form-group').find('.search').parents('.form-horizontal').children('table').attr('id');
     var thisObj = $(this).children('.form-group').find('.search');
     table_search(thisObj, tableID);
-    return;
   }
   var icon = $(this).children().last();
   var rowValid = false;
@@ -167,7 +164,6 @@ function check_panel_valid() {
 }
 
 function check_this_panel_required(thisObj) {
-  console.log(thisObj);
   var thisPanel = $(thisObj);
   var required = false
   $(thisPanel).each(function() {
