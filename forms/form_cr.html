@@ -800,7 +800,7 @@
               <!-- numbered circle in each form panel-->
               <div class="text-circle">
                 <div class="text-in-circle">
-                  Referral
+                  Actions
                 </div>
               </div>
 
@@ -809,14 +809,21 @@
                 <div class="form-group">
                   <label class="col-sm-4 control-label">Action Required?</label>
                   <div class="col-sm-8">
-                    <input type="checkbox" data-group="checkbox">
+                    <input type="checkbox" data-group="checkbox" id="action-required">
+                  </div>
+                </div>
+
+                <div class="form-group hidden">
+                  <label class="col-sm-4 control-label">Referral Notes</label>
+                  <div class="col-sm-8">
+                    <textarea class="form-control" rows="3"></textarea>
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label class="col-sm-4 control-label">Referral To</label>
                   <div class="col-sm-8">
-                    <select class="selectpicker form-control" multiple title=''>
+                    <select id="referral-to" class="selectpicker form-control show-tick" title='' disabled="true">
                       <option>Contact 1</option>
                       <option>Contact 2</option>
                       <option>Contact 3</option>
@@ -827,7 +834,7 @@
                 <div class="form-group">
                   <label class="col-sm-4 control-label">Closed By</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" disabled>
                   </div>
                 </div>
 
@@ -835,11 +842,18 @@
                   <label class="col-sm-4 control-label">Closed Date</label>
                   <div class="col-sm-8">
                     <div class="input-group merged">
-                      <input type="text" class="form-control insert-picker" />
+                      <input type="text" class="form-control insert-picker" disabled/>
                       <span class="input-group-addon">
                         <span class="glyphicon glyphicon-calendar"></span>
                       </span>
                     </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Close Request</label>
+                  <div class="col-sm-8">
+                    <span class="btn btn-info form-control close-form"><span class="glyphicon glyphicon-remove"></span><span class="close-form-text">Close</span></span>
                   </div>
                 </div>
 
@@ -879,5 +893,5 @@ $('.insert-picker').datetimepicker({
 });
 
 $('.input-group-addon').on('click', calendar_icon_click); //activate calendar on icon click
-
+$('#action-required').on('change', toggle_action_required);
 </script>
