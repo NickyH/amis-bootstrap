@@ -20,21 +20,6 @@ $(function(){
   $('li.dcjq-parent-li').on('click', mimic_anchor_click);
 });
 
-// function rotate_ovals_while_scroll() {
-//   $('div .oval').toggleClass('rotate');
-// }
-
-function toggle_action_required() {
-  if ($(this).prop('checked')) {
-    $(this).parents('.form-group').next('.form-group').toggleClass('hidden');
-    $('button[data-id="referral-to"]').removeClass('disabled');
-  }
-  if (!($(this).prop('checked'))) {
-    $(this).parents('.form-group').next('.form-group').toggleClass('hidden');
-    $('button[data-id="referral-to"]').addClass('disabled');
-  }
-}
-
 function table_search(thisObj, tableID) {
 var $rows = $("#"+tableID+" tr");
 

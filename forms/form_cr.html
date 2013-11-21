@@ -840,18 +840,30 @@
               <form class="form-horizontal container" role="form">
 
                 <div class="form-group">
-                  <label class="col-sm-4 control-label">No Action Required?</label>
-                  <div class="col-sm-2">
-                    <input type="checkbox" data-group="checkbox" id="action-required">
-                  </div>
-                  <label class="col-sm-2 control-label">Referral</label>
+                  <div class="col-sm-4"></div>
                   <div class="col-sm-4">
-                    <input type="checkbox" data-group="checkbox" id="referral-to">
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                        No action required
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-sm-4"></div>
+                  <div class="col-sm-4">
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                        Referral
+                      </label>
+                    </div>
                   </div>
                 </div>
 
-                <div class="form-group hidden">
-                  <label class="col-sm-4 control-label">Referral Notes</label>
+
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Notes</label>
                   <div class="col-sm-8">
                     <textarea class="form-control" rows="3"></textarea>
                   </div>
@@ -859,8 +871,8 @@
 
                 <div class="form-group">
                   <label class="col-sm-4 control-label">Referral To</label>
-                  <div class="col-sm-8">
-                    <select id="referral-to" class="selectpicker form-control show-tick" title='' disabled="true">
+                  <div class="col-sm-8" id="referral-to">
+                    <select class="selectpicker form-control show-tick" title=''>
                       <option>Contact 1</option>
                       <option>Contact 2</option>
                       <option>Contact 3</option>
@@ -930,5 +942,6 @@ $('.insert-picker').datetimepicker({
 });
 
 $('.input-group-addon').on('click', calendar_icon_click); //activate calendar on icon click
-$('#action-required').on('change', toggle_action_required);
+// $('input[type="checkbox"]').on('change', toggle_action_required);
+
 </script>
