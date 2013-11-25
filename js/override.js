@@ -18,6 +18,7 @@ $(function(){
   $("#map").on('click', showAssets_qtip);
   $('#details-link').on('click', toggle_navbar);
   $('li.dcjq-parent-li').on('click', mimic_anchor_click);
+
 });
 
 function table_search(thisObj, tableID) {
@@ -34,9 +35,9 @@ var $rows = $("#"+tableID+" tr");
       $('thead tr').show();
 }
 
-// function calendar_icon_click() {
-//   $(this).parent().children('.form-control').datetimepicker('show');
-// }
+function calendar_icon_click() {
+  $(this).parent().children('.form-control').datetimepicker('show');
+}
 
 function change_selectpicker_values() {
     $('.selectpicker').each(function() {
