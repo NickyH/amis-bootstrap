@@ -367,16 +367,22 @@ body {
   z-index: 2;
   &.incomplete {
     border: 3px solid @cancel-button-colour;
-    background-color: lighten(@cancel-button-colour, 40%);
+    background-color: @cancel-button-colour;
     .text-in-circle {
       margin-top: 5px;
+      color: @white;
+      font-style: normal;
+      letter-spacing: 2px;
     }
   }
   &.complete {
     border: 3px solid @save-button-colour;
-    background-color: lighten(@save-button-colour, 40%);
+    background-color: @save-button-colour;
     .text-in-circle {
       margin-top: 5px;
+      color: @white;
+      font-style: normal;
+      letter-spacing: 2px;
     }
   }
 }
@@ -505,9 +511,11 @@ body {
     }
     &.save-button {
     background-color: @save-button-colour;
+    letter-spacing: 2px;
     }
     &.cancel-button {
     background-color: @cancel-button-colour;
+    letter-spacing: 2px;
     }
   }
 }
