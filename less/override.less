@@ -42,9 +42,7 @@ body {
   position: fixed;
   top: 0;
   z-index: 3;
-  box-shadow: inset 0 -5px 5px -5px @grey-dark;
-  -moz-box-shadow: inset 0 -5px 5px -5px @grey-dark;
-  -webkit-box-shadow: inset 0 -5px 5px -5px @grey-dark;
+  border-bottom: 1px solid darken(@grey-medium, 10%);
 }
 
 //top bar right panel (utility bar)
@@ -147,9 +145,7 @@ body {
   top: 0;
   bottom: 0;
   z-index: 4;
-  box-shadow: inset -15px 0 5px -5px #606060;
-  -moz-box-shadow: inset -15px 0 5px -5px #606060;
-  -webkit-box-shadow: inset -15px 0 5px -5px #606060;
+  border-right: 1px solid darken(@left-bar-colour, 20%);
 }
 
 .left-bar-icons {
