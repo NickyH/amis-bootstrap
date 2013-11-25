@@ -928,20 +928,32 @@ $('.form-horizontal').on('keyup', this, check_panel_valid);
 $('.form-horizontal').on('change', this, check_panel_valid);
 $( '.form-horizontal .container' ).parsley( 'validate');
 $('.selectpicker').selectpicker({ size: 5 });
-$('.date').datepicker();
 $('#bookmark-nav').on('click', 'a', check_form_location);
 $('.referral-icon').on('click', toggle_referral);
 $('.form-container').on('DOMMouseScroll mousewheel', get_page_position);
 
 change_selectpicker_values()
 
-$('.insert-picker').datetimepicker({
+// $('.insert-time-picker').datetimepicker({
+//   pickDate: false,
+//   timeFormat: 'HH:mm',
+//   stepMinute: 5
+//   });
+
+//   $('.insert-date-picker').datetimepicker({
+//   controlType: 'select',
+//   pickTime: false,
+//   pickDate: true
+// });
+
+  $('.insert-picker').datetimepicker({
   controlType: 'select',
   timeFormat: 'HH:mm',
-  stepMinute: 5
+  stepMinute: 5,
+  pickTime: true,
+  pickDate: true
 });
 
 $('.input-group-addon').on('click', calendar_icon_click); //activate calendar on icon click
-// $('input[type="checkbox"]').on('change', toggle_action_required);
 
 </script>

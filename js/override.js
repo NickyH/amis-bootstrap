@@ -34,9 +34,9 @@ var $rows = $("#"+tableID+" tr");
       $('thead tr').show();
 }
 
-function calendar_icon_click() {
-  $(this).parent().children('.form-control').datetimepicker('show');
-}
+// function calendar_icon_click() {
+//   $(this).parent().children('.form-control').datetimepicker('show');
+// }
 
 function change_selectpicker_values() {
     $('.selectpicker').each(function() {
