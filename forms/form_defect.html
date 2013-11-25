@@ -65,6 +65,18 @@
                 </div>
 
                 <div class="form-group">
+                  <label class="col-sm-4 control-label">Position</label>
+                  <div class="col-sm-8">
+                    <select class="selectpicker show-tick form-control" title='' data-live-search="true">
+                      <option data-hidden="true"></option>
+                      <option>L</option>
+                      <option>R</option>
+                      <option>M</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
                   <label class="col-sm-4 control-label">Created By</label>
                   <div class="col-sm-8">
                     <input type="text" class="form-control" value="Sam Lanza" disabled>
@@ -82,6 +94,57 @@
                     </div>
                   </div>
                 </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Created By</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" disabled>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Date Created</label>
+                  <div class="col-sm-8">
+                    <div class="input-group merged">
+                      <input type="text" class="form-control insert-picker" disabled />
+                      <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Date Due</label>
+                  <div class="col-sm-8">
+                    <div class="input-group merged">
+                      <input type="text" class="form-control insert-picker" disabled />
+                      <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Completed By</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" disabled>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Date Completed</label>
+                  <div class="col-sm-8">
+                    <div class="input-group merged">
+                      <input type="text" class="form-control insert-picker" />
+                      <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
 
                 <span class="glyphicon insert-cross-icon"></span>
               </form>
@@ -163,9 +226,6 @@
                   </div>
                   <div class="col-sm-4">
                     <input class="form-control all-touchspin" data-required="true" value="1">
-                  <script>
-                      $(".form-control.all-touchspin").TouchSpin();
-                  </script>
                   </div>
 
                 </div>
@@ -335,7 +395,12 @@
                 <div class="form-group">
                   <label class="col-sm-4 control-label">Date Created</label>
                   <div class="col-sm-8">
-                    <input type="datetime-local" class="form-control">
+                    <div class="input-group merged">
+                      <input type="text" class="form-control insert-picker" />
+                      <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                      </span>
+                    </div>
                   </div>
                 </div>
 
@@ -361,7 +426,12 @@
                 <div class="form-group">
                   <label class="col-sm-4 control-label">Date Last Modified</label>
                   <div class="col-sm-8">
-                    <input type="datetime-local" class="form-control">
+                    <div class="input-group merged">
+                      <input type="text" class="form-control insert-picker" />
+                      <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                      </span>
+                    </div>
                   </div>
                 </div>
 
@@ -608,16 +678,37 @@
               <form class="form-horizontal container" role="form">
 
                 <div class="form-group">
-                  <label class="col-sm-4 control-label">Action Required?</label>
+                  <div class="col-sm-4"></div>
+                  <div class="col-sm-4">
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                        No action required
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-sm-4"></div>
+                  <div class="col-sm-4">
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                        Referral
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Notes</label>
                   <div class="col-sm-8">
-                    <input type="checkbox" data-group="checkbox">
+                    <textarea class="form-control" rows="3"></textarea>
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label class="col-sm-4 control-label">Referral To</label>
-                  <div class="col-sm-8">
-                    <select class="selectpicker form-control" multiple title=''>
+                  <div class="col-sm-8" id="referral-to">
+                    <select class="selectpicker form-control show-tick" title=''>
                       <option>Contact 1</option>
                       <option>Contact 2</option>
                       <option>Contact 3</option>
@@ -628,14 +719,26 @@
                 <div class="form-group">
                   <label class="col-sm-4 control-label">Closed By</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" disabled>
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label class="col-sm-4 control-label">Closed Date</label>
                   <div class="col-sm-8">
-                    <input type="datetime-local" class="form-control" data-required="true">
+                    <div class="input-group merged">
+                      <input type="text" class="form-control insert-picker" disabled/>
+                      <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Close Request</label>
+                  <div class="col-sm-8">
+                    <span class="btn btn-info form-control close-form"><span class="glyphicon glyphicon-remove"></span><span class="close-form-text">Close</span></span>
                   </div>
                 </div>
 
@@ -692,5 +795,8 @@ $('.input-group-addon').on('click', calendar_icon_click); //activate calendar on
   $("input[type='text']").on("click", function () {
    $(this).select();
 });
+
+$(".form-control.all-touchspin").TouchSpin();
+
 
 </script>
