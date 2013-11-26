@@ -111,7 +111,7 @@
                 <div class="form-group">
                   <label class="col-sm-4 control-label">Category</label>
                   <div class="col-sm-8">
-                    <select class="selectpicker form-control" data-required="true" data-live-search="true">
+                    <select class="selectpicker form-control" multiple data-required="true" data-live-search="true" title=''>
                       <option>After Hours</option>
                       <option>Bridge</option>
                       <option>Boat Ramp</option>
@@ -973,5 +973,15 @@
     $("input[type='text']").on("click", function () {
    $(this).select();
 });
+
+// $('.select-all').on('click', function() {$(this).selectpicker('selectAll');});
+$('.select-all').on('click', function() {
+  $(this).parent('.col-sm-8').children('.selectpicker').selectpicker('selectAll');
+});
+$('.select-none').on('click', function() {
+  $(this).parent('.col-sm-8').children('.selectpicker').selectpicker('deselectAll');
+});
+
+
 
 </script>
