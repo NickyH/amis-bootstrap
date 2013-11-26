@@ -7,7 +7,15 @@
     <img class="top-bar-icons icon-map icon-follow-me" src="images/icons/icon-follow-me.png">
     <!--form icons-->
     <img class="top-bar-icons icon-form icon-request hidden" src="images/icons/icon-request.png">
-    <img onclick="insert_defect_form()" class="top-bar-icons icon-form icon-defects hidden" src="images/icons/icon-defect.png">
-    <img onclick="insert_inspection_form()" class="top-bar-icons icon-form icon-inspect hidden" src="images/icons/icon-inspect.png">
+    <img class="top-bar-icons icon-form icon-defects hidden" src="images/icons/icon-defect.png">
+    <img class="top-bar-icons icon-form icon-inspect hidden" src="images/icons/icon-inspect.png">
   </div>
 </div>
+
+<script>
+  $('.icon-form').on('click', show_correct_ovals);
+  $('.icon-request').on('click', insert_CR_form);
+  $('.icon-defects').on('click', insert_defect_form);
+  $('.icon-inspect').on('click', insert_inspection_form);
+
+</script>

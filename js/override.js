@@ -16,7 +16,7 @@ $(function(){
   $("#insert-top").on('click', '#search-by-address-button', searchByAddress_qtip);
   $("#insert-top").on('click', '.arrow-history-tree', showHistoryTree_qtip);
   $("#map").on('click', showAssets_qtip);
-  $('#details-link').on('click', toggle_navbar);
+  $('#details-link').on('click', form_navbar);
   $('li.dcjq-parent-li').on('click', mimic_anchor_click);
 
 });
@@ -64,7 +64,7 @@ function oval_border_highlight(tab_id) {
   $(tab_id).addClass('current');
 }
 
-function get_page_position() {
+function get_CR_page_position() {
   var details = $('#bookmark_details').offset().top;
   var contact = $('#bookmark_contact').offset().top;
   var notes = $('#bookmark_notes').offset().top;
@@ -74,6 +74,26 @@ function get_page_position() {
     oval_border_highlight('#tab1');
   }
   if ($(window).scrollTop() >= (contact - topOffset -50) ) {
+    oval_border_highlight('#tab2');
+  }
+  if ($(window).scrollTop() >= (notes - topOffset -50) ) {
+    oval_border_highlight('#tab3');
+  }
+  if ($(window).scrollTop() >= (location - topOffset -50) ) {
+    oval_border_highlight('#tab4');
+  }
+}
+
+function get_defect_page_position() {
+  var details = $('#bookmark_details').offset().top;
+  var condition = $('#bookmark_condition').offset().top;
+  var notes = $('#bookmark_notes').offset().top;
+  var location = $('#bookmark_location').offset().top;
+
+  if ($(window).scrollTop() >= (details - topOffset -50 ) ) {
+    oval_border_highlight('#tab1');
+  }
+  if ($(window).scrollTop() >= (condition - topOffset -50) ) {
     oval_border_highlight('#tab2');
   }
   if ($(window).scrollTop() >= (notes - topOffset -50) ) {
@@ -198,12 +218,14 @@ function layer_active_clicked() {
 
 function goto_forms()
 {
-  toggle_navbar();
+  form_navbar();
   $('#insert-map').empty();
   $.get('forms/form_cr.html', function(data) {
     $('#insert-form').html(data);
     });
   $('#insert-form').trigger('create');
+  var formName = 'request'
+  show_correct_ovals(formName);
 }
 
 function insert_inspection_form()
@@ -212,6 +234,18 @@ function insert_inspection_form()
   $.get('forms/form_inspect.html', function(data) {
     $('#insert-form').html(data);
     });
+  var formName = 'inspection'
+  show_correct_ovals(formName);
+}
+
+function insert_CR_form()
+{
+  $('#insert-form').empty();
+  $.get('forms/form_cr.html', function(data) {
+    $('#insert-form').html(data);
+  });
+  var formName = 'request'
+  show_correct_ovals(formName);
 }
 
 function insert_defect_form()
@@ -219,26 +253,57 @@ function insert_defect_form()
   $('#insert-form').empty();
   $.get('forms/form_defect.html', function(data) {
     $('#insert-form').html(data);
-    });
+  });
+  var formName = 'defect'
+  show_correct_ovals(formName);
 }
 
 function goto_map()
 {
-  toggle_navbar();
+  map_navbar();
   $('#insert-form').empty();
   $.get('MapLayer.html', function(data) {
     $('#insert-map').html(data);
     });
   $('#insert-map').trigger('create');
+  insert_left();
 }
 
-function toggle_navbar()
+function map_navbar()
 {
-  $('.icon-map').toggleClass('hidden');
-  $('.icon-form').toggleClass('hidden');
-  $('.tab-shape').toggleClass('hidden');
-  $('.left-bar-icons').toggleClass('hidden');
-  $('.oval-text').toggleClass('hidden');
+  $('.icon-map').removeClass('hidden');
+  $('.icon-form').addClass('hidden');
+  $('#bookmark_nav li a').addClass('hidden');
+  $('.oval-text').addClass('hidden');
+  $('.detail-icon').removeClass('hidden');
+  $('.map-icon').addClass('hidden');
+}
+
+function form_navbar()
+{
+  $('.icon-map').addClass('hidden');
+  $('.icon-form').removeClass('hidden');
+  $('.left-bar-icons').addClass('hidden');
+  $('#bookmark_nav li a').removeClass('hidden');
+  $('.oval-text').removeClass('hidden');
+  $('.map-icon').removeClass('hidden');
+  $('.detail-icon').addClass('hidden');
+}
+
+function show_correct_ovals(formName) {
+  console.log(formName);
+  if (formName === 'request') {
+    $('a[data-href="#bookmark_condition"]').parent('li').hide();
+    $('a[data-href="#bookmark_contact"]').parent('li').show();
+  }
+  if (formName === 'defect') {
+    $('a[data-href="#bookmark_contact"]').parent('li').hide();
+    $('a[data-href="#bookmark_condition"]').parent('li').show();
+  }
+  if (formName === 'inspection') {
+    $('a[data-href="#bookmark_condition"]').parent('li').hide();
+    $('a[data-href="#bookmark_contact"]').parent('li').show();
+  }
 }
 
 
@@ -262,15 +327,20 @@ function check_form_location()
       $('html, body').animate({ scrollTop: scrollAmount }, 1000);
       oval_border_highlight('#tab2');
     }
-    if (href === '#bookmark_notes') {
+    if (href === '#bookmark_condition') {
       var scrollAmount = ($(href).offset().top) - topOffset;
       $('html, body').animate({ scrollTop: scrollAmount }, 1000);
       oval_border_highlight('#tab3');
     }
-    if (href === '#bookmark_location') {
+    if (href === '#bookmark_notes') {
       var scrollAmount = ($(href).offset().top) - topOffset;
       $('html, body').animate({ scrollTop: scrollAmount }, 1000);
       oval_border_highlight('#tab4');
+    }
+    if (href === '#bookmark_location') {
+      var scrollAmount = ($(href).offset().top) - topOffset;
+      $('html, body').animate({ scrollTop: scrollAmount }, 1000);
+      oval_border_highlight('#tab5');
     }
   }
 }
@@ -760,6 +830,7 @@ function insert_map()
 
 function insert_left()
 {
+  $('#insert-left').empty();
   $.get('left_bar.html', function(data) {
     $('#insert-left').html(data);
     });
