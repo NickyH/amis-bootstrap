@@ -467,7 +467,7 @@ body {
       }
     }
     @media @widthMediumLarge {
-      font: @form-header-font-small;
+      font: @form-header-font-medium;
       font-weight: bold;
       max-width: 25%;
       left: 150px;
@@ -531,6 +531,18 @@ body {
   font-size: 20px;
   white-space: pre;
   line-height: 8px !important;
+  @media @widthMedium {
+    display: none;
+  }
+  @media @widthNarrow {
+    display: none;
+  }
+  @media @widthMediumLarge {
+    font: @form-header-font-small;
+    font-weight: bold;
+    max-width: 25%;
+    left: 150px;
+  }
 }
 
 .status:before {
