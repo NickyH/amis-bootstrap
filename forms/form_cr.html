@@ -932,11 +932,11 @@ $('.form-container').on('DOMMouseScroll mousewheel', get_CR_page_position);
 
 change_selectpicker_values()
 
-// $('.insert-time-picker').datetimepicker({
-//   pickDate: false,
-//   timeFormat: 'HH:mm',
-//   stepMinute: 5
-//   });
+$('.insert-time-picker').datetimepicker({
+  timeOnly: true,
+  timeFormat: 'HH:mm',
+  stepMinute: 5
+  });
 
 //   $('.insert-date-picker').datetimepicker({
 //   controlType: 'select',
