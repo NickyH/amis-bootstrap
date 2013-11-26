@@ -77,10 +77,10 @@ function get_CR_page_position() {
     oval_border_highlight('#tab2');
   }
   if ($(window).scrollTop() >= (notes - topOffset -50) ) {
-    oval_border_highlight('#tab3');
+    oval_border_highlight('#tab4');
   }
   if ($(window).scrollTop() >= (location - topOffset -50) ) {
-    oval_border_highlight('#tab4');
+    oval_border_highlight('#tab5');
   }
 }
 
@@ -94,13 +94,33 @@ function get_defect_page_position() {
     oval_border_highlight('#tab1');
   }
   if ($(window).scrollTop() >= (condition - topOffset -50) ) {
+    oval_border_highlight('#tab3');
+  }
+  if ($(window).scrollTop() >= (notes - topOffset -50) ) {
+    oval_border_highlight('#tab4');
+  }
+  if ($(window).scrollTop() >= (location - topOffset -50) ) {
+    oval_border_highlight('#tab5');
+  }
+}
+
+function get_inspection_page_position() {
+  var details = $('#bookmark_details').offset().top;
+  var contact = $('#bookmark_contact').offset().top;
+  var notes = $('#bookmark_notes').offset().top;
+  var location = $('#bookmark_location').offset().top;
+
+  if ($(window).scrollTop() >= (details - topOffset -50 ) ) {
+    oval_border_highlight('#tab1');
+  }
+  if ($(window).scrollTop() >= (contact - topOffset -50) ) {
     oval_border_highlight('#tab2');
   }
   if ($(window).scrollTop() >= (notes - topOffset -50) ) {
-    oval_border_highlight('#tab3');
+    oval_border_highlight('#tab4');
   }
   if ($(window).scrollTop() >= (location - topOffset -50) ) {
-    oval_border_highlight('#tab4');
+    oval_border_highlight('#tab5');
   }
 }
 
@@ -236,6 +256,7 @@ function insert_inspection_form()
     });
   var formName = 'inspection'
   show_correct_ovals(formName);
+  $('html body').animate({ scrollTop: 0 });
 }
 
 function insert_CR_form()
@@ -246,6 +267,7 @@ function insert_CR_form()
   });
   var formName = 'request'
   show_correct_ovals(formName);
+  $('html body').animate({ scrollTop: 0 });
 }
 
 function insert_defect_form()
@@ -256,6 +278,7 @@ function insert_defect_form()
   });
   var formName = 'defect'
   show_correct_ovals(formName);
+  $('html body').animate({ scrollTop: 0 });
 }
 
 function goto_map()
