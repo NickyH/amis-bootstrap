@@ -314,7 +314,6 @@ function form_navbar()
 }
 
 function show_correct_ovals(formName) {
-  console.log(formName);
   if (formName === 'request') {
     $('a[data-href="#bookmark_condition"]').parent('li').hide();
     $('a[data-href="#bookmark_contact"]').parent('li').show();

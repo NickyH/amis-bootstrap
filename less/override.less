@@ -1112,8 +1112,10 @@ a.oval-last:after {
 
 tr:first-child th {
   font-size: 13px;
-  color: white;
-  background-color: black;
+  color: black;
+  font-weight: bold;
+  background-color: lighten(@form-highlight-colour, 50%);
+  border-bottom: 1px solid @form-highlight-colour !important;
 }
 
 // file upload attachment styling
