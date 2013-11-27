@@ -4,7 +4,7 @@
 
 body {
   background-color: @white-medium;
-  font-family: @font;
+  font-family: @font-family-main;
 }
 
 //map styling
@@ -428,16 +428,16 @@ body {
 //plceholder text
 
 ::-webkit-input-placeholder {
-   font-family: @questrial;
+   font-family: @font-family-main;
 }
 :-moz-placeholder { /* Firefox 18- */
-   font-family: @questrial;
+   font-family: @font-family-main;
 }
 ::-moz-placeholder {  /* Firefox 19+ */
-   font-family: @questrial;
+   font-family: @font-family-main;
 }
 :-ms-input-placeholder {
-   font-family: @questrial;
+   font-family: @font-family-main;
 }
 
 // form buttons
@@ -1031,6 +1031,9 @@ li.required {
     -ms-transform: scale(1.25);
     -webkit-transform: scale(1.25);
     transition-duration: 1s;
+    span {
+    color: @white-medium;
+    }
   }
   &.incomplete {
     border: 4px solid @cancel-button-colour;
@@ -1112,7 +1115,7 @@ a.oval-last:after {
 
 tr:first-child th {
   font-size: 13px;
-  color: black;
+  color: @black;
   font-weight: bold;
   background-color: lighten(@form-highlight-colour, 50%);
   border-bottom: 1px solid @form-highlight-colour !important;
@@ -1207,7 +1210,7 @@ input[type="file"] {
 }
 
 .ui-widget {
-  font-family: @questrial;
+  font-family: @font-family-main;
 }
 
 .ui-state-highlight {

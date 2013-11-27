@@ -2,11 +2,11 @@
 
 @import url(http://fonts.googleapis.com/css?family=Questrial);
 
-@questrial: 'Questrial', sans-serif;
+@font-family-main: 'Questrial', sans-serif;
 
 // Two main colours
 @map-highlight-colour: #5a71e2;
-@form-highlight-colour: #07e5bb;
+@form-highlight-colour: #07aa8b;
 
 // Background-colours
 
@@ -38,10 +38,8 @@
 //Form colours
 
 @required: #c7f9f6;
-
 @form-background-required: lighten(@required, 9%);
 @form-border-required: darken(@required, 40%);
-
 @file-upload-light: @white-medium;
 
 // Customisable colours
@@ -63,8 +61,6 @@
 
 @utility-icon-colour: @white;
 
-
-
 //Dimensions
 
 @left-bar-width: 120px;
@@ -79,35 +75,21 @@
 @tab-border-radius: 7px;
 @tab-fill: @white;
 @tab-fill-hover: @white-medium;
-
 @tab-fill-active: @white-medium;
 @tab-border-active: 1px solid @white-medium;
 
-.font-tab { font-family: @questrial; font-weight: normal; }
-
-
-
+.font-tab { font-family: @font-family-main; font-weight: normal; }
 
 // Fonts
 
-@font: @questrial;
-
-@input-form-font: 14px @questrial;
-
-@form-header-font: 22px @questrial;
-@form-header-font-medium: 14px @questrial;
-@form-header-font-small: 12px @questrial;
-
-@form-button-font: 16px @questrial;
-
-@form-tab-font: 15px @questrial;
-
-@form-label-font: 13px @questrial;
-
+@input-form-font: 14px @font-family-main;
+@form-header-font: 22px @font-family-main;
+@form-header-font-medium: 14px @font-family-main;
+@form-header-font-small: 12px @font-family-main;
+@form-button-font: 16px @font-family-main;
+@form-tab-font: 15px @font-family-main;
+@form-label-font: 13px @font-family-main;
 @layers-header-font: 14px arial, sans-serif;
-
-
-
 
 // Media Queries
 
@@ -123,11 +105,9 @@
 @heightTall:          ~"(min-height: 768px)";
 @mediaScreen:         ~"only screen and ";
 
-
 // condition:  is the tablet rotated portrait or landscape?;
 @tabletLandscape:      ~"(orientation: landscape)";
 @tabletPortrait:       ~"(orientation: portrait)";
-
 
 // set the min-width and height
 @tabletLandscapeWidth:               ~"(min-width: 1024px) and (orientation: landscape)";
