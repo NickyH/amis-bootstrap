@@ -21,6 +21,22 @@ $(function(){
 
 });
 
+function warn_cancel_form() {
+  bootbox.confirm('Are you sure you want to cancel all changes made to this form?', function (response) {
+        if(response) {
+          window.location = '/';
+        }
+    });
+}
+
+function warn_close_form() {
+  bootbox.confirm('This will permanently close off this issue', function (response) {
+        if(response) {
+          window.location = '/';
+        }
+    });
+}
+
 function disable_datepickers() {
   $('.input-group-addon').each( function() {
     var disabled = $(this).parents('.input-group').children('.hasDatepicker').attr('disabled');
