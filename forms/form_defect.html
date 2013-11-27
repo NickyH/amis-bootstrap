@@ -770,25 +770,21 @@ $('.form-container').on('DOMMouseScroll mousewheel', get_defect_page_position);
 
 change_selectpicker_values()
 
-// $('.insert-time-picker').datetimepicker({
-//   pickDate: false,
-//   timeFormat: 'HH:mm',
-//   stepMinute: 5
-//   });
+$('.insert-time-picker').datetimepicker({
+  timeOnly: true,
+  timeFormat: 'HH:mm',
+  stepMinute: 5
+  });
 
-//   $('.insert-date-picker').datetimepicker({
-//   controlType: 'select',
-//   pickTime: false,
-//   pickDate: true
-// });
+  $('.insert-date-picker').datepicker({
+  controlType: 'select'
+  });
 
   $('.insert-picker').datetimepicker({
   controlType: 'select',
   timeFormat: 'HH:mm',
-  stepMinute: 5,
-  pickTime: true,
-  pickDate: true
-});
+  stepMinute: 5
+  });
 
 $('.input-group-addon').on('click', calendar_icon_click); //activate calendar on icon click
 
@@ -797,6 +793,8 @@ $('.input-group-addon').on('click', calendar_icon_click); //activate calendar on
 });
 
 $(".form-control.all-touchspin").TouchSpin();
+
+disable_datepickers();
 
 
 </script>

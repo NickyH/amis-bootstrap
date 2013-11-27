@@ -21,6 +21,22 @@ $(function(){
 
 });
 
+function disable_datepickers() {
+  $('.input-group-addon').each( function() {
+    var disabled = $(this).parents('.input-group').children('.hasDatepicker').attr('disabled');
+      if (disabled === 'disabled') {
+        $(this).parents('.input-group').children('.hasDatepicker').datepicker('disable');
+      }
+  });
+}
+
+// function check_date_disabled() {
+  var disabled = $(this).parents('.input-group').children('.hasDatepicker').attr('disabled');
+  if (disabled === 'disabled') {
+    $(this).parents('.input-group').children('.hasDatepicker').datepicker('disable');
+  }
+// }
+
 function table_search(thisObj, tableID) {
 var $rows = $("#"+tableID+" tr");
 

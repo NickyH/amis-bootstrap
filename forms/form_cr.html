@@ -938,24 +938,22 @@ $('.insert-time-picker').datetimepicker({
   stepMinute: 5
   });
 
-//   $('.insert-date-picker').datetimepicker({
-//   controlType: 'select',
-//   pickTime: false,
-//   pickDate: true
-// });
+  $('.insert-date-picker').datepicker({
+  controlType: 'select'
+  });
 
   $('.insert-picker').datetimepicker({
   controlType: 'select',
   timeFormat: 'HH:mm',
-  stepMinute: 5,
-  pickTime: true,
-  pickDate: true
-});
+  stepMinute: 5
+  });
 
 $('.input-group-addon').on('click', calendar_icon_click); //activate calendar on icon click
 
   $("input[type='text']").on("click", function () {
    $(this).select();
 });
+
+disable_datepickers();
 
 </script>
