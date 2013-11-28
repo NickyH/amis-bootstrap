@@ -21,6 +21,7 @@ $(function(){
 
 });
 
+
 function warn_cancel_form() {
   bootbox.confirm('Are you sure you want to cancel all changes made to this form?', function (response) {
         if(response) {
@@ -408,8 +409,8 @@ function create_layers_carousel()
     items : 3,
     itemsDesktop : [1199,3],
     itemsDesktopSmall : [980,3],
-    itemsTablet: [768,2],
-    itemsTabletSmall: false,
+    itemsTablet: [800,3],
+    itemsTabletSmall: [400,2],
     itemsMobile : [479,1],
     singleItem : false,
     itemsScaleUp : false,
@@ -435,7 +436,7 @@ function create_layers_carousel()
 
     // Responsive
     responsive: true,
-    responsiveRefreshRate : 200,
+    responsiveRefreshRate : 100,
     responsiveBaseWidth: window,
 
     // CSS Styles
