@@ -18,9 +18,7 @@ $(function(){
   $("#map").on('click', showAssets_qtip);
   $('#details-link').on('click', form_navbar);
   $('li.dcjq-parent-li').on('click', mimic_anchor_click);
-
 });
-
 
 function warn_cancel_form() {
   bootbox.confirm('Are you sure you want to cancel all changes made to this form?', function (response) {
@@ -32,10 +30,10 @@ function warn_cancel_form() {
 
 function warn_close_form() {
   bootbox.confirm('This will permanently close off this issue', function (response) {
-        if(response) {
-          window.location = '/';
-        }
-    });
+    if(response) {
+      window.location = '/';
+    }
+  });
 }
 
 function disable_datepickers() {
@@ -502,7 +500,7 @@ function layers_qtip()
       },
       api: {
           onContentLoaded: $('.item').each(function () {
-              $(this).attr('style', 'width: 250px; height: 250px;');
+              $(this).attr('style', 'width: 200px; height: 250px;');
           })
       }
   });
