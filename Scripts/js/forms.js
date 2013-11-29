@@ -10,6 +10,7 @@ $('.referral-icon').on('click', toggle_referral);
 change_selectpicker_values()
 
 $('.insert-time-picker').datetimepicker({
+  controlType: 'select',
   timeOnly: true,
   timeFormat: 'HH:mm',
   stepMinute: 5
