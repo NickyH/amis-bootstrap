@@ -478,9 +478,8 @@ function layers_qtip()
           classes: 'qtip-layers-panel qtip-rounded qtip-shadow qtip-light',
           tip: {
             corner: 'center left',
-            width: 100,
-            height: 100,
-            offset: 100
+            width: 50,
+            height: 30
         }
       },
       hide: {
@@ -492,7 +491,7 @@ function layers_qtip()
       overwrite: false,
       position: {
           my: 'center left',
-          at: 'top right',
+          at: 'center right',
           target: $(this),
           adjust: {
             scroll: true // Can be ommited (e.g. default behaviour)
