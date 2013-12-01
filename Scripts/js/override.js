@@ -543,12 +543,9 @@ function searchByAddress_qtip()
       style: {
           classes: 'qtip-address-panel qtip-rounded qtip-shadow qtip-light',
           tip: {
-            corner: 'center left',
-            width: 100,
-            height: 100,
-            offset: 100,
-            x: 100,
-            y: 200
+            corner: 'top center',
+            width: 50,
+            height: 30
         }
       },
       hide: {
@@ -559,8 +556,8 @@ function searchByAddress_qtip()
       },
       overwrite: false,
       position: {
-          my: 'top right',
-          at: 'bottom left',
+          my: 'top center',
+          at: 'bottom center',
           target: $('#search-by-address-button'),
           adjust: {
             scroll: true, // Can be ommited (e.g. default behaviour)
@@ -683,8 +680,8 @@ function showAssets_qtip()
       },
       overwrite: false,
       position: {
-          my: 'center center',
-          at: 'center center',
+          my: 'center left',
+          at: 'center right',
           adjust: {
             scroll: true, // Can be ommited (e.g. default behaviour)
             x: 20,
@@ -748,10 +745,9 @@ function showHistoryTree_qtip()
         classes: 'qtip-history-tree qtip-rounded qtip-shadow qtip-light',
         tip: {
           corner: 'center left',
-          width: 100,
-          height: 100,
-          offset: 100
-      }
+          width: 30,
+          height: 30
+          }
     },
     hide: {
         event: 'click',
@@ -766,8 +762,8 @@ function showHistoryTree_qtip()
           },
     overwrite: false,
     position: {
-        my: 'top left',
-        at: 'bottom right',
+        my: 'center left',
+        at: 'center right',
         target: $(this),
         adjust: {
           scroll: true // Can be ommited (e.g. default behaviour)
@@ -824,9 +820,8 @@ function search_by_category_qtip()
           classes: 'qtip-search-category qtip-rounded qtip-shadow qtip-light',
           tip: {
             corner: 'center left',
-            width: 100,
-            height: 100,
-            offset: 100
+            width: 30,
+            height: 30
         }
       },
       hide: {
@@ -838,7 +833,7 @@ function search_by_category_qtip()
       overwrite: false,
       position: {
           my: 'center left',
-          at: 'top right',
+          at: 'center right',
           target: $(this),
           adjust: {
             scroll: true // Can be ommited (e.g. default behaviour)
