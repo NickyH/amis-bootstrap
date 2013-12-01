@@ -602,14 +602,45 @@ body {
     max-width: 300px !important;
     max-height: 200px !important;
     }
-  .layers-panel {
+  &.qtip-layers-panel {
     @media @tabletLandscapeWidth {
       max-width: 780px !important;
       margin-left: 50px;
     }
     @media @tabletPortraitWidth {
       max-width: 600px !important;
-      margin-left: 20px;
+      margin-left: -20px;
+      width: 580px !important;
+      .owl-buttons {
+
+      }
+      .owl-prev {
+        left: -240px;
+      }
+      .owl-next {
+        right: -240px;
+      }
+      a.qtip-close.qtip-icon {
+        visibility: hidden !important;
+      }
+      .owl-pagination {
+        width: 460px !important;
+      }
+      .owl-item {
+        margin-right: 5px;
+        margin-left: 10px;
+      }
+      .qtip-content {
+        width: auto !important;
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+      }
+      .owl-carousel {
+        width: 500px !important;
+      }
+      .owl-wrapper-outer {
+        width: 460px;
+      }
     }
   }
 }
@@ -744,8 +775,8 @@ body {
 }
 
 .item {
-  // width: auto;
-  // display: inline-block !important;
+  width: 100%;
+  display: block !important;
   height: 100%;
   overflow: auto;
   li {
