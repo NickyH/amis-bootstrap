@@ -558,12 +558,7 @@ function searchByAddress_qtip()
       position: {
           my: 'top center',
           at: 'bottom center',
-          target: $('#search-by-address-button'),
-          adjust: {
-            scroll: true, // Can be ommited (e.g. default behaviour)
-            x: 20,
-            y: 20
-        }
+          target: $('#search-by-address-button')
       }
   });
   $('#address-search-panel').removeClass('invisible');
@@ -681,12 +676,7 @@ function showAssets_qtip()
       overwrite: false,
       position: {
           my: 'center left',
-          at: 'center right',
-          adjust: {
-            scroll: true, // Can be ommited (e.g. default behaviour)
-            x: 20,
-            y: 20
-        }
+          at: 'center right'
       }
   });
 }
@@ -745,7 +735,7 @@ function showHistoryTree_qtip()
         classes: 'qtip-history-tree qtip-rounded qtip-shadow qtip-light',
         tip: {
           corner: 'center left',
-          width: 30,
+          width: 50,
           height: 30
           }
     },
@@ -764,10 +754,7 @@ function showHistoryTree_qtip()
     position: {
         my: 'center left',
         at: 'center right',
-        target: $(this),
-        adjust: {
-          scroll: true // Can be ommited (e.g. default behaviour)
-      }
+        target: $(this)
     },
     api: {
         onContentLoaded: $('.item').each(function () {
@@ -820,8 +807,9 @@ function search_by_category_qtip()
           classes: 'qtip-search-category qtip-rounded qtip-shadow qtip-light',
           tip: {
             corner: 'center left',
-            width: 30,
-            height: 30
+            width: 50,
+            height: 30,
+            target: $('#search-by-category-button')
         }
       },
       hide: {
@@ -834,10 +822,7 @@ function search_by_category_qtip()
       position: {
           my: 'center left',
           at: 'center right',
-          target: $(this),
-          adjust: {
-            scroll: true // Can be ommited (e.g. default behaviour)
-        }
+          target: $(this)
       },
       api: {
           onContentLoaded: $('.item').each(function () {
