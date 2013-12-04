@@ -46,6 +46,9 @@ $('.close-form').on('click', warn_close_form);
 $('.cancel-button').on('click', warn_cancel_form);
 
 $(".checkbox label input").change(function() {
+    var boxes = $(".action-checkbox").click(function(){
+      boxes.not(this).attr('checked', false);
+    });
     if(this.checked) {
       $('#referralNotesCR').parent('div').parent('div').removeClass('hidden');
       $('#referral-to').parent('.form-group').removeClass('hidden');
@@ -57,8 +60,6 @@ $(".checkbox label input").change(function() {
       $(this).removeAttr('checked');
     }
 });
-
-
 
 
 
