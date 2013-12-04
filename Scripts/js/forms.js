@@ -44,3 +44,8 @@ disable_datepickers();
 
 $('.close-form').on('click', warn_close_form);
 $('.cancel-button').on('click', warn_cancel_form);
+
+
+if ($('#actionCheckCR').prop('checked')) {
+  $('#referralNotesCR').attr('disabled', '');
+};

@@ -842,18 +842,18 @@
                 <div class="form-group">
                   <div class="col-sm-4"></div>
                   <div class="col-sm-4">
-                    <div class="radio">
+                    <div class="checkbox">
                       <label>
-                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                        <input type="checkbox" name="noValidate" id="actionCheckCR" value="option1" checked>
                         No action required
                       </label>
                     </div>
                   </div>
                   <div class="col-sm-4"></div>
                   <div class="col-sm-4">
-                    <div class="radio">
+                    <div class="checkbox">
                       <label>
-                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                        <input type="checkbox" name="noValidate" id="referralCheckCR" value="option1">
                         Referral
                       </label>
                     </div>
@@ -863,14 +863,14 @@
                 <div class="form-group">
                   <label class="col-sm-4 control-label">Notes</label>
                   <div class="col-sm-8">
-                    <textarea class="form-control" rows="3"></textarea>
+                    <textarea id="referralNotesCR" class="form-control" rows="3" disabled ></textarea>
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label class="col-sm-4 control-label">Referral To</label>
                   <div class="col-sm-8" id="referral-to">
-                    <select class="selectpicker form-control show-tick" title=''>
+                    <select class="selectpicker form-control show-tick" title='' disabled>
                       <option>Contact 1</option>
                       <option>Contact 2</option>
                       <option>Contact 3</option>
