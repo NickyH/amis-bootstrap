@@ -45,7 +45,20 @@ disable_datepickers();
 $('.close-form').on('click', warn_close_form);
 $('.cancel-button').on('click', warn_cancel_form);
 
+$(".checkbox label input").change(function() {
+    if(this.checked) {
+      $('#referralNotesCR').parent('div').parent('div').removeClass('hidden');
+      $('#referral-to').parent('.form-group').removeClass('hidden');
+      $(this).attr('checked', 'checked');
+    }
+    else if($(this).prop('checked', 'false')) {
+      $('#referralNotesCR').parent('div').parent('div').addClass('hidden');
+      $('#referral-to').parent('.form-group').addClass('hidden');
+      $(this).removeAttr('checked');
+    }
+});
 
-if ($('#actionCheckCR').prop('checked')) {
-  $('#referralNotesCR').attr('disabled', '');
-};
+
+
+
+
