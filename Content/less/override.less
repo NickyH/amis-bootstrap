@@ -608,34 +608,47 @@ body {
       margin-left: 50px;
     }
     @media @tabletPortraitWidth {
-      max-width: 600px !important;
-      margin-left: -20px;
-      width: 580px !important;
-      .owl-prev {
-        left: -240px;
-      }
-      .owl-next {
-        right: -240px;
-      }
-      .owl-pagination {
-        width: 460px !important;
-      }
-      .owl-item {
-        margin-right: 5px;
-        margin-left: 10px;
-      }
-      .qtip-content {
-        width: auto !important;
-        padding-left: 30px !important;
-        padding-right: 30px !important;
-      }
-      .owl-carousel {
-        width: 500px !important;
-      }
-      .owl-wrapper-outer {
-        width: 460px;
-      }
+      .narrow-layers-panel
     }
+    @media @widthMedium {
+      .narrow-layers-panel
+    }
+    @media @widthMediumLarge {
+      .narrow-layers-panel
+    }
+    @media @widthNarrow {
+      .narrow-layers-panel
+    }
+  }
+}
+
+.narrow-layers-panel {
+  max-width: 600px !important;
+  margin-left: -20px;
+  width: 580px !important;
+  .owl-prev {
+    left: -240px;
+  }
+  .owl-next {
+    right: -240px;
+  }
+  .owl-pagination {
+    width: 460px !important;
+  }
+  .owl-item {
+    margin-right: 5px;
+    margin-left: 10px;
+  }
+  .qtip-content {
+    width: auto !important;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
+  .owl-carousel {
+    width: 500px !important;
+  }
+  .owl-wrapper-outer {
+    width: 460px;
   }
 }
 
