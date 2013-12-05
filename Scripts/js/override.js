@@ -511,9 +511,6 @@ function searchByAddress_qtip()
       render: function (event, api) {
           // Grab the content
           var content = api.elements.content;
-          // Now it's is rendered, we can...
-          content.otherPlugin(); // ...Call our other plugins to act on its contents
-          $(this, content).otherPlugin(); // ...or a subset of it's contents!
       },
       show: {
           modal: {
