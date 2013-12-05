@@ -61,5 +61,10 @@ $(".checkbox label input").change(function() {
     }
 });
 
+// $(window).scroll(function() {
+//     scrollDistance = $(window).scrollTop();
+//     get_CR_page_position(scrollDistance);
+// });
+
 
 
