@@ -22,10 +22,10 @@ $(function(){
 
 function warn_cancel_form() {
   bootbox.confirm('Are you sure you want to cancel all changes made to this form?', function (response) {
-        if(response) {
-          window.location = '/';
-        }
-    });
+    if(response) {
+      window.location = '/';
+    }
+  });
 }
 
 function warn_close_form() {
@@ -39,24 +39,23 @@ function warn_close_form() {
 function disable_datepickers() {
   $('.input-group-addon').each( function() {
     var disabled = $(this).parents('.input-group').children('.hasDatepicker').attr('disabled');
-      if (disabled === 'disabled') {
-        $(this).parents('.input-group').children('.hasDatepicker').datepicker('disable');
-      }
+    if (disabled === 'disabled') {
+      $(this).parents('.input-group').children('.hasDatepicker').datepicker('disable');
+    }
   });
 }
 
 function table_search(thisObj, tableID) {
-var $rows = $("#"+tableID+" tr");
+  var $rows = $("#"+tableID+" tr");
+  var val = '^(?=.*\\b' + $.trim($(thisObj).val()).split(/\s+/).join('\\b)(?=.*\\b') + ').*$',
+      reg = RegExp(val, 'i'),
+      text;
 
-      var val = '^(?=.*\\b' + $.trim($(thisObj).val()).split(/\s+/).join('\\b)(?=.*\\b') + ').*$',
-          reg = RegExp(val, 'i'),
-          text;
-
-      $rows.show().filter(function() {
-          text = $(this).text().replace(/\s+/g, ' ');
-          return !reg.test(text);
-      }).hide();
-      $('thead tr').show();
+  $rows.show().filter(function() {
+      text = $(this).text().replace(/\s+/g, ' ');
+      return !reg.test(text);
+  }).hide();
+  $('thead tr').show();
 }
 
 function calendar_icon_click() {
@@ -64,7 +63,7 @@ function calendar_icon_click() {
 }
 
 function change_selectpicker_values() {
-    $('.selectpicker').each(function() {
+  $('.selectpicker').each(function() {
     var selectValue = $(this).attr('value');
     $(this).next().children('.btn').children('.filter-option').html(selectValue);
   });
@@ -212,15 +211,16 @@ function check_panel_valid() {
       }
     });
 
-  if (rowValid) {
-    toggle_oval_colour( (this), 'complete' );
+    if (rowValid) {
+      toggle_oval_colour( (this), 'complete' );
+    }
   }
-}
 
   if (panelValid === false) {
     $(icon).removeClass('glyphicon-remove panel-remove glyphicon-ok panel-ok').addClass('glyphicon-remove panel-remove');
     toggle_panel_num_colour( $(this), 'incomplete' );
   }
+
 }
 
 function check_this_panel_required(thisObj) {
@@ -415,8 +415,8 @@ function create_layers_carousel()
     stopOnHover : false,
 
     // Navigation
-    navigation: true,
-    navigationText: false,
+    navigation : true,
+    navigationText : false,
     rewindNav : true,
     scrollPerPage : false,
 
@@ -441,6 +441,7 @@ function create_layers_carousel()
   $('.owl-prev').addClass('arrow-left');
   $('.owl-next').addClass('arrow-right');
 }
+
 
 function layers_qtip()
 {
@@ -506,11 +507,14 @@ function searchByAddress_qtip()
               'data-role="button" style="background-color: #2584cd; border-radius: 20px;' +
               'width: 200px; height: 25px; font: 16px arial, sans serif; margin-top: 20px;' +
               'margin-right: auto; margin-left: 30px;" />',
-      button: 'Close'
+        button: 'Close'
       },
       render: function (event, api) {
           // Grab the content
           var content = api.elements.content;
+          // Now it's is rendered, we can...
+          content.otherPlugin(); // ...Call our other plugins to act on its contents
+          $(this, content).otherPlugin(); // ...or a subset of it's contents!
       },
       show: {
           modal: {
@@ -627,7 +631,7 @@ function showAssets_qtip()
               '</table>' +
               '</div>' +
               '</div>',
-      button: 'Close'
+        button: 'Close'
       },
       render: function (event, api) {
           // Grab the content
@@ -701,7 +705,7 @@ function showHistoryTree_qtip()
               '</div>' +
               '</div>' +
               '</div>',
-      button: 'Close'
+    button: 'Close'
     },
     show: {
         modal: {
@@ -773,7 +777,7 @@ function search_by_category_qtip()
               '<li class="lyr ctgry"><div class="layer-text-category">Category 8 <i class="icon-long-arrow-down"></i></div></li>' +
               '<li class="lyr ctgry"><div class="layer-text-category">Category 9 <i class="icon-long-arrow-down"></i></div></li>' +
               '</ul></div>',
-      button: 'Close'
+        button: 'Close'
       },
       show: {
           modal: {
@@ -819,7 +823,6 @@ function search_by_category_qtip()
       }
   });
 }
-
 
 $(function(){
   $("#map-link").on('click', refresh_map);
@@ -882,129 +885,132 @@ function refresh_map()
 function openActionRow(row) {
   $('#infoPopupTable tbody tr').each(function () {
     $(this).removeClass('actionRow');
+
     // Collapse all previous rows
     if ($(this).attr('onclick') != null) {
       if ($(this).next('tr').is(':visible')) {
         $(this).next('tr').slideRow('up');
+        }
       }
-    }
-  });
+    });
   // Highlight current selected row
   $(row).addClass('actionRow');
+
   var nextRow = $(row).next('tr');
+
   if ($(nextRow).is(':visible')) {
-    $(nextRow).slideRow('up');
-  }
-  else {
-    $(nextRow).slideRow('down');
+      $(nextRow).slideRow('up');
+  } else {
+      $(nextRow).slideRow('down');
   }
 }
+
 /* Custom animation for a table row to slide up or down */
 (function ($) {
-  var sR = {
-    defaults: {
-        slideSpeed: 400,
-        easing: false,
-        callback: false
-    },
-    thisCallArgs: {
-        slideSpeed: 400,
-        easing: false,
-        callback: false
-    },
-    methods: {
-      up: function (arg1, arg2, arg3) {
-        if (typeof arg1 == 'object') {
-          for (p in arg1) {
-            sR.thisCallArgs.eval(p) = arg1[p];
-          }
-        } else if (typeof arg1 != 'undefined' && (typeof arg1 == 'number' || arg1 == 'slow' || arg1 == 'fast')) {
-            sR.thisCallArgs.slideSpeed = arg1;
-        } else {
-            sR.thisCallArgs.slideSpeed = sR.defaults.slideSpeed;
+    var sR = {
+        defaults: {
+            slideSpeed: 400,
+            easing: false,
+            callback: false
+        },
+        thisCallArgs: {
+            slideSpeed: 400,
+            easing: false,
+            callback: false
+        },
+        methods: {
+            up: function (arg1, arg2, arg3) {
+                if (typeof arg1 == 'object') {
+                    for (p in arg1) {
+                        sR.thisCallArgs.eval(p) = arg1[p];
+                    }
+                } else if (typeof arg1 != 'undefined' && (typeof arg1 == 'number' || arg1 == 'slow' || arg1 == 'fast')) {
+                    sR.thisCallArgs.slideSpeed = arg1;
+                } else {
+                    sR.thisCallArgs.slideSpeed = sR.defaults.slideSpeed;
+                }
+                if (typeof arg2 == 'string') {
+                    sR.thisCallArgs.easing = arg2;
+                } else if (typeof arg2 == 'function') {
+                    sR.thisCallArgs.callback = arg2;
+                } else if (typeof arg2 == 'undefined') {
+                    sR.thisCallArgs.easing = sR.defaults.easing;
+                }
+                if (typeof arg3 == 'function') {
+                    sR.thisCallArgs.callback = arg3;
+                } else if (typeof arg3 == 'undefined' && typeof arg2 != 'function') {
+                    sR.thisCallArgs.callback = sR.defaults.callback;
+                }
+                var $cells = $(this).find('td');
+                $cells.wrapInner('<div class="slideRowUp" />');
+                var currentPadding = $cells.css('padding');
+                $cellContentWrappers = $(this).find('.slideRowUp');
+                $cellContentWrappers.slideUp(sR.thisCallArgs.slideSpeed, sR.thisCallArgs.easing).parent().animate({
+                    paddingTop: '0px',
+                    paddingBottom: '0px'
+                }, {
+                    complete: function () {
+                        $(this).children('.slideRowUp').replaceWith($(this).children('.slideRowUp').contents());
+                        $(this).parent().css({ 'display': 'none' });
+                        $(this).css({ 'padding': currentPadding });
+                    }
+                });
+                var wait = setInterval(function () {
+                    if ($cellContentWrappers.is(':animated') === false) {
+                        clearInterval(wait);
+                        if (typeof sR.thisCallArgs.callback == 'function') {
+                            sR.thisCallArgs.callback.call(this);
+                        }
+                    }
+                }, 100);
+                return $(this);
+            },
+            down: function (arg1, arg2, arg3) {
+                if (typeof arg1 == 'object') {
+                    for (p in arg1) {
+                        sR.thisCallArgs.eval(p) = arg1[p];
+                    }
+                } else if (typeof arg1 != 'undefined' && (typeof arg1 == 'number' || arg1 == 'slow' || arg1 == 'fast')) {
+                    sR.thisCallArgs.slideSpeed = arg1;
+                } else {
+                    sR.thisCallArgs.slideSpeed = sR.defaults.slideSpeed;
+                }
+                if (typeof arg2 == 'string') {
+                    sR.thisCallArgs.easing = arg2;
+                } else if (typeof arg2 == 'function') {
+                    sR.thisCallArgs.callback = arg2;
+                } else if (typeof arg2 == 'undefined') {
+                    sR.thisCallArgs.easing = sR.defaults.easing;
+                }
+                if (typeof arg3 == 'function') {
+                    sR.thisCallArgs.callback = arg3;
+                } else if (typeof arg3 == 'undefined' && typeof arg2 != 'function') {
+                    sR.thisCallArgs.callback = sR.defaults.callback;
+                }
+                var $cells = $(this).find('td');
+                $cells.wrapInner('<div class="slideRowDown" style="display:none;" />');
+                $cellContentWrappers = $cells.find('.slideRowDown');
+                $(this).show();
+                $cellContentWrappers.slideDown(sR.thisCallArgs.slideSpeed, sR.thisCallArgs.easing, function () { $(this).replaceWith($(this).contents()); });
+                var wait = setInterval(function () {
+                    if ($cellContentWrappers.is(':animated') === false) {
+                        clearInterval(wait);
+                        if (typeof sR.thisCallArgs.callback == 'function') {
+                            sR.thisCallArgs.callback.call(this);
+                        }
+                    }
+                }, 100);
+                return $(this);
+            }
         }
-        if (typeof arg2 == 'string') {
-            sR.thisCallArgs.easing = arg2;
-        } else if (typeof arg2 == 'function') {
-            sR.thisCallArgs.callback = arg2;
-        } else if (typeof arg2 == 'undefined') {
-            sR.thisCallArgs.easing = sR.defaults.easing;
+    };
+    $.fn.slideRow = function (method, arg1, arg2, arg3) {
+        if (typeof method != 'undefined') {
+            if (sR.methods[method]) {
+                return sR.methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
+            }
         }
-        if (typeof arg3 == 'function') {
-            sR.thisCallArgs.callback = arg3;
-        } else if (typeof arg3 == 'undefined' && typeof arg2 != 'function') {
-            sR.thisCallArgs.callback = sR.defaults.callback;
-        }
-        var $cells = $(this).find('td');
-        $cells.wrapInner('<div class="slideRowUp" />');
-        var currentPadding = $cells.css('padding');
-        $cellContentWrappers = $(this).find('.slideRowUp');
-        $cellContentWrappers.slideUp(sR.thisCallArgs.slideSpeed, sR.thisCallArgs.easing).parent().animate({
-            paddingTop: '0px',
-            paddingBottom: '0px'
-        }, {
-    complete: function () {
-      $(this).children('.slideRowUp').replaceWith($(this).children('.slideRowUp').contents());
-      $(this).parent().css({ 'display': 'none' });
-      $(this).css({ 'padding': currentPadding });
-        }
-      });
-      var wait = setInterval(function () {
-        if ($cellContentWrappers.is(':animated') === false) {
-          clearInterval(wait);
-          if (typeof sR.thisCallArgs.callback == 'function') {
-            sR.thisCallArgs.callback.call(this);
-          }
-        }
-      }, 100);
-      return $(this);
-      },
-    down: function (arg1, arg2, arg3) {
-      if (typeof arg1 == 'object') {
-        for (p in arg1) {
-          sR.thisCallArgs.eval(p) = arg1[p];
-        }
-      } else if (typeof arg1 != 'undefined' && (typeof arg1 == 'number' || arg1 == 'slow' || arg1 == 'fast')) {
-          sR.thisCallArgs.slideSpeed = arg1;
-      } else {
-          sR.thisCallArgs.slideSpeed = sR.defaults.slideSpeed;
-      }
-      if (typeof arg2 == 'string') {
-          sR.thisCallArgs.easing = arg2;
-      } else if (typeof arg2 == 'function') {
-          sR.thisCallArgs.callback = arg2;
-      } else if (typeof arg2 == 'undefined') {
-          sR.thisCallArgs.easing = sR.defaults.easing;
-      }
-      if (typeof arg3 == 'function') {
-          sR.thisCallArgs.callback = arg3;
-      } else if (typeof arg3 == 'undefined' && typeof arg2 != 'function') {
-          sR.thisCallArgs.callback = sR.defaults.callback;
-      }
-      var $cells = $(this).find('td');
-      $cells.wrapInner('<div class="slideRowDown" style="display:none;" />');
-      $cellContentWrappers = $cells.find('.slideRowDown');
-      $(this).show();
-      $cellContentWrappers.slideDown(sR.thisCallArgs.slideSpeed, sR.thisCallArgs.easing, function () { $(this).replaceWith($(this).contents()); });
-      var wait = setInterval(function () {
-        if ($cellContentWrappers.is(':animated') === false) {
-          clearInterval(wait);
-          if (typeof sR.thisCallArgs.callback == 'function') {
-            sR.thisCallArgs.callback.call(this);
-          }
-        }
-      }, 100);
-      return $(this);
-      }
-    }
-  };
-  $.fn.slideRow = function (method, arg1, arg2, arg3) {
-    if (typeof method != 'undefined') {
-      if (sR.methods[method]) {
-        return sR.methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
-      }
-    }
-  };
+    };
 })(jQuery);
 
 function open_form_from_asset()
