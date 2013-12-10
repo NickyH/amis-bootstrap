@@ -81,11 +81,19 @@ body {
     background-color: @map-highlight-colour !important;
   }
   //form tool icons
+  &.icon-asset {
+    right: 530px;
+    background-color: @form-highlight-colour !important;
+  }
   &.icon-request {
-    right: 290px;
+    right: 410px;
     background-color: @form-highlight-colour !important;
   }
   &.icon-defects {
+    right: 290px;
+    background-color: @form-highlight-colour !important;
+  }
+  &.icon-task {
     right: 170px;
     background-color: @form-highlight-colour !important;
   }
@@ -1188,8 +1196,9 @@ input[type="file"] {
   .glyphicon {
     margin-right: 10px;
   }
-  .close-form-text {
-    // margin-bottom: 20px;
+  &.email {
+    width: 100%;
+    padding: 5px 5px 0 15px;
   }
 }
 
