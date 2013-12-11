@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="../Scripts/js/jquery.qtip.js"></script>
+
+    <style>
+        /* Layers Action */
+        .actionRow {
+            background-color: lightblue;
+        }
+    </style>
+
+    <script type="text/javascript">
+
+        $(function(){
+            $("#map").on('click', showAssets_qtip);
+        });
+
+        function openActionRow(row) {
+            $('#infoPopupTable tbody tr').each(function () {
+                $(this).removeClass('actionRow');
+
+                // Collapse all previous rows
+                if ($(this).attr('onclick') != null) {
+                    if ($(this).next('tr').is(':visible')) {
+                        $(this).next('tr').slideRow('up');
+                    }
+                }
+            });
+
+            // Highlight current selected row
+            $(row).addClass('actionRow');
+
+            var nextRow = $(row).next('tr');
+
+            if ($(nextRow).is(':visible')) {
+                $(nextRow).slideRow('up');
+            } else {
+                $(nextRow).slideRow('down');
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <div data-role="page">
+        <a id="map" href="#featureInfoGridPopup" data-rel="popup" data-transition="pop">
+            <img id="mapstatic" src="../Content/images/OsmMap.jpg" alt="" />
+        </a>
+    </div>
+</body>
+</html>
