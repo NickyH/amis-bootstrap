@@ -154,6 +154,20 @@ body {
   bottom: 0;
   z-index: 4;
   border-right: 1px solid darken(@left-bar-colour, 20%);
+  .powered {
+    position: absolute;
+    bottom: 15px;
+    padding: 0 10px 0 10px;
+    span {
+      color: @white;
+      font-size: 11px;
+      display: block;
+    }
+    span:nth-child(1) {
+      font-weight: bold;
+      font-size: 13px;
+    }
+  }
 }
 
 .left-bar-icons {
