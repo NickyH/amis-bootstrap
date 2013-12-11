@@ -61,5 +61,5 @@ $(".checkbox label input").change(function() {
     }
 });
 
-
+$('.reference-history tr').on('click', open_current_contact_row);
 

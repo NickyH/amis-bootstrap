@@ -20,6 +20,19 @@ $(function(){
   $('li.dcjq-parent-li').on('click', mimic_anchor_click);
 });
 
+function open_current_contact_row() {
+  if ($(this).hasClass('row-open')) {
+    $(this).removeClass('row-open');
+    $(this).next('tr').remove();
+  } else if (!$(this).hasClass('row-open')) {
+    $(this).addClass('row-open');
+    $(this).after("<tr class='reference-details'><td colspan='8'><span>Vivamus ut arcu" +
+      "posuere, molestie quam et, rhoncus diam. Nunc suscipit porta urna, tincidunt" +
+      "vehicula libero elementum sed. Aliquam vestibulum blandit tortor. Curabitur" +
+      "dolor eget odio ultricies adipiscing et vel ante.</span></td></tr>");
+  }
+}
+
 function skip_to_details() {
   var details = $('#bookmark_details').offset().top;
   $(window).scrollTop((details - 200));
