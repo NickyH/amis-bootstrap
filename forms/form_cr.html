@@ -14,6 +14,67 @@
   <div class="container-fluid form-container">
 
     <!-- form row 1 -->
+    <div class="row" id="bookmark_location">
+      <div class="col-12">
+        <div class="row-fluid">
+
+          <!-- form panel 1 -->
+          <div class="col-lg-6 col-md-6 col-sm-12">
+
+            <div class="form-panel">
+              <!-- numbered circle in each form panel-->
+              <div class="text-circle">
+                <div class="text-in-circle">
+                  Location
+                </div>
+              </div>
+
+              <form class="form-horizontal container" role="form">
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Location</label>
+                  <div class="col-sm-8">
+                    <textarea class="form-control" rows="7"></textarea>
+                  </div>
+                </div>
+                <span class="glyphicon insert-cross-icon"></span>
+              </form>
+
+            </div>
+          </div>
+          <!-- end form panel 1 -->
+
+          <!-- form panel 2 -->
+          <div class="col-lg-6 col-md-6 col-sm-12">
+
+            <div class="form-panel">
+              <!-- numbered circle in each form panel-->
+              <div class="text-circle">
+                <div class="text-in-circle">
+                  Map
+                </div>
+              </div>
+
+              <form class="form-horizontal container" role="form">
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Map</label>
+                  <div class="col-sm-8">
+                    <textarea class="form-control" rows="7"></textarea>
+                  </div>
+                </div>
+
+                <span class="glyphicon insert-cross-icon"></span>
+              </form>
+
+            </div>
+          </div>
+          <!-- end form panel 2 -->
+
+        </div>
+      </div>
+    </div>
+    <!-- end form row 1 -->
+
+    <!-- form row 2 -->
     <div class="row" id="bookmark_details">
       <div class="col-12">
         <div class="row-fluid">
@@ -193,9 +254,9 @@
         </div>
       </div>
     </div>
-    <!-- end form row 1 -->
+    <!-- end form row 2 -->
 
-    <!-- form row 2 -->
+    <!-- form row 3 -->
     <div class="row" id="bookmark_contact">
       <div class="col-12">
         <div class="row-fluid">
@@ -224,18 +285,6 @@
                   <label class="col-sm-4 control-label">Type</label>
                   <div class="col-sm-8">
                     <select id="temp" class="selectpicker show-tick form-control" title='' data-live-search="true" value="Resident">
-                      <option data-hidden="true"></option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Select Customer</label>
-                  <div class="col-sm-8">
-                    <select class="selectpicker show-tick form-control" title='' data-live-search="true">
                       <option data-hidden="true"></option>
                       <option>1</option>
                       <option>2</option>
@@ -411,10 +460,10 @@
         </div>
       </div>
     </div>
-    <!-- end form row 2 -->
+    <!-- end form row 3 -->
 
 
-    <!-- form row 3 -->
+    <!-- form row 4 -->
     <div class="row">
       <div class="col-12">
         <div class="row-fluid">
@@ -753,67 +802,6 @@
     <!-- end form row 5 -->
 
     <!-- form row 6 -->
-    <div class="row" id="bookmark_location">
-      <div class="col-12">
-        <div class="row-fluid">
-
-          <!-- form panel 1 -->
-          <div class="col-lg-6 col-md-6 col-sm-12">
-
-            <div class="form-panel">
-              <!-- numbered circle in each form panel-->
-              <div class="text-circle">
-                <div class="text-in-circle">
-                  Location
-                </div>
-              </div>
-
-              <form class="form-horizontal container" role="form">
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Location</label>
-                  <div class="col-sm-8">
-                    <textarea class="form-control" rows="7"></textarea>
-                  </div>
-                </div>
-                <span class="glyphicon insert-cross-icon"></span>
-              </form>
-
-            </div>
-          </div>
-          <!-- end form panel 1 -->
-
-          <!-- form panel 2 -->
-          <div class="col-lg-6 col-md-6 col-sm-12">
-
-            <div class="form-panel">
-              <!-- numbered circle in each form panel-->
-              <div class="text-circle">
-                <div class="text-in-circle">
-                  Map
-                </div>
-              </div>
-
-              <form class="form-horizontal container" role="form">
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Map</label>
-                  <div class="col-sm-8">
-                    <textarea class="form-control" rows="7"></textarea>
-                  </div>
-                </div>
-
-                <span class="glyphicon insert-cross-icon"></span>
-              </form>
-
-            </div>
-          </div>
-          <!-- end form panel 2 -->
-
-        </div>
-      </div>
-    </div>
-    <!-- end form row 6 -->
-
-    <!-- form row 7 -->
     <div class="row" id="bookmark_referral">
       <div class="col-12">
         <div class="row-fluid">
@@ -906,7 +894,7 @@
         </div>
       </div>
     </div>
-    <!-- end form row 7 -->
+    <!-- end form row 6 -->
 
   </div> <!-- end form container -->
 </div>
@@ -914,4 +902,5 @@
 <script src="../Scripts/js/forms.js"></script>
 <script>
 $('.form-container').on('DOMMouseScroll mousewheel', get_CR_page_position);
+skip_to_details();
 </script>

@@ -20,6 +20,11 @@ $(function(){
   $('li.dcjq-parent-li').on('click', mimic_anchor_click);
 });
 
+function skip_to_details() {
+  var details = $('#bookmark_details').offset().top;
+  $(window).scrollTop((details - 200));
+}
+
 function warn_cancel_form() {
   bootbox.confirm('Are you sure you want to cancel all changes made to this form?', function (response) {
     if(response) {
@@ -88,22 +93,22 @@ function oval_border_highlight(tab_id) {
 }
 
 function get_CR_page_position() {
+  var location = $('#bookmark_location').offset().top;
   var details = $('#bookmark_details').offset().top;
   var contact = $('#bookmark_contact').offset().top;
   var notes = $('#bookmark_notes').offset().top;
-  var location = $('#bookmark_location').offset().top;
 
-  if ($(window).scrollTop() >= (details - topOffset -50 ) ) {
+  if ($(window).scrollTop() >= (location - topOffset -50) ) {
     oval_border_highlight('#tab1');
   }
-  if ($(window).scrollTop() >= (contact - topOffset -50) ) {
+  if ($(window).scrollTop() >= (details - topOffset -50 ) ) {
     oval_border_highlight('#tab2');
+  }
+  if ($(window).scrollTop() >= (contact - topOffset -50) ) {
+    oval_border_highlight('#tab3');
   }
   if ($(window).scrollTop() >= (notes - topOffset -50) ) {
     oval_border_highlight('#tab4');
-  }
-  if ($(window).scrollTop() >= (location - topOffset -50) ) {
-    oval_border_highlight('#tab5');
   }
 }
 
@@ -362,27 +367,27 @@ function check_form_location()
 {
   if (!$('#bookmark-nav ul').hasClass('disabled')) {
     var href = $(this).attr('data-href');
+    if (href === '#bookmark_location') {
+      var scrollAmount = ($(href).offset().top) - topOffset;
+      $('html, body').animate({ scrollTop: scrollAmount }, 1000);
+      oval_border_highlight('#tab1');
+    }
     if (href === '#bookmark_details') {
       var scrollAmount = ($(href).offset().top) - topOffset;
       $('html, body').animate({scrollTop: scrollAmount }, 1500);
-      oval_border_highlight('#tab1');
+      oval_border_highlight('#tab2');
     }
     if (href === '#bookmark_contact') {
       var scrollAmount = ($(href).offset().top) - topOffset;
       $('html, body').animate({ scrollTop: scrollAmount }, 1000);
-      oval_border_highlight('#tab2');
+      oval_border_highlight('#tab3');
     }
     if (href === '#bookmark_condition') {
       var scrollAmount = ($(href).offset().top) - topOffset;
       $('html, body').animate({ scrollTop: scrollAmount }, 1000);
-      oval_border_highlight('#tab3');
-    }
-    if (href === '#bookmark_notes') {
-      var scrollAmount = ($(href).offset().top) - topOffset;
-      $('html, body').animate({ scrollTop: scrollAmount }, 1000);
       oval_border_highlight('#tab4');
     }
-    if (href === '#bookmark_location') {
+    if (href === '#bookmark_notes') {
       var scrollAmount = ($(href).offset().top) - topOffset;
       $('html, body').animate({ scrollTop: scrollAmount }, 1000);
       oval_border_highlight('#tab5');
