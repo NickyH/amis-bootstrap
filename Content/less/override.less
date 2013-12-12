@@ -648,7 +648,7 @@ body {
   &.qtip-layers-panel {
     @media @tabletLandscapeWidth {
       max-width: 780px !important;
-      margin-left: 50px;
+      margin-left: -25px;
     }
     @media @tabletPortraitWidth {
       .narrow-layers-panel
@@ -783,9 +783,9 @@ body {
 
 .owl-pagination {
   position: relative;
-  top: -30px;
-  margin-top: 30px;
-  padding-top: 30px;
+  top: -10px;
+  margin-top: 10px;
+  padding-top: 10px;
 }
 
 .owl-theme .owl-controls .owl-page span.owl-numbers {
@@ -801,18 +801,27 @@ body {
 
 .layers-owl-wrapper {
   width: 630px;
+  height: 400px;
 }
 
 .owl-wrapper-outer {
   margin-right: auto;
   margin-left: auto;
-  height: 200px;
+  height: 300px;
+}
+
+.owl-controls.clickable {
+  height: 50px !important;
+}
+
+.owl-buttons {
+  height: 20px !important;
 }
 
 //collapsible layers menu
 
 .owl-carousel {
-  max-height: 200px !important;
+  max-height: 300px !important;
   .panel-item {
     width: 200px;
     display: block;

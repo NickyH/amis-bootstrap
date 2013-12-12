@@ -22,32 +22,32 @@ $(function(){
 
 function open_address_book() {
   bootbox.dialog({
-  message: "Search for contacts...",
-  title: "Contact Address Book",
-  buttons: {
-    success: {
-      label: "Search",
-      className: "btn-success",
-      callback: function() {
-        Example.show("great success");
-      }
-    },
-    danger: {
-      label: "Cancel",
-      className: "btn-danger",
-      callback: function() {
-        Example.show("uh oh, look out!");
-      }
-    },
-    main: {
-      label: "Done",
-      className: "btn-primary",
-      callback: function() {
-        Example.show("Primary button");
+    message: "Search for contacts...",
+    title: "Contact Address Book",
+    buttons: {
+      success: {
+        label: "Search",
+        className: "btn-success",
+        callback: function() {
+          Example.show("great success");
+        }
+      },
+      danger: {
+        label: "Cancel",
+        className: "btn-danger",
+        callback: function() {
+          Example.show("uh oh, look out!");
+        }
+      },
+      main: {
+        label: "Done",
+        className: "btn-primary",
+        callback: function() {
+          Example.show("Primary button");
+        }
       }
     }
-  }
-});
+  });
 }
 
 function open_current_contact_row() {
@@ -548,7 +548,7 @@ function layers_qtip()
       },
       api: {
           onContentLoaded: $('.item').each(function () {
-              $(this).attr('style', 'width: 200px; height: 250px;');
+              $(this).attr('style', 'width: 200px; height: 300px;');
           })
       }
   });
