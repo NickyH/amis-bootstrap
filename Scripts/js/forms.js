@@ -45,6 +45,8 @@ disable_datepickers();
 $('.close-form').on('click', warn_close_form);
 $('.cancel-button').on('click', warn_cancel_form);
 
+$('span.lookup').on('click', open_address_book);
+
 $(".checkbox label input").change(function() {
     var boxes = $(".action-checkbox").click(function(){
       boxes.not(this).attr('checked', false);

@@ -20,6 +20,36 @@ $(function(){
   $('li.dcjq-parent-li').on('click', mimic_anchor_click);
 });
 
+function open_address_book() {
+  bootbox.dialog({
+  message: "Search for contacts...",
+  title: "Contact Address Book",
+  buttons: {
+    success: {
+      label: "Search",
+      className: "btn-success",
+      callback: function() {
+        Example.show("great success");
+      }
+    },
+    danger: {
+      label: "Cancel",
+      className: "btn-danger",
+      callback: function() {
+        Example.show("uh oh, look out!");
+      }
+    },
+    main: {
+      label: "Done",
+      className: "btn-primary",
+      callback: function() {
+        Example.show("Primary button");
+      }
+    }
+  }
+});
+}
+
 function open_current_contact_row() {
   if ($(this).hasClass('row-open')) {
     $(this).removeClass('row-open');
