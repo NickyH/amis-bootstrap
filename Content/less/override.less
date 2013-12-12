@@ -1420,5 +1420,47 @@ span.lookup:hover {
  .panel {
   position: fixed;
   left: 120px;
-  top: 20px;
+  top: 10px;
+  background-color: @form-highlight-colour;
+  color: white;
+  height: 80px;
+  width: 50px;
+  margin: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  img {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 18px;
+  }
  }
+
+ .cb_slide_panel.panel_left, .cb_slide_panel.panel_right {
+  background: none;
+  background-color: @white;
+  width: 170px !important;
+  height: 90%;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  top: 5px !important;
+  border-right: 8px solid @form-highlight-colour;
+  border-bottom: 5px solid @form-highlight-colour;
+  border-top: 5px solid @form-highlight-colour;
+ }
+
+ .cb_slide_panel a.close {
+  background: url("../images/icons/icon-history-small-white.png") @form-highlight-colour no-repeat !important;
+  background-position: center !important;
+  opacity: 0.8 !important;
+  border: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height: 80px;
+  width: 50px;
+ }
+
+.cb_slide_panel.panel_left a.close {
+  top: 0px;
+  right: -51px;
+}
