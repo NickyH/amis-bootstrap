@@ -12,6 +12,10 @@
     <img class="top-bar-icons icon-form icon-defects hidden" src="../Content/images/icons/icon-defect-white.png">
     <img class="top-bar-icons icon-form icon-task hidden" src="../Content/images/icons/icon-task-white.png">
   </div>
+
+<a href="history.html" class="panel" data-slidepanel="panel">Show Panel</a>
+
+
 </div>
 
 <script>
@@ -19,4 +23,13 @@
   $('.icon-request').on('click', insert_CR_form);
   $('.icon-defects').on('click', insert_defect_form);
   $('.icon-inspect').on('click', insert_inspection_form);
+</script>
+
+<script type="text/javascript">
+      $(document).ready(function(){
+          $('[data-slidepanel]').slidepanel({
+              orientation: 'left',
+              mode: 'overlay'
+          });
+      });
 </script>
