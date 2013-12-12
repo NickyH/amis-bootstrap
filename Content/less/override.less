@@ -69,11 +69,11 @@ body {
   // -webkit-box-shadow: 2px 2px @grey-dark;
   // box-shadow: 2px 2px @grey-dark;
   &.icon-address-book {
-    right: 290px;
+    right: 250px;
     background-color: @map-highlight-colour !important;
   }
   &.icon-locate-me {
-    right: 170px;
+    right: 150px;
     background-color: @map-highlight-colour !important;
   }
   &.icon-follow-me {
@@ -82,19 +82,19 @@ body {
   }
   //form tool icons
   &.icon-asset {
-    right: 530px;
+    right: 450px;
     background-color: @form-highlight-colour !important;
   }
   &.icon-request {
-    right: 410px;
+    right: 350px;
     background-color: @form-highlight-colour !important;
   }
   &.icon-inspect {
-    right: 290px;
+    right: 250px;
     background-color: @form-highlight-colour !important;
   }
   &.icon-defects {
-    right: 170px;
+    right: 150px;
     background-color: @form-highlight-colour !important;
   }
   &.icon-task {
@@ -1438,29 +1438,31 @@ span.lookup:hover {
 
  .cb_slide_panel.panel_left, .cb_slide_panel.panel_right {
   background: none;
-  background-color: @white;
+  background-color: @white-medium;
   width: 170px !important;
-  height: 90%;
+  height: 93%;
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
   top: 5px !important;
-  border-right: 8px solid @form-highlight-colour;
-  border-bottom: 5px solid @form-highlight-colour;
-  border-top: 5px solid @form-highlight-colour;
+  border-right: 1px solid @form-highlight-colour;
+  border-bottom: 1px solid @form-highlight-colour;
+  border-top: 1px solid @form-highlight-colour;
+  border-left: 10px solid @grey-dark;
+  box-shadow: 3px 0px 2px @grey-light;
  }
 
  .cb_slide_panel a.close {
-  background: url("../images/icons/icon-history-small-white.png") @form-highlight-colour no-repeat !important;
+  background: url("../images/icons/icon-history-small-white.png") @grey-light no-repeat !important;
   background-position: center !important;
   opacity: 0.8 !important;
   border: 0;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   height: 80px;
-  width: 50px;
+  width: 55px;
  }
 
 .cb_slide_panel.panel_left a.close {
-  top: 0px;
-  right: -51px;
+  top: 5px;
+  right: -56px;
 }
