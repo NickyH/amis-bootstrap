@@ -594,7 +594,7 @@ body {
 // qtip styling
 
 .qtip {
-  line-height: 14px;
+  line-height: 20px;
   &.qtip-address-panel {
     width: 300px;
     height: 150px;
@@ -849,13 +849,25 @@ body {
       color: @white;
       text-decoration: none;
       padding: 5px;
+      vertical-align: middle;
+      display: inline-block;
+      &.truncate {
+        text-overflow: ellipsis;
+        width: 140px;
+        white-space: nowrap;
+        overflow: hidden;
+        padding-right: 0;
+      }
     }
   }
 }
 
+
+
 .dcjq-parent-li {
   margin-left: 0;
   margin-right: 0;
+  font-size: 12px;
   ul {
     background-color: lighten( @map-highlight-colour, 10% );
   }
@@ -880,7 +892,7 @@ body {
   border-top-right-radius: 5px;
   color: @white;
   float: right;
-  height: 26px;
+  height: 35px;
   width: 30px;
   padding: 5px;
   z-index: 10;
@@ -904,6 +916,7 @@ body {
   padding-top: 8px;
   padding-left: 10px;
 }
+
 
 // additional overrides for mockup prototype for conference
 
