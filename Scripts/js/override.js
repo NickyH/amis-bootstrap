@@ -13,8 +13,8 @@ $(function(){
   $('ul[id^="accordion-"]').dcAccordion();
   $("#insert-left").on('click', '#layers-button', layers_qtip);
   $("#insert-left").on('click', '#search-by-category-button', search_by_category_qtip);
+  $("#insert-left").on('click', '.search-icon', search_by_number_qtip);
   $("#insert-top").on('click', '#search-by-address-button', searchByAddress_qtip);
-  $("#insert-top").on('click', '.arrow-history-tree', showHistoryTree_qtip);
   $("#map").on('click', showAssets_qtip);
   $('#details-link').on('click', form_navbar);
   $('li.dcjq-parent-li').on('click', mimic_anchor_click);
@@ -730,95 +730,6 @@ function showAssets_qtip()
   });
 }
 
-function showHistoryTree_qtip()
-{
-  toggle_arrow();
-  $(this).qtip({
-    content: {
-      text: '<div id="processTreePanel">' +
-              '<div id="processTreeContainer">' +
-              '<div class="css-treeview">' +
-              '<li class="no-list">' +
-              '<div class="tree-header"><input type="checkbox" checked="checked"><label for="2c20eb11-0495-e211-9759-00a0d5ffffae"><a href="#">EmergencyPhone (00108)</a></label><ul></div>' +
-              '<li class="no-list">' +
-              '<div class="tree-header"><input type="checkbox" checked="checked"><label for="f8bb31c4-3564-4c0d-b814-b05b51e2035e"><a href="#">Customer Request (IDENTIFIED)</a></label><ul></div>' +
-              '<li class="no-list"><img src="images/expanded-arrow.png" class="expanded-arrow"><a href="#" class="isClosed">Inspection (2.919, 04/09/2013)</a></li>' +
-              '<li class="no-list"><img src="images/expanded-arrow.png" class="expanded-arrow"><a href="#">Defect (IDENTIFIED)</a></li>' +
-              '<li class="no-list"><img src="images/expanded-arrow.png" class="expanded-arrow"><a href="#">Defect (IDENTIFIED)</a></li>' +
-              '</ul>' +
-              '</li>' +
-              '<li class="no-list"><img src="images/expanded-arrow.png" class="expanded-arrow"><a href="#" class="isClosed">Inspection (1.919, 04/09/2013)</a></li>' +
-              '<li class="no-list"><img src="images/expanded-arrow.png" class="expanded-arrow"><a href="#" class="isClosed">Inspection (14.555, 01/07/2013)</a></li>' +
-              '<li class="no-list"><img src="images/expanded-arrow.png" class="expanded-arrow"><a href="#" class="isClosed">Task (COMPLETED)</a></li>' +
-              '</ul>' +
-              '</li>' +
-              '</div>' +
-              '</div>' +
-              '<div id="showClosedContainer">' +
-              '<div class="ui-checkbox">' +
-              '<label data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="checkbox-on" data-theme="b" data-mini="false" class="ui-checkbox-on ui-btn ui-btn-up-b ui-btn-corner-all ui-fullsize ui-btn-icon-left">' +
-              '<span class="ui-btn-inner"><span class="ui-btn-text">Show Closed' +
-              '</span><span class="ui-icon ui-icon-checkbox-on ui-icon-shadow">&nbsp;</span></span></label><input type="checkbox" data-corners="false" data-theme="b" id="chkShowClosed">' +
-              '</div>' +
-              '</div>' +
-              '</div>',
-    button: 'Close'
-    },
-    show: {
-        modal: {
-            on: true,
-            solo: true
-        },
-
-        ready: true,
-        event: 'click',
-        effect: function (offset) {
-            $(this).slideDown(300);
-        }
-    },
-    events: {
-      show: function(event, api) {
-      }
-    },
-    style: {
-        classes: 'qtip-history-tree qtip-rounded qtip-shadow qtip-light',
-        tip: {
-          corner: 'center left',
-          width: 50,
-          height: 30
-          }
-    },
-    hide: {
-        event: 'click',
-        effect: function () {
-            $(this).slideUp(300);
-        }
-    },
-    events:{
-            hide: function(event, api){
-              toggle_arrow();
-            }
-          },
-    overwrite: false,
-    position: {
-        my: 'center left',
-        at: 'center right',
-        target: $(this)
-    },
-    api: {
-        onContentLoaded: $('.item').each(function () {
-            $(this).attr('style', 'width: 250px; height: 250px;');
-        })
-    }
-  });
-}
-
-function toggle_arrow()
-{
-  $(".arrow-history-tree").toggleClass('myactive');
-}
-
-
 function search_by_category_qtip()
 {
   $(this).qtip({
@@ -870,6 +781,59 @@ function search_by_category_qtip()
       }
   });
   $('#address-search-panel').removeClass('invisible');
+}
+
+function search_by_number_qtip()
+{
+  $(this).qtip({
+      content: {
+        text: $('#search-by-number'),
+        button: 'Close'
+      },
+      show: {
+          modal: {
+              on: true,
+              solo: true
+          },
+
+          ready: true,
+          event: 'click',
+          effect: function (offset) {
+              $(this).slideDown(300);
+          }
+      },
+      events: {
+        show: function(event, api) {
+        }
+      },
+      style: {
+          classes: 'qtip-search-number qtip-rounded qtip-shadow qtip-light',
+          tip: {
+            corner: 'center left',
+            width: 50,
+            height: 30,
+            target: $('.search-icon')
+        }
+      },
+      hide: {
+          event: 'click',
+          effect: function () {
+              $(this).slideUp(300);
+          }
+      },
+      overwrite: false,
+      position: {
+          my: 'center left',
+          at: 'center right',
+          target: $(this)
+      },
+      api: {
+          onContentLoaded: $('.item').each(function () {
+              $(this).attr('style', 'width: 250px; height: 150px;');
+          })
+      }
+  });
+  $('#search-by-number').removeClass('invisible');
 }
 
 $(function(){
