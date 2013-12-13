@@ -13,17 +13,16 @@
     <link rel="stylesheet" type="text/css" href="../Content/css/jquery.slidepanel.css">
     <link rel="stylesheet" type="text/less" href="../Content/less/jquery.qtip.min.css">
     <link rel="stylesheet" type="text/less" href="../Content/less/override.less">
-
   </head>
   <body>
     <!-- page start -->
-    <div data-role="page" id="map-page">
+    <div id="map-page">
 
       <!-- top bar -->
       <div id="insert-top"></div>
 
       <!-- main content area on form page -->
-      <div data-role="content">
+      <div>
         <div id="insert-form"></div>
         <div id="insert-map"></div>
       </div>
@@ -38,320 +37,316 @@
     <div class="invisible">
       <div class="layers-owl-wrapper">
         <div id="owl-example" class="owl-carousel">
-          <!-- <a class="btn prev"><div class="nav-arrow arrow-left"><img src="images/arrow-big-narrow.png"></div></a> -->
 
-            <!-- panel column 1-->
-            <!-- highest level, class 'item' is part of owl-carousel-->
-            <div class="item">
-              <!-- each new accordion needs id with number at end-->
-              <ul id="accordion-1" class="menu">
-                <!--panel header-->
-                <div class="layer-header"><span>Customer Request</span></div>
+          <!-- panel column 1-->
+          <!-- highest level, class 'item' is part of owl-carousel-->
+          <div class="item">
+            <!-- each new accordion needs id with number at end-->
+            <ul id="accordion-1" class="menu">
+              <!--panel header-->
+              <div class="layer-header"><span>Customer Request</span></div>
 
-                <!-- highest level category heading-->
-                <li><a href="#">Customer Request</a>
-                  <ul>
-                    <!-- second level category heading-->
-                    <!-- all layer li's need class of 'layer'-->
-                    <li class="layer">
-                      <div class="input-group">
-                        <input type="checkbox">
-                      </div>
-                      <!-- layer heading - lowest level-->
-                      <a href="#">Customer Request - A</a>
-                      <span class="make-active"><span class="glyphicon glyphicon-certificate"></span></span>
-                    </li>
-                    <li class="layer">
-                      <div class="input-group">
-                        <input type="checkbox">
-                      </div>
-                      <a href="#">Customer Request - W</a>
-                      <span class="make-active"><span class="glyphicon glyphicon-certificate"></span></span>
-                    </li>
-                    <li class="layer">
-                      <div class="input-group">
-                        <input type="checkbox">
-                      </div>
-                      <a href="#">Customer Request - C</a>
-                      <span class="make-active"><span class="glyphicon glyphicon-certificate"></span></span>
-                    </li>
-                  </ul>
-                </li>
-                <!-- end of second level category-->
+              <!-- highest level category heading-->
+              <li><a href="#">Customer Request</a>
+                <ul>
+                  <!-- second level category heading-->
+                  <!-- all layer li's need class of 'layer'-->
+                  <li class="layer">
+                    <div class="input-group">
+                      <input type="checkbox">
+                    </div>
+                    <!-- layer heading - lowest level-->
+                    <a href="#">Customer Request - A</a>
+                    <span class="make-active"><span class="glyphicon glyphicon-certificate"></span></span>
+                  </li>
+                  <li class="layer">
+                    <div class="input-group">
+                      <input type="checkbox">
+                    </div>
+                    <a href="#">Customer Request - W</a>
+                    <span class="make-active"><span class="glyphicon glyphicon-certificate"></span></span>
+                  </li>
+                  <li class="layer">
+                    <div class="input-group">
+                      <input type="checkbox">
+                    </div>
+                    <a href="#">Customer Request - C</a>
+                    <span class="make-active"><span class="glyphicon glyphicon-certificate"></span></span>
+                  </li>
+                </ul>
+              </li>
+              <!-- end of second level category-->
 
-              </ul>
-              <!-- end of highest level category headings-->
+            </ul>
+            <!-- end of highest level category headings-->
 
-            </div>
-            <!-- end panel column 1-->
+          </div>
+          <!-- end panel column 1-->
 
-            <!-- panel column 2-->
-            <!-- highest level, class 'item' is part of owl-carousel-->
-            <div class="item">
-              <!-- each new accordion needs id with number at end-->
-              <ul id="accordion-2" class="menu">
-                <!--panel header-->
-                <div class="layer-header"><span>Task</span></div>
+          <!-- panel column 2-->
+          <!-- highest level, class 'item' is part of owl-carousel-->
+          <div class="item">
+            <!-- each new accordion needs id with number at end-->
+            <ul id="accordion-2" class="menu">
+              <!--panel header-->
+              <div class="layer-header"><span>Task</span></div>
 
-                <!-- highest level category heading-->
-                <li><a href="#">Task</a>
-                  <ul>
-                    <!-- all layer li's need class of 'layer'-->
-                    <li class="layer">
-                      <div class="input-group">
-                        <input type="checkbox">
-                      </div>
-                      <!-- layer heading - lowest level-->
-                      <a href="#">Task - Available</a>
-                      <span class="make-active"><span class="glyphicon glyphicon-certificate"></span></span>
-                    </li>
-                    <li class="layer">
-                      <div class="input-group">
-                        <input type="checkbox">
-                      </div>
-                      <a href="#">Task - Work In Progress</a>
-                      <span class="make-active"><span class="glyphicon glyphicon-certificate"></span></span>
-                    </li>
-                    <li class="layer">
-                      <div class="input-group">
-                        <input type="checkbox">
-                      </div>
-                      <a href="#">Task - Completed</a>
-                      <span class="make-active"><span class="glyphicon glyphicon-certificate"></span></span>
-                    </li>
-                  </ul>
-                </li>
-                <!-- end of second level category-->
+              <!-- highest level category heading-->
+              <li><a href="#">Task</a>
+                <ul>
+                  <!-- all layer li's need class of 'layer'-->
+                  <li class="layer">
+                    <div class="input-group">
+                      <input type="checkbox">
+                    </div>
+                    <!-- layer heading - lowest level-->
+                    <a href="#">Task - Available</a>
+                    <span class="make-active"><span class="glyphicon glyphicon-certificate"></span></span>
+                  </li>
+                  <li class="layer">
+                    <div class="input-group">
+                      <input type="checkbox">
+                    </div>
+                    <a href="#">Task - Work In Progress</a>
+                    <span class="make-active"><span class="glyphicon glyphicon-certificate"></span></span>
+                  </li>
+                  <li class="layer">
+                    <div class="input-group">
+                      <input type="checkbox">
+                    </div>
+                    <a href="#">Task - Completed</a>
+                    <span class="make-active"><span class="glyphicon glyphicon-certificate"></span></span>
+                  </li>
+                </ul>
+              </li>
+              <!-- end of second level category-->
 
-              </ul>
-              <!-- end of highest level category headings-->
-            </div>
-            <!-- end panel column 2-->
+            </ul>
+            <!-- end of highest level category headings-->
+          </div>
+          <!-- end panel column 2-->
 
-            <!-- panel column 3-->
-            <!-- highest level, class 'item' is part of owl-carousel-->
-            <div class="item">
-              <!-- each new accordion needs id with number at end-->
-              <ul id="accordion-3" class="menu">
-                <!--panel header-->
-                <div class="layer-header"><span>Defect</span></div>
+          <!-- panel column 3-->
+          <!-- highest level, class 'item' is part of owl-carousel-->
+          <div class="item">
+            <!-- each new accordion needs id with number at end-->
+            <ul id="accordion-3" class="menu">
+              <!--panel header-->
+              <div class="layer-header"><span>Defect</span></div>
 
-                <!-- highest level category heading-->
-                <li><a href="#">Defect</a>
-                  <ul>
-                    <!-- all layer li's need class of 'layer'-->
-                    <li class="layer">
-                      <div class="input-group">
-                        <input type="checkbox">
-                      </div>
-                      <!-- layer heading - lowest level-->
-                      <a href="#">Defect - Available</a>
-                      <span class="make-active"><span class="glyphicon glyphicon-certificate"></span></span>
-                    </li>
-                    <li class="layer">
-                      <div class="input-group">
-                        <input type="checkbox">
-                      </div>
-                      <a href="#">Defect - Work In Progress</a>
-                      <span class="make-active"><span class="glyphicon glyphicon-certificate"></span></span>
-                    </li>
-                    <li class="layer">
-                      <div class="input-group">
-                        <input type="checkbox">
-                      </div>
-                      <a href="#">Defect - Completed</a>
-                      <span class="make-active"><span class="glyphicon glyphicon-certificate"></span></span>
-                    </li>
-                  </ul>
-                </li>
-                <!-- end of second level category-->
+              <!-- highest level category heading-->
+              <li><a href="#">Defect</a>
+                <ul>
+                  <!-- all layer li's need class of 'layer'-->
+                  <li class="layer">
+                    <div class="input-group">
+                      <input type="checkbox">
+                    </div>
+                    <!-- layer heading - lowest level-->
+                    <a href="#">Defect - Available</a>
+                    <span class="make-active"><span class="glyphicon glyphicon-certificate"></span></span>
+                  </li>
+                  <li class="layer">
+                    <div class="input-group">
+                      <input type="checkbox">
+                    </div>
+                    <a href="#">Defect - Work In Progress</a>
+                    <span class="make-active"><span class="glyphicon glyphicon-certificate"></span></span>
+                  </li>
+                  <li class="layer">
+                    <div class="input-group">
+                      <input type="checkbox">
+                    </div>
+                    <a href="#">Defect - Completed</a>
+                    <span class="make-active"><span class="glyphicon glyphicon-certificate"></span></span>
+                  </li>
+                </ul>
+              </li>
+              <!-- end of second level category-->
 
-              </ul>
-              <!-- end of highest level category headings-->
+            </ul>
+            <!-- end of highest level category headings-->
 
-            </div>
-            <!-- end panel column 3-->
+          </div>
+          <!-- end panel column 3-->
 
-            <!-- panel column 4-->
-            <!-- highest level, class 'item' is part of owl-carousel-->
-            <div class="item">
-              <!-- each new accordion needs id with number at end-->
-              <ul id="accordion-4" class="menu">
-                <!--panel header-->
-                <div class="layer-header"><span>Assets</span></div>
+          <!-- panel column 4-->
+          <!-- highest level, class 'item' is part of owl-carousel-->
+          <div class="item">
+            <!-- each new accordion needs id with number at end-->
+            <ul id="accordion-4" class="menu">
+              <!--panel header-->
+              <div class="layer-header"><span>Assets</span></div>
 
-                <!-- highest level category heading-->
-                <li><a href="#">Assets</a>
-                  <ul>
-                    <!-- all layer li's need class of 'layer'-->
-                    <li class="layer">
-                      <div class="input-group">
-                        <input type="checkbox">
-                      </div>
-                      <!-- layer heading - lowest level-->
-                      <a href="#">Drainage</a>
-                      <span class="make-active"><span class="glyphicon glyphicon-certificate"></span></span>
-                    </li>
-                    <li class="layer">
-                      <div class="input-group">
-                        <input type="checkbox">
-                      </div>
-                      <a href="#">Railing</a>
-                      <span class="make-active"><span class="glyphicon glyphicon-certificate"></span></span>
-                    </li>
-                    <li class="layer">
-                      <div class="input-group">
-                        <input type="checkbox">
-                      </div>
-                      <a href="#">Sign</a>
-                      <span class="make-active"><span class="glyphicon glyphicon-certificate"></span></span>
-                    </li>
-                  </ul>
-                </li>
-                <!-- end of second level category-->
+              <!-- highest level category heading-->
+              <li><a href="#">Assets</a>
+                <ul>
+                  <!-- all layer li's need class of 'layer'-->
+                  <li class="layer">
+                    <div class="input-group">
+                      <input type="checkbox">
+                    </div>
+                    <!-- layer heading - lowest level-->
+                    <a href="#">Drainage</a>
+                    <span class="make-active"><span class="glyphicon glyphicon-certificate"></span></span>
+                  </li>
+                  <li class="layer">
+                    <div class="input-group">
+                      <input type="checkbox">
+                    </div>
+                    <a href="#">Railing</a>
+                    <span class="make-active"><span class="glyphicon glyphicon-certificate"></span></span>
+                  </li>
+                  <li class="layer">
+                    <div class="input-group">
+                      <input type="checkbox">
+                    </div>
+                    <a href="#">Sign</a>
+                    <span class="make-active"><span class="glyphicon glyphicon-certificate"></span></span>
+                  </li>
+                </ul>
+              </li>
+              <!-- end of second level category-->
 
-              </ul>
-              <!-- end of highest level category headings-->
+            </ul>
+            <!-- end of highest level category headings-->
 
-            </div>
-            <!-- end panel column 4-->
+          </div>
+          <!-- end panel column 4-->
 
-            <!-- panel column 5-->
-            <!-- highest level, class 'item' is part of owl-carousel-->
-            <div class="item">
-              <!-- each new accordion needs id with number at end-->
-              <ul id="accordion-4" class="menu">
-                <!--panel header-->
-                <div class="layer-header"><span>Asset Schedule</span></div>
+          <!-- panel column 5-->
+          <!-- highest level, class 'item' is part of owl-carousel-->
+          <div class="item">
+            <!-- each new accordion needs id with number at end-->
+            <ul id="accordion-4" class="menu">
+              <!--panel header-->
+              <div class="layer-header"><span>Asset Schedule</span></div>
 
-                <!-- highest level category heading-->
-                <li><a href="#">Asset Schedule</a>
-                  <ul>
-                    <!-- all layer li's need class of 'layer'-->
-                    <li class="layer">
-                      <div class="input-group">
-                        <input type="checkbox">
-                      </div>
-                      <!-- layer heading - lowest level-->
-                      <a href="#">Annual Railing</a>
-                      <span class="make-active"><span class="glyphicon glyphicon-certificate"></span></span>
-                    </li>
-                  </ul>
-                </li>
-                <!-- end of second level category-->
+              <!-- highest level category heading-->
+              <li><a href="#">Asset Schedule</a>
+                <ul>
+                  <!-- all layer li's need class of 'layer'-->
+                  <li class="layer">
+                    <div class="input-group">
+                      <input type="checkbox">
+                    </div>
+                    <!-- layer heading - lowest level-->
+                    <a href="#">Annual Railing</a>
+                    <span class="make-active"><span class="glyphicon glyphicon-certificate"></span></span>
+                  </li>
+                </ul>
+              </li>
+              <!-- end of second level category-->
 
-              </ul>
-              <!-- end of highest level category headings-->
+            </ul>
+            <!-- end of highest level category headings-->
 
-            </div>
-            <!-- end panel column 5-->
+          </div>
+          <!-- end panel column 5-->
 
-            <!-- panel column 6-->
-            <!-- highest level, class 'item' is part of owl-carousel-->
-            <div class="item">
-              <!-- each new accordion needs id with number at end-->
-              <ul id="accordion-4" class="menu">
-                <!--panel header-->
-                <div class="layer-header"><span>Infrastructure</span></div>
+          <!-- panel column 6-->
+          <!-- highest level, class 'item' is part of owl-carousel-->
+          <div class="item">
+            <!-- each new accordion needs id with number at end-->
+            <ul id="accordion-4" class="menu">
+              <!--panel header-->
+              <div class="layer-header"><span>Infrastructure</span></div>
 
-                <!-- highest level category heading-->
-                <li><a href="#">Infrastructure</a>
-                  <ul>
-                    <!-- all layer li's need class of 'layer'-->
-                    <li class="layer">
-                      <div class="input-group">
-                        <input type="checkbox">
-                      </div>
-                      <!-- layer heading - lowest level-->
-                      <a href="#">Network</a>
-                      <span class="make-active"><span class="glyphicon glyphicon-certificate"></span></span>
-                    </li>
-                    <li class="layer">
-                      <div class="input-group">
-                        <input type="checkbox">
-                      </div>
-                      <a href="#">Point Of Reference</a>
-                      <span class="make-active"><span class="glyphicon glyphicon-certificate"></span></span>
-                    </li>
-                  </ul>
-                </li>
-                <!-- end of second level category-->
+              <!-- highest level category heading-->
+              <li><a href="#">Infrastructure</a>
+                <ul>
+                  <!-- all layer li's need class of 'layer'-->
+                  <li class="layer">
+                    <div class="input-group">
+                      <input type="checkbox">
+                    </div>
+                    <!-- layer heading - lowest level-->
+                    <a href="#">Network</a>
+                    <span class="make-active"><span class="glyphicon glyphicon-certificate"></span></span>
+                  </li>
+                  <li class="layer">
+                    <div class="input-group">
+                      <input type="checkbox">
+                    </div>
+                    <a href="#">Point Of Reference</a>
+                    <span class="make-active"><span class="glyphicon glyphicon-certificate"></span></span>
+                  </li>
+                </ul>
+              </li>
+              <!-- end of second level category-->
 
-              </ul>
-              <!-- end of highest level category headings-->
+            </ul>
+            <!-- end of highest level category headings-->
 
-            </div>
-            <!-- end panel column 6-->
+          </div>
+          <!-- end panel column 6-->
 
-            <!-- panel column 7-->
-            <!-- highest level, class 'item' is part of owl-carousel-->
-            <div class="item">
-              <!-- each new accordion needs id with number at end-->
-              <ul id="accordion-4" class="menu">
-                <!--panel header-->
-                <div class="layer-header"><span>Inspection</span></div>
+          <!-- panel column 7-->
+          <!-- highest level, class 'item' is part of owl-carousel-->
+          <div class="item">
+            <!-- each new accordion needs id with number at end-->
+            <ul id="accordion-4" class="menu">
+              <!--panel header-->
+              <div class="layer-header"><span>Inspection</span></div>
 
-                <!-- highest level category heading-->
-                <li><a href="#">Inspection</a>
-                  <ul>
-                    <!-- all layer li's need class of 'layer'-->
-                    <li class="layer">
-                      <div class="input-group">
-                        <input type="checkbox">
-                      </div>
-                      <!-- layer heading - lowest level-->
-                      <a href="#">Weekly Inspection</a>
-                      <span class="make-active"><span class="glyphicon glyphicon-certificate"></span></span>
-                    </li>
-                    <li class="layer">
-                      <div class="input-group">
-                        <input type="checkbox">
-                      </div>
-                      <a href="#">Monthly Inspection</a>
-                      <span class="make-active"><span class="glyphicon glyphicon-certificate"></span></span>
-                    </li>
-                  </ul>
-                </li>
-                <!-- end of second level category-->
+              <!-- highest level category heading-->
+              <li><a href="#">Inspection</a>
+                <ul>
+                  <!-- all layer li's need class of 'layer'-->
+                  <li class="layer">
+                    <div class="input-group">
+                      <input type="checkbox">
+                    </div>
+                    <!-- layer heading - lowest level-->
+                    <a href="#">Weekly Inspection</a>
+                    <span class="make-active"><span class="glyphicon glyphicon-certificate"></span></span>
+                  </li>
+                  <li class="layer">
+                    <div class="input-group">
+                      <input type="checkbox">
+                    </div>
+                    <a href="#">Monthly Inspection</a>
+                    <span class="make-active"><span class="glyphicon glyphicon-certificate"></span></span>
+                  </li>
+                </ul>
+              </li>
+              <!-- end of second level category-->
 
-              </ul>
-              <!-- end of highest level category headings-->
+            </ul>
+            <!-- end of highest level category headings-->
 
-            </div>
-            <!-- end panel column 7-->
+          </div>
+          <!-- end panel column 7-->
 
-            <!-- panel column 8-->
-            <!-- highest level, class 'item' is part of owl-carousel-->
-            <div class="item">
-              <!-- each new accordion needs id with number at end-->
-              <ul id="accordion-4" class="menu">
-                <!--panel header-->
-                <div class="layer-header"><span>Base Maps</span></div>
+          <!-- panel column 8-->
+          <!-- highest level, class 'item' is part of owl-carousel-->
+          <div class="item">
+            <!-- each new accordion needs id with number at end-->
+            <ul id="accordion-4" class="menu">
+              <!--panel header-->
+              <div class="layer-header"><span>Base Maps</span></div>
 
-                <!-- highest level category heading-->
-                <li><a href="#">Base Maps</a>
-                  <ul>
-                    <!-- all layer li's need class of 'layer'-->
-                    <li class="layer">
-                      <div class="input-group">
-                        <input type="checkbox">
-                      </div>
-                      <!-- layer heading - lowest level-->
-                      <a href="#">OSM Map</a>
-                      <span class="make-active"><span class="glyphicon glyphicon-certificate"></span></span>
-                    </li>
-                  </ul>
-                </li>
-                <!-- end of second level category-->
+              <!-- highest level category heading-->
+              <li><a href="#">Base Maps</a>
+                <ul>
+                  <!-- all layer li's need class of 'layer'-->
+                  <li class="layer">
+                    <div class="input-group">
+                      <input type="checkbox">
+                    </div>
+                    <!-- layer heading - lowest level-->
+                    <a href="#">OSM Map</a>
+                    <span class="make-active"><span class="glyphicon glyphicon-certificate"></span></span>
+                  </li>
+                </ul>
+              </li>
+              <!-- end of second level category-->
 
-              </ul>
-              <!-- end of highest level category headings-->
+            </ul>
+            <!-- end of highest level category headings-->
 
-            </div>
-            <!-- end panel column 8-->
-
-
-         <!--  <a class="btn next"><div class="nav-arrow arrow-right"><img src="images/arrow-big-narrow.png"></div></a> -->
+          </div>
+          <!-- end panel column 8-->
         </div>
       </div>
     </div>
