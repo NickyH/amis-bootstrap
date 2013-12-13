@@ -637,12 +637,34 @@ body {
   }
 }
 
+.search-address {
+  width: 80%;
+  height: 80%;
+  font-size: 14px;
+  input {
+    margin: 20px auto auto auto;
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    padding: 1px 1px 1px 15px !important;
+  }
+  .btn.btn-info {
+    width: 200px;
+    margin-top: 20px;
+  }
+}
+
 .qtip {
   &.qtip-search-category {
     width: 280px;
     height: 450px;
     margin-left: -20px;
     top: 70px !important;
+    .qtip-content {
+    padding-left: 10px !important;
+    }
+  }
+  &.qtip-address-panel {
     .qtip-content {
     padding-left: 10px !important;
     }

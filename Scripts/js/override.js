@@ -558,12 +558,7 @@ function searchByAddress_qtip()
 {
   $(this).qtip({
       content: {
-        text: '<div data-role="fieldcontain" style="margin-top: 40px;">' +
-              '<input type="search" name="search-2" id="search-2" value="" style="width: 200px; margin-left:30px;" /></div>' +
-              '<input type="submit" value="Search Address" class="form-button save-button"' +
-              'data-role="button" style="background-color: #2584cd; border-radius: 20px;' +
-              'width: 200px; height: 25px; font: 16px arial, sans serif; margin-top: 20px;' +
-              'margin-right: auto; margin-left: 30px;" />',
+        text: $('#search-address'),
         button: 'Close'
       },
       render: function (event, api) {
@@ -610,7 +605,7 @@ function searchByAddress_qtip()
           target: $('#search-by-address-button')
       }
   });
-  $('#address-search-panel').removeClass('invisible');
+  $('#address-search').removeClass('invisible');
 }
 
 function showAssets_qtip()
