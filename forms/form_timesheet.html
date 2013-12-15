@@ -1,0 +1,512 @@
+<div class="content_div">
+
+  <div class="form-buttons">
+    <div class="form-title"><img class="form-head-icon" src="../Content/images/icons/icon-clock-white.png"><span>Timesheet</span></div>
+    <input type="submit" value="Cancel" class="form-button cancel-button" data-role="button" />
+    <input type="submit" value="Save" class="form-button save-button" data-role="button" />
+  </div>
+
+  <!-- forms content container -->
+  <div class="container-fluid form-container">
+
+    <!-- form row 1 -->
+    <div class="row" id="bookmark_start">
+      <div class="col-12">
+        <div class="row-fluid">
+
+          <!-- form panel 1 -->
+          <div class="col-lg-6 col-md-6 col-sm-12">
+
+            <div class="form-panel">
+              <!-- numbered circle in each form panel-->
+              <div class="text-circle">
+                <div class="text-in-circle">
+                  Start
+                </div>
+              </div>
+
+              <form class="form-horizontal container" role="form">
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Time</label>
+                  <div class="col-sm-8">
+                    <div class="input-group merged">
+                      <input type="text" class="form-control insert-time-picker" data-required="true" />
+                      <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-time"></span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Member</label>
+                  <div class="col-sm-8">
+                    <select class="selectpicker form-control" multiple data-required="true" data-live-search="true" title=''>
+                      <option>Nathan Adamson</option>
+                      <option>Tony Aaron</option>
+                      <option>Brett Carlisle</option>
+                      <option>Adrian Galloway</option>
+                      <option>Henry Ingham</option>
+                      <option>Sam Kelly</option>
+                      <option>Rick Mally</option>
+                    </select>
+                    <span class='btn btn-default select-none'>Select None</span>
+                    <span class='btn btn-primary select-all'>Select All</span>
+                  </div>
+                </div>
+
+                <span class="glyphicon insert-cross-icon"></span>
+              </form>
+
+            </div>
+          </div>
+          <!-- end form panel 1 -->
+
+        </div>
+      </div>
+    </div>
+    <!-- end form row 1 -->
+
+    <!-- form row 2 -->
+    <div class="row" id="bookmark_contact">
+      <div class="col-12">
+        <div class="row-fluid">
+
+          <!-- form panel 1 -->
+          <div class="col-lg-6 col-md-6 col-sm-12">
+
+            <div class="form-panel">
+              <!-- numbered circle in each form panel-->
+              <div class="text-circle">
+                <div class="text-in-circle">
+                  Work
+                </div>
+              </div>
+
+              <form class="form-horizontal container" role="form">
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">End Time</label>
+                  <div class="col-sm-8">
+                    <div class="input-group merged">
+                      <input type="text" class="form-control insert-time-picker" data-required="true" />
+                      <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-time"></span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Type</label>
+                  <div class="col-sm-8">
+                    <select id="temp" class="selectpicker show-tick form-control" title='' data-live-search="true" value="Resident">
+                      <option data-hidden="true"></option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                    </select>
+                  </div>
+                </div>
+
+                 <div class="form-group">
+                  <label class="col-sm-4 control-label">Select Customer</label>
+                  <div class="col-sm-8">
+                    <select class="selectpicker show-tick form-control" title='' data-live-search="true">
+                      <option data-hidden="true"></option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Nature/Source</label>
+                  <div class="col-sm-4">
+                    <select class="selectpicker show-tick form-control" title='Complaint' data-live-search="true">
+                      <option data-hidden="true"></option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-4">
+                    <select class="selectpicker show-tick form-control" title='Email' data-live-search="true">
+                      <option data-hidden="true"></option>
+                      <option>Email</option>
+                      <option>Fax</option>
+                      <option>Phone</option>
+                      <option>Mail</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Contacted Date</label>
+                  <div class="col-sm-8">
+                    <div class="input-group merged">
+                      <input type="text" class="form-control insert-picker" />
+                      <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Comments</label>
+                  <div class="col-sm-8">
+                    <textarea type="text" class="form-control" rows="3"></textarea>
+                  </div>
+                </div>
+
+                <span class="glyphicon insert-cross-icon"></span>
+              </form>
+
+            </div>
+
+          </div>
+          <!-- end form panel 1 -->
+
+
+
+        </div>
+      </div>
+    </div>
+    <!-- end form row 2 -->
+
+    <!-- form row 3 -->
+    <div class="row" id="bookmark_notes">
+      <div class="col-12">
+        <div class="row-fluid">
+
+          <!-- form panel 1 -->
+          <div class="col-lg-6 col-md-6 col-sm-12">
+
+            <div class="form-panel">
+              <!-- numbered circle in each form panel-->
+              <div class="text-circle">
+                <div class="text-in-circle">
+                  Work
+                </div>
+              </div>
+
+              <form class="form-horizontal container" role="form">
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Note ID</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" disabled value="1023.763">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Created By</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Created Date</label>
+                  <div class="col-sm-8">
+                    <div class="input-group merged">
+                      <input type="text" class="form-control insert-picker" />
+                      <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Note Type</label>
+                  <div class="col-sm-8">
+                    <select class="selectpicker show-tick form-control" title='' data-live-search="true">
+                      <option data-hidden="true"></option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Last Modified By</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Last Modified Date</label>
+                  <div class="col-sm-8">
+                    <div class="input-group merged">
+                      <input type="text" class="form-control insert-picker" />
+                      <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <span class="glyphicon insert-cross-icon"></span>
+              </form>
+
+            </div>
+          </div>
+          <!-- end form panel 1 -->
+
+        </div>
+      </div>
+    </div>
+    <!-- end form row 3 -->
+
+    <!-- form row 4 -->
+    <div class="row">
+      <div class="col-12">
+        <div class="row-fluid">
+
+          <!-- form panel 1 -->
+          <div class="col-lg-12 col-md-12 col-sm-12">
+
+            <div class="form-panel full-width">
+              <!-- numbered circle in each form panel-->
+              <div class="text-circle">
+                <div class="text-in-circle">
+                  Break
+                </div>
+              </div>
+
+              <form class="form-horizontal container" role="form">
+
+                <div class="form-group" role="search">
+                  <div class="col-sm-12">
+                    <input type="text" class="form-control search" placeholder="Search">
+                  </div>
+                </div>
+
+                <table id="table-filter-2" class="table table-condensed table-striped">
+                  <thead>
+                    <tr>
+                      <th>Ref. No.</th>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                      <th>Contact Date</th>
+                      <th>Work Phone</th>
+                      <th>Home Phone</th>
+                      <th>Mobile</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1035.35</td>
+                      <td>Julia</td>
+                      <td>Blogg</td>
+                      <td>14/10/2012</td>
+                      <td>98567492</td>
+                      <td>94358327</td>
+                      <td>0416496845</td>
+                    </tr>
+                    <tr>
+                      <td>1035.35</td>
+                      <td>Gerald</td>
+                      <td>Lim</td>
+                      <td>04/01/2013</td>
+                      <td>98567492</td>
+                      <td>94358327</td>
+                      <td>0412059483</td>
+                    </tr>
+                    <tr>
+                      <td>1035.35</td>
+                      <td>Joseph</td>
+                      <td>Koll</td>
+                      <td>05/05/2012</td>
+                      <td>98567492</td>
+                      <td>94358327</td>
+                      <td>0418384736</td>
+                    </tr>
+                    <tr>
+                      <td>1035.35</td>
+                      <td>Samantha</td>
+                      <td>Rickson</td>
+                      <td>12/10/2012</td>
+                      <td>98567492</td>
+                      <td>94358327</td>
+                      <td>0413958473</td>
+                    </tr>
+                    <tr>
+                      <td>1035.35</td>
+                      <td>Daniella</td>
+                      <td>Olivetti</td>
+                      <td>05/05/2012</td>
+                      <td>98567492</td>
+                      <td>94358327</td>
+                      <td>0418384736</td>
+                    </tr>
+                    <tr>
+                      <td>1035.35</td>
+                      <td>Gregory</td>
+                      <td>Heath</td>
+                      <td>10/05/2012</td>
+                      <td>98567492</td>
+                      <td>94353432</td>
+                      <td>0413958473</td>
+                    </tr>
+                </tbody>
+                </table>
+
+                <span class="glyphicon insert-cross-icon"></span>
+              </form>
+
+            </div>
+
+          </div>
+          <!-- end form panel 1 -->
+
+        </div>
+      </div>
+    </div>
+    <!-- end form row 4 -->
+
+
+    <!-- form row 5 -->
+    <div class="row" id="bookmark_location">
+      <div class="col-12">
+        <div class="row-fluid">
+
+          <!-- form panel 1 -->
+          <div class="col-lg-6 col-md-6 col-sm-12">
+
+            <div class="form-panel">
+              <!-- numbered circle in each form panel-->
+              <div class="text-circle">
+                <div class="text-in-circle">
+                  End
+                </div>
+              </div>
+
+              <form class="form-horizontal container" role="form">
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Location</label>
+                  <div class="col-sm-8">
+                    <textarea class="form-control" rows="7"></textarea>
+                  </div>
+                </div>
+                <span class="glyphicon insert-cross-icon"></span>
+              </form>
+
+            </div>
+          </div>
+          <!-- end form panel 1 -->
+
+        </div>
+      </div>
+    </div>
+    <!-- end form row 5 -->
+
+    <!-- form row 6 -->
+    <div class="row" id="bookmark_referral">
+      <div class="col-12">
+        <div class="row-fluid">
+
+          <!-- form panel 1 -->
+          <div class="col-lg-6 col-md-6 col-sm-12">
+
+            <div class="form-panel">
+              <!-- numbered circle in each form panel-->
+              <div class="text-circle">
+                <div class="text-in-circle">
+                  Review
+                </div>
+              </div>
+
+              <form class="form-horizontal container" role="form">
+
+                <div class="form-group">
+                  <div class="col-sm-4"></div>
+                  <div class="col-sm-4">
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                        No action required
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-sm-4"></div>
+                  <div class="col-sm-4">
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                        Referral
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Notes</label>
+                  <div class="col-sm-8">
+                    <textarea class="form-control" rows="3"></textarea>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Referral To</label>
+                  <div class="col-sm-8" id="referral-to">
+                    <select class="selectpicker form-control show-tick" title=''>
+                      <option>Contact 1</option>
+                      <option>Contact 2</option>
+                      <option>Contact 3</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Closed By</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" disabled>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Closed Date</label>
+                  <div class="col-sm-8">
+                    <div class="input-group merged">
+                      <input type="text" class="form-control insert-picker" disabled/>
+                      <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Close Request</label>
+                  <div class="col-sm-8">
+                    <span class="btn btn-info form-control close-form"><span class="glyphicon glyphicon-remove"></span><span class="close-form-text">Close</span></span>
+                  </div>
+                </div>
+
+                <span class="glyphicon insert-cross-icon"></span>
+              </form>
+
+            </div>
+          </div>
+          <!-- end form panel 1 -->
+
+        </div>
+      </div>
+    </div>
+    <!-- end form row 6 -->
+
+  </div> <!-- end form container -->
+</div>
+
+<script src="../Scripts/js/forms.js"></script>
+<script>
+  $('.form-container').on('DOMMouseScroll mousewheel', get_timesheet_page_position);
+  $('.form-container').bind('swipemove',get_timesheet_page_position);
+</script>

@@ -356,6 +356,17 @@ function insert_defect_form()
   $('html body').animate({ scrollTop: 0 });
 }
 
+function insert_timesheet_form()
+{
+  $('#insert-form').empty();
+  $.get('forms/form_timesheet.html', function(data) {
+    $('#insert-form').html(data);
+  });
+  var formName = 'timesheet'
+  show_correct_ovals(formName);
+  $('html body').animate({ scrollTop: 0 });
+}
+
 function goto_map()
 {
   map_navbar();
@@ -392,14 +403,43 @@ function show_correct_ovals(formName) {
   if (formName === 'request') {
     $('a[data-href="#bookmark_condition"]').parent('li').hide();
     $('a[data-href="#bookmark_contact"]').parent('li').show();
+    $('a[data-href="#bookmark_start"]').parent('li').hide();
+    $('a[data-href="#bookmark_work"]').parent('li').hide();
+    $('a[data-href="#bookmark_breaks"]').parent('li').hide();
+    $('a[data-href="#bookmark_end"]').parent('li').hide();
+    $('a[data-href="#bookmark_review"]').parent('li').hide();
   }
   if (formName === 'defect') {
     $('a[data-href="#bookmark_contact"]').parent('li').hide();
     $('a[data-href="#bookmark_condition"]').parent('li').show();
+    $('a[data-href="#bookmark_start"]').parent('li').hide();
+    $('a[data-href="#bookmark_work"]').parent('li').hide();
+    $('a[data-href="#bookmark_breaks"]').parent('li').hide();
+    $('a[data-href="#bookmark_end"]').parent('li').hide();
+    $('a[data-href="#bookmark_review"]').parent('li').hide();
   }
   if (formName === 'inspection') {
     $('a[data-href="#bookmark_condition"]').parent('li').hide();
     $('a[data-href="#bookmark_contact"]').parent('li').show();
+    $('a[data-href="#bookmark_start"]').parent('li').hide();
+    $('a[data-href="#bookmark_work"]').parent('li').hide();
+    $('a[data-href="#bookmark_breaks"]').parent('li').hide();
+    $('a[data-href="#bookmark_end"]').parent('li').hide();
+    $('a[data-href="#bookmark_review"]').parent('li').hide();
+  }
+  if (formName === 'timesheet') {
+    $('a[data-href="#bookmark_condition"]').parent('li').hide();
+    $('a[data-href="#bookmark_contact"]').parent('li').hide();
+    $('a[data-href="#bookmark_location"]').parent('li').hide();
+    $('a[data-href="#bookmark_details"]').parent('li').hide();
+    $('a[data-href="#bookmark_notes"]').parent('li').hide();
+    $('a[data-href="#bookmark_closeout"]').parent('li').hide();
+
+    $('a[data-href="#bookmark_start"]').parent('li').show();
+    $('a[data-href="#bookmark_work"]').parent('li').show();
+    $('a[data-href="#bookmark_breaks"]').parent('li').show();
+    $('a[data-href="#bookmark_end"]').parent('li').show();
+    $('a[data-href="#bookmark_review"]').parent('li').show();
   }
 }
 
