@@ -64,3 +64,8 @@ $(".checkbox label input").change(function() {
 });
 
 $('.reference-history tr').on('click', open_current_contact_row);
+
+
+
+$('td a span.glyphicon-play').on('click', highlight_current_task);
+$('td a span.glyphicon-play.breaks').on('click', highlight_current_break);

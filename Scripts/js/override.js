@@ -20,6 +20,21 @@ $(function(){
   $('li.dcjq-parent-li').on('click', mimic_anchor_click);
 });
 
+function highlight_current_break() {
+  event.preventDefault();
+  $('.breaks-row.current-break').removeClass('current-break');
+  console.log($(this).parents());
+  $(this).parents('.breaks-row').addClass('current-break');
+}
+
+
+function highlight_current_task() {
+  event.preventDefault();
+  $('.task-row.current-task').removeClass('current-task');
+  console.log($(this).parents());
+  $(this).parents('.task-row').addClass('current-task');
+}
+
 function open_address_book() {
   bootbox.dialog({
     message: "Search for contacts...",
@@ -196,6 +211,30 @@ function get_inspection_page_position() {
   }
   if ($(window).scrollTop() >= (location - topOffset -50) ) {
     oval_border_highlight('#tab5');
+  }
+}
+
+function get_timesheet_page_position() {
+  var start = $('#bookmark_start').offset().top;
+  var work = $('#bookmark_work').offset().top;
+  var breaks = $('#bookmark_breaks').offset().top;
+  var end = $('#bookmark_end').offset().top;
+  var review = $('#bookmark_review').offset().top;
+
+  if ($(window).scrollTop() >= (start - topOffset -50 ) ) {
+    oval_border_highlight('#tab20');
+  }
+  if ($(window).scrollTop() >= (work - topOffset -50) ) {
+    oval_border_highlight('#tab21');
+  }
+  if ($(window).scrollTop() >= (breaks - topOffset -50) ) {
+    oval_border_highlight('#tab22');
+  }
+  if ($(window).scrollTop() >= (end - topOffset -50) ) {
+    oval_border_highlight('#tab23');
+  }
+  if ($(window).scrollTop() >= (review - topOffset -50) ) {
+    oval_border_highlight('#tab24');
   }
 }
 
