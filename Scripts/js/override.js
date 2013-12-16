@@ -20,6 +20,11 @@ $(function(){
   $('li.dcjq-parent-li').on('click', mimic_anchor_click);
 });
 
+
+function show_task_map() {
+  bootbox.confirm('<img class="temp-task-map" src="../../Content/images/OsmMap_Feature.PNG">', function (response) {});
+}
+
 function highlight_current_break() {
   event.preventDefault();
   $('.breaks-row.current-break').removeClass('current-break');
