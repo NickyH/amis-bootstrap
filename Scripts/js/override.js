@@ -20,6 +20,10 @@ $(function(){
   $('li.dcjq-parent-li').on('click', mimic_anchor_click);
 });
 
+function show_member_timesheet() {
+  event.preventDefault();
+  $('.member-timesheet-panel').toggleClass('hidden');
+}
 
 function show_task_map() {
   bootbox.confirm('<img class="temp-task-map" src="../../Content/images/OsmMap_Feature.PNG">', function (response) {});

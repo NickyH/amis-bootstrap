@@ -71,3 +71,4 @@ $('.reference-history tr').on('click', open_current_contact_row);
 $('td a span.glyphicon-play').on('click', highlight_current_task);
 $('td a span.glyphicon-play.breaks').on('click', highlight_current_break);
 $('.glyphicon-picture').on('click', show_task_map);
+$('.member-timesheet-row').on('click', show_member_timesheet);

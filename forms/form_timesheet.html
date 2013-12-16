@@ -240,6 +240,18 @@
                 </div>
 
                 <div class="form-group">
+                  <label class="col-sm-4 control-label">Task Category</label>
+                  <div class="col-sm-8">
+                    <select class="selectpicker form-control" title=''>
+                      <option>Ctrgy 1</option>
+                      <option>Ctrgy 2</option>
+                      <option>Ctrgy 3</option>
+                      <option>Ctrgy 4</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
                   <label class="col-sm-4 control-label">End Task</label>
                   <div class="col-sm-8">
                     <div class="input-group merged">
@@ -322,57 +334,48 @@
                     <tr>
                       <th>Item Code</th>
                       <th>Description</th>
-                      <th>Rate</th>
                       <th>Unit</th>
                       <th>Estimated Qty</th>
                       <th>Actual Qty</th>
-                      <th>Sub Total Cost</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td>8583.56</td>
                       <td>Railing</td>
-                      <td>50.00</td>
                       <td>m</td>
                       <td>10</td>
                       <td>8</td>
-                      <td>400.00</td>
                     </tr>
                     <tr>
                       <td>8583.56</td>
                       <td>Railing</td>
-                      <td>50.00</td>
                       <td>m</td>
                       <td>10</td>
                       <td>8</td>
-                      <td>400.00</td>
                     </tr>
                     <tr>
                       <td>8583.56</td>
                       <td>Railing</td>
-                      <td>50.00</td>
                       <td>m</td>
                       <td>10</td>
                       <td>8</td>
-                      <td>400.00</td>
                     </tr>
                   </tbody>
                 </table>
 
                 <div class="form-group">
-                  <label class="col-sm-4 control-label">Total Qty</label>
+                  <label class="col-sm-4 control-label"></label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control">
+                    <span class='btn btn-default select-none'>Update Item</span>
+                    <span class='btn btn-primary select-all'>Add Item</span>
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label class="col-sm-4 control-label">Total Cost</label>
+                  <label class="col-sm-4 control-label">Total Qty</label>
                   <div class="col-sm-8">
                     <input type="text" class="form-control">
-                    <span class='btn btn-default select-none'>Update Item</span>
-                    <span class='btn btn-primary select-all'>Add Item</span>
                   </div>
                 </div>
 
@@ -670,7 +673,7 @@
               <!-- numbered circle in each form panel-->
               <div class="text-circle">
                 <div class="text-in-circle">
-                  Tasks Review
+                  Review - Tasks
                 </div>
               </div>
 
@@ -781,7 +784,7 @@
               <!-- numbered circle in each form panel-->
               <div class="text-circle">
                 <div class="text-in-circle">
-                  Member Review
+                  Review - Member
                 </div>
               </div>
 
@@ -799,56 +802,56 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>Nathan Adamson</td>
+                    <tr class="member-timesheet-row">
+                      <td><a href="#">Nathan Adamson</a></td>
                       <td>16/12/2013</td>
                       <td>7:30am</td>
                       <td>4:30pm</td>
                       <td>00:40</td>
                       <td>08:20</td>
                     </tr>
-                    <tr>
-                      <td>Tony Aaron</td>
+                    <tr class="member-timesheet-row">
+                      <td><a href="#">Tony Aaron</a></td>
                       <td>16/12/2013</td>
                       <td>7:30am</td>
                       <td>4:30pm</td>
                       <td>00:40</td>
                       <td>08:20</td>
                     </tr>
-                    <tr>
-                      <td>Brett Carlisle</td>
+                    <tr class="member-timesheet-row">
+                      <td><a href="#">Brett Carlisle</a></td>
                       <td>16/12/2013</td>
                       <td>7:30am</td>
                       <td>4:30pm</td>
                       <td>00:40</td>
                       <td>08:20</td>
                     </tr>
-                    <tr>
-                      <td>Adrian Galloway</td>
+                    <tr class="member-timesheet-row">
+                      <td><a href="#">Adrian Galloway</a></td>
                       <td>16/12/2013</td>
                       <td>7:30am</td>
                       <td>4:30pm</td>
                       <td>00:40</td>
                       <td>08:20</td>
                     </tr>
-                    <tr>
-                      <td>Henry Ingham</td>
+                    <tr class="member-timesheet-row">
+                      <td><a href="#">Henry Ingham</a></td>
                       <td>16/12/2013</td>
                       <td>7:30am</td>
                       <td>4:30pm</td>
                       <td>00:40</td>
                       <td>08:20</td>
                     </tr>
-                    <tr>
-                      <td>Sam Kelly</td>
+                    <tr class="member-timesheet-row">
+                      <td><a href="#">Sam Kelly</a></td>
                       <td>16/12/2013</td>
                       <td>7:30am</td>
                       <td>4:30pm</td>
                       <td>00:40</td>
                       <td>08:20</td>
                     </tr>
-                    <tr>
-                      <td>Rick Mally</td>
+                    <tr class="member-timesheet-row">
+                      <td><a href="#">Rick Mally</a></td>
                       <td>16/12/2013</td>
                       <td>7:30am</td>
                       <td>4:30pm</td>
@@ -863,6 +866,88 @@
             </div>
           </div>
           <!-- end form panel 1 -->
+
+          <!-- form panel 2 -->
+          <div class="col-lg-6 col-md-6 col-sm-12">
+
+            <div class="form-panel member-timesheet-panel hidden">
+              <!-- numbered circle in each form panel-->
+              <div class="text-circle">
+                <div class="text-in-circle">
+                  Review - Member
+                </div>
+              </div>
+
+              <form class="form-horizontal container" role="form">
+
+                <div class="form-group">
+                  <label class="col-sm-5 control-label">Nathan Adamson</label>
+                  <div class="col-sm-1"></div>
+                  <label class="col-sm-3 control-label">Hours:</label>
+                  <div class="col-sm-3">
+                    <div class="input-group merged">
+                      <label class="col-sm-4 control-label">07:25</label>
+                    </div>
+                  </div>
+                </div>
+
+                <table class="table table-condensed table-striped">
+                  <thead>
+                    <tr>
+                      <th>Task</th>
+                      <th>Category</th>
+                      <th>Type</th>
+                      <th>Start Time</th>
+                      <th>End Time</th>
+                      <th>Breaks</th>
+                      <th>Total Time</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>4845.45</td>
+                      <td>Ctgry 432</td>
+                      <td>656</td>
+                      <td>01:35pm</td>
+                      <td>03:15pm</td>
+                      <td>00:15</td>
+                      <td>01:25</td>
+                    </tr>
+                    <tr>
+                      <td>3265.45</td>
+                      <td>Ctgry 34</td>
+                      <td>586</td>
+                      <td>09:35am</td>
+                      <td>11:15am</td>
+                      <td>00:15</td>
+                      <td>01:25</td>
+                    </tr>
+                    <tr>
+                      <td>4865.45</td>
+                      <td>Ctgry 78</td>
+                      <td>253</td>
+                      <td>11:30am</td>
+                      <td>12:30pm</td>
+                      <td>00:00</td>
+                      <td>01:00</td>
+                    </tr>
+                    <tr>
+                      <td>4865.45</td>
+                      <td>Ctgry 34</td>
+                      <td>586</td>
+                      <td>01:35pm</td>
+                      <td>03:15pm</td>
+                      <td>00:15</td>
+                      <td>01:25</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+              </form>
+
+            </div>
+          </div>
+          <!-- end form panel 2 -->
 
         </div>
       </div>
