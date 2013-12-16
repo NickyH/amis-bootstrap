@@ -446,7 +446,13 @@ function form_navbar()
 function show_correct_ovals(formName) {
   if (formName === 'request') {
     $('a[data-href="#bookmark_condition"]').parent('li').hide();
+
     $('a[data-href="#bookmark_contact"]').parent('li').show();
+    $('a[data-href="#bookmark_details"]').parent('li').show();
+    $('a[data-href="#bookmark_location"]').parent('li').show();
+    $('a[data-href="#bookmark_notes"]').parent('li').show();
+    $('a[data-href="#bookmark_closeout"]').parent('li').show();
+
     $('a[data-href="#bookmark_start"]').parent('li').hide();
     $('a[data-href="#bookmark_work"]').parent('li').hide();
     $('a[data-href="#bookmark_breaks"]').parent('li').hide();
@@ -455,7 +461,13 @@ function show_correct_ovals(formName) {
   }
   if (formName === 'defect') {
     $('a[data-href="#bookmark_contact"]').parent('li').hide();
+
     $('a[data-href="#bookmark_condition"]').parent('li').show();
+    $('a[data-href="#bookmark_details"]').parent('li').show();
+    $('a[data-href="#bookmark_location"]').parent('li').show();
+    $('a[data-href="#bookmark_notes"]').parent('li').show();
+    $('a[data-href="#bookmark_closeout"]').parent('li').show();
+
     $('a[data-href="#bookmark_start"]').parent('li').hide();
     $('a[data-href="#bookmark_work"]').parent('li').hide();
     $('a[data-href="#bookmark_breaks"]').parent('li').hide();
@@ -465,6 +477,12 @@ function show_correct_ovals(formName) {
   if (formName === 'inspection') {
     $('a[data-href="#bookmark_condition"]').parent('li').hide();
     $('a[data-href="#bookmark_contact"]').parent('li').show();
+
+    $('a[data-href="#bookmark_details"]').parent('li').show();
+    $('a[data-href="#bookmark_location"]').parent('li').show();
+    $('a[data-href="#bookmark_notes"]').parent('li').show();
+    $('a[data-href="#bookmark_closeout"]').parent('li').show();
+
     $('a[data-href="#bookmark_start"]').parent('li').hide();
     $('a[data-href="#bookmark_work"]').parent('li').hide();
     $('a[data-href="#bookmark_breaks"]').parent('li').hide();
@@ -486,7 +504,6 @@ function show_correct_ovals(formName) {
     $('a[data-href="#bookmark_review"]').parent('li').show();
   }
 }
-
 
 function show_fake_map()
 {
@@ -527,6 +544,32 @@ function check_form_location()
       var scrollAmount = ($(href).offset().top) - topOffset;
       $('html, body').animate({ scrollTop: scrollAmount }, 1000);
       oval_border_highlight('#tab5');
+    }
+    //timesheet form
+    if (href === '#bookmark_start') {
+      var scrollAmount = ($(href).offset().top) - topOffset;
+      $('html, body').animate({ scrollTop: scrollAmount }, 1000);
+      oval_border_highlight('#tab20');
+    }
+    if (href === '#bookmark_work') {
+      var scrollAmount = ($(href).offset().top) - topOffset;
+      $('html, body').animate({ scrollTop: scrollAmount }, 1000);
+      oval_border_highlight('#tab21');
+    }
+    if (href === '#bookmark_breaks') {
+      var scrollAmount = ($(href).offset().top) - topOffset;
+      $('html, body').animate({ scrollTop: scrollAmount }, 1000);
+      oval_border_highlight('#tab22');
+    }
+    if (href === '#bookmark_end') {
+      var scrollAmount = ($(href).offset().top) - topOffset;
+      $('html, body').animate({ scrollTop: scrollAmount }, 1000);
+      oval_border_highlight('#tab23');
+    }
+    if (href === '#bookmark_review') {
+      var scrollAmount = ($(href).offset().top) - topOffset;
+      $('html, body').animate({ scrollTop: scrollAmount }, 1000);
+      oval_border_highlight('#tab24');
     }
   }
 }
