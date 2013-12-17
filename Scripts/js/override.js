@@ -23,7 +23,7 @@ $(function(){
 
 function refresh_history_accordion() {
   event.preventDefault();
-  $('.history-tree-wrapper').toggleClass('invisible');
+  $('.history-tree-wrapper').removeClass('invisible');
 }
 
 function uncheck_all_others() {
