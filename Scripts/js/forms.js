@@ -65,6 +65,8 @@ $(".checkbox label input").change(function() {
 
 $('.reference-history tr').on('click', open_current_contact_row);
 
+$('.icon-history').on('click', refresh_history_accordion);
+
 
 //task form functions
 

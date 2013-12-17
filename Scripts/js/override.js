@@ -21,6 +21,11 @@ $(function(){
   $('.category-checkbox').on('click', uncheck_all_others);
 });
 
+function refresh_history_accordion() {
+  event.preventDefault();
+  $('.history-tree-wrapper').toggleClass('invisible');
+}
+
 function uncheck_all_others() {
   $('.category-checkbox input[type="checkbox"]').removeAttr('checked');
   $(this).attr('checked', 'checked');

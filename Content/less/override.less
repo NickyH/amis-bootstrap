@@ -1515,6 +1515,8 @@ span.lookup:hover {
   }
 }
 
+
+
 .cb_slide_panel.panel_left, .cb_slide_panel.panel_right {
   background: none;
   background-color: @white-medium;
@@ -1526,7 +1528,34 @@ span.lookup:hover {
   border-right: 1px solid @grey-medium;
   border-left: 10px solid @grey-dark;
   box-shadow: 4px 0px 2px @grey-light;
- }
+  .history-tree-wrapper {
+    height: 50%;
+  }
+  ul#accordion-15 {
+    max-height: 800px;
+    min-height: 300px;
+    overflow: scroll;
+  }
+  #history-tree {
+    height: 50%;
+    li {
+      width: 130px;
+      background-color: white;
+      color: black;
+    }
+    li.layer {
+      width: 110px;
+      margin-right: 5px !important;
+    }
+    .item {
+      height: 95% !important;
+    }
+  }
+}
+
+ul#accordion-15.menu {
+  width: 150px;
+}
 
 .cb_slide_panel a.close {
   background: url("../images/icons/icon-history-small-white.png") @grey-darker no-repeat !important;
