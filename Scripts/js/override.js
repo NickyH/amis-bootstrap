@@ -18,7 +18,13 @@ $(function(){
   $("#map").on('click', showAssets_qtip);
   $('#details-link').on('click', form_navbar);
   $('li.dcjq-parent-li').on('click', mimic_anchor_click);
+  $('.category-checkbox').on('click', uncheck_all_others);
 });
+
+function uncheck_all_others() {
+  $('.category-checkbox input[type="checkbox"]').removeAttr('checked');
+  $(this).attr('checked', 'checked');
+}
 
 function show_member_timesheet() {
   event.preventDefault();
