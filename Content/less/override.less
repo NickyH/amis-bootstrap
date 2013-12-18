@@ -118,22 +118,12 @@ body {
     margin-top: 10px;
     margin-bottom: auto;
   }
-  &.arrow-history-tree {
-    left: 150px;
-    width: 30px;
-    opacity: 0.4;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    transform: rotate(90deg);
-    -ms-transform: rotate(90deg); /* IE 9 */
-    -webkit-transform: rotate(90deg); /* Safari and Chrome */
-    &.myactive {
-      transform: rotate(0deg);
-      -ms-transform: rotate(0deg); /* IE 9 */
-      -webkit-transform: rotate(0deg); /* Safari and Chrome */
-      z-index: 15800 !important;
-      opacity: 1;
+  &.icon-history {
+    img {
+      -moz-transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
     }
   }
 }
