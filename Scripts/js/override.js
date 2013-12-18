@@ -99,7 +99,6 @@ function open_current_contact_row() {
 }
 
 function skip_to_details() {
-  console.log('hello');
   var details = $('#bookmark_details').offset().top;
   $(window).scrollTop((details - 200));
 }
@@ -216,21 +215,25 @@ function get_defect_page_position() {
 }
 
 function get_inspection_page_position() {
+  var location = $('#bookmark_location').offset().top;
   var details = $('#bookmark_details').offset().top;
   var contact = $('#bookmark_contact').offset().top;
   var notes = $('#bookmark_notes').offset().top;
-  var location = $('#bookmark_location').offset().top;
+  var closeout = $('#bookmark_closeout').offset().top;
 
-  if ($(window).scrollTop() >= (details - topOffset -50 ) ) {
+  if ($(window).scrollTop() >= (location - topOffset -50) ) {
     oval_border_highlight('#tab1');
   }
-  if ($(window).scrollTop() >= (contact - topOffset -50) ) {
+  if ($(window).scrollTop() >= (details - topOffset -50 ) ) {
     oval_border_highlight('#tab2');
+  }
+  if ($(window).scrollTop() >= (contact - topOffset -50) ) {
+    oval_border_highlight('#tab3');
   }
   if ($(window).scrollTop() >= (notes - topOffset -50) ) {
     oval_border_highlight('#tab4');
   }
-  if ($(window).scrollTop() >= (location - topOffset -50) ) {
+  if ($(window).scrollTop() >= (closeout - topOffset -50) ) {
     oval_border_highlight('#tab5');
   }
 }
