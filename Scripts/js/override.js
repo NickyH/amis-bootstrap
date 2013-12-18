@@ -518,12 +518,10 @@ function show_correct_ovals(formName) {
     $('a[data-href="#bookmark_end"]').parent('li').hide();
     $('a[data-href="#bookmark_review"]').parent('li').hide();
 
-    $('a[data-href="#bookmark_taskdetails"]').parent('li').hide();
-    $('a[data-href="#bookmark_extdetails"]').parent('li').hide();
-    $('a[data-href="#bookmark_loe"]').parent('li').hide();
-    $('a[data-href="#bookmark_wip"]').parent('li').hide();
-    $('a[data-href="#bookmark_traffic"]').parent('li').hide();
-    $('a[data-href="#bookmark_tasknotes"]').parent('li').hide();
+    hide_timesheet_ovals();
+
+    hide_task_ovals();
+
   }
   if (formName === 'defect') {
     $('a[data-href="#bookmark_contact"]').parent('li').hide();
@@ -539,6 +537,11 @@ function show_correct_ovals(formName) {
     $('a[data-href="#bookmark_breaks"]').parent('li').hide();
     $('a[data-href="#bookmark_end"]').parent('li').hide();
     $('a[data-href="#bookmark_review"]').parent('li').hide();
+
+    hide_timesheet_ovals();
+
+    hide_task_ovals();
+
   }
   if (formName === 'inspection') {
     $('a[data-href="#bookmark_condition"]').parent('li').hide();
@@ -554,6 +557,11 @@ function show_correct_ovals(formName) {
     $('a[data-href="#bookmark_breaks"]').parent('li').hide();
     $('a[data-href="#bookmark_end"]').parent('li').hide();
     $('a[data-href="#bookmark_review"]').parent('li').hide();
+
+    hide_timesheet_ovals();
+
+    hide_task_ovals();
+
   }
   if (formName === 'task') {
     $('a[data-href="#bookmark_condition"]').parent('li').hide();
@@ -563,18 +571,10 @@ function show_correct_ovals(formName) {
     $('a[data-href="#bookmark_notes"]').parent('li').hide();
     $('a[data-href="#bookmark_closeout"]').parent('li').hide();
 
-    $('a[data-href="#bookmark_start"]').parent('li').hide();
-    $('a[data-href="#bookmark_work"]').parent('li').hide();
-    $('a[data-href="#bookmark_breaks"]').parent('li').hide();
-    $('a[data-href="#bookmark_end"]').parent('li').hide();
-    $('a[data-href="#bookmark_review"]').parent('li').hide();
+    hide_timesheet_ovals();
 
-    $('a[data-href="#bookmark_taskdetails"]').parent('li').show();
-    $('a[data-href="#bookmark_extdetails"]').parent('li').show();
-    $('a[data-href="#bookmark_loe"]').parent('li').show();
-    $('a[data-href="#bookmark_wip"]').parent('li').show();
-    $('a[data-href="#bookmark_traffic"]').parent('li').show();
-    $('a[data-href="#bookmark_tasknotes"]').parent('li').show();
+    show_task_ovals();
+
   }
   if (formName === 'timesheet') {
     $('a[data-href="#bookmark_condition"]').parent('li').hide();
@@ -584,13 +584,48 @@ function show_correct_ovals(formName) {
     $('a[data-href="#bookmark_notes"]').parent('li').hide();
     $('a[data-href="#bookmark_closeout"]').parent('li').hide();
 
-    $('a[data-href="#bookmark_start"]').parent('li').show();
-    $('a[data-href="#bookmark_work"]').parent('li').show();
-    $('a[data-href="#bookmark_breaks"]').parent('li').show();
-    $('a[data-href="#bookmark_end"]').parent('li').show();
-    $('a[data-href="#bookmark_review"]').parent('li').show();
+    show_timesheet_ovals();
+
+    hide_task_ovals();
+
   }
 }
+
+function hide_task_ovals() {
+  $('a[data-href="#bookmark_taskdetails"]').parent('li').hide();
+  $('a[data-href="#bookmark_extdetails"]').parent('li').hide();
+  $('a[data-href="#bookmark_loe"]').parent('li').hide();
+  $('a[data-href="#bookmark_wip"]').parent('li').hide();
+  $('a[data-href="#bookmark_traffic"]').parent('li').hide();
+  $('a[data-href="#bookmark_tasknotes"]').parent('li').hide();
+}
+
+function show_task_ovals() {
+  $('a[data-href="#bookmark_taskdetails"]').parent('li').show();
+  $('a[data-href="#bookmark_extdetails"]').parent('li').show();
+  $('a[data-href="#bookmark_loe"]').parent('li').show();
+  $('a[data-href="#bookmark_wip"]').parent('li').show();
+  $('a[data-href="#bookmark_traffic"]').parent('li').show();
+  $('a[data-href="#bookmark_tasknotes"]').parent('li').show();
+}
+
+function show_timesheet_ovals() {
+  $('a[data-href="#bookmark_start"]').parent('li').show();
+  $('a[data-href="#bookmark_work"]').parent('li').show();
+  $('a[data-href="#bookmark_breaks"]').parent('li').show();
+  $('a[data-href="#bookmark_end"]').parent('li').show();
+  $('a[data-href="#bookmark_review"]').parent('li').show();
+}
+
+function hide_timesheet_ovals() {
+  $('a[data-href="#bookmark_start"]').parent('li').hide();
+  $('a[data-href="#bookmark_work"]').parent('li').hide();
+  $('a[data-href="#bookmark_breaks"]').parent('li').hide();
+  $('a[data-href="#bookmark_end"]').parent('li').hide();
+  $('a[data-href="#bookmark_review"]').parent('li').hide();
+}
+
+
 
 function show_fake_map()
 {
