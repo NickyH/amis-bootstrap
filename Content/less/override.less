@@ -1548,19 +1548,27 @@ span.lookup:hover {
     width: 150px;
     background-color: @white-medium;
     color: black;
+    a.truncate {
+      width: auto;
+    }
   }
   a {
     color: black;
-  }
-  li.layer {
-    width: 110px;
-    margin-right: 5px !important;
   }
   .item {
     height: 95% !important;
   }
   ul  {
     background-color: @white-medium;
+  }
+  .dcjq-parent-li a:not(.active):before {
+    content: url("../images/arrow-closed.png");
+  }
+  .dcjq-parent-li a.active:before {
+    content: url("../images/arrow-open.png");
+  }
+  .layer a.category-checkbox:before {
+    content: '';
   }
 }
 
