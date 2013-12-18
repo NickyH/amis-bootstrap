@@ -1,6 +1,5 @@
 var owlLayersHtml;
 var topOffset = 170;
-var scrolling = false;
 
 //dom ready functions
 $(function(){
@@ -394,7 +393,8 @@ function insert_inspection_form()
     });
   var formName = 'inspection'
   show_correct_ovals(formName);
-  $('html body').animate({ scrollTop: 0 });
+  // $('html body').animate({ scrollTop: 0 });
+  $('#insert-form').on('change', skip_to_details);
 }
 
 function insert_CR_form()
@@ -405,7 +405,8 @@ function insert_CR_form()
   });
   var formName = 'request'
   show_correct_ovals(formName);
-  $('html body').animate({ scrollTop: 0 });
+  // $('html body').animate({ scrollTop: 0 });
+  $('#insert-form').on('change', skip_to_details);
 }
 
 function insert_defect_form()

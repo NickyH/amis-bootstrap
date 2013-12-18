@@ -67,7 +67,6 @@ $('.reference-history tr').on('click', open_current_contact_row);
 
 $('.icon-history').on('click', refresh_history_accordion);
 
-
 //task form functions
 
 $('td a span.glyphicon-play').on('click', highlight_current_task);
