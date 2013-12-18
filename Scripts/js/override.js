@@ -99,6 +99,7 @@ function open_current_contact_row() {
 }
 
 function skip_to_details() {
+  console.log('hello');
   var details = $('#bookmark_details').offset().top;
   $(window).scrollTop((details - 200));
 }
