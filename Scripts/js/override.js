@@ -238,27 +238,31 @@ function get_inspection_page_position() {
 }
 
 function get_task_page_position() {
-  // var location = $('#bookmark_location').offset().top;
-  // var details = $('#bookmark_details').offset().top;
-  // var contact = $('#bookmark_contact').offset().top;
-  // var notes = $('#bookmark_notes').offset().top;
-  // var closeout = $('#bookmark_closeout').offset().top;
+  var taskdetails = $('#bookmark_taskdetails').offset().top;
+  var extdetails = $('#bookmark_extdetails').offset().top;
+  var loe = $('#bookmark_loe').offset().top;
+  var wip = $('#bookmark_wip').offset().top;
+  var traffic = $('#bookmark_traffic').offset().top;
+  var tasknotes = $('#bookmark_tasknotes').offset().top;
 
-  // if ($(window).scrollTop() >= (location - topOffset -50) ) {
-  //   oval_border_highlight('#tab1');
-  // }
-  // if ($(window).scrollTop() >= (details - topOffset -50 ) ) {
-  //   oval_border_highlight('#tab2');
-  // }
-  // if ($(window).scrollTop() >= (contact - topOffset -50) ) {
-  //   oval_border_highlight('#tab3');
-  // }
-  // if ($(window).scrollTop() >= (notes - topOffset -50) ) {
-  //   oval_border_highlight('#tab4');
-  // }
-  // if ($(window).scrollTop() >= (closeout - topOffset -50) ) {
-  //   oval_border_highlight('#tab5');
-  // }
+  if ($(window).scrollTop() >= (taskdetails - topOffset -50) ) {
+    oval_border_highlight('#tab10');
+  }
+  if ($(window).scrollTop() >= (extdetails - topOffset -50 ) ) {
+    oval_border_highlight('#tab11');
+  }
+  if ($(window).scrollTop() >= (loe - topOffset -50) ) {
+    oval_border_highlight('#tab12');
+  }
+  if ($(window).scrollTop() >= (wip - topOffset -50) ) {
+    oval_border_highlight('#tab13');
+  }
+  if ($(window).scrollTop() >= (traffic - topOffset -50) ) {
+    oval_border_highlight('#tab14');
+  }
+  if ($(window).scrollTop() >= (tasknotes - topOffset -50) ) {
+    oval_border_highlight('#tab15');
+  }
 }
 
 function get_timesheet_page_position() {
@@ -513,6 +517,13 @@ function show_correct_ovals(formName) {
     $('a[data-href="#bookmark_breaks"]').parent('li').hide();
     $('a[data-href="#bookmark_end"]').parent('li').hide();
     $('a[data-href="#bookmark_review"]').parent('li').hide();
+
+    $('a[data-href="#bookmark_taskdetails"]').parent('li').hide();
+    $('a[data-href="#bookmark_extdetails"]').parent('li').hide();
+    $('a[data-href="#bookmark_loe"]').parent('li').hide();
+    $('a[data-href="#bookmark_wip"]').parent('li').hide();
+    $('a[data-href="#bookmark_traffic"]').parent('li').hide();
+    $('a[data-href="#bookmark_tasknotes"]').parent('li').hide();
   }
   if (formName === 'defect') {
     $('a[data-href="#bookmark_contact"]').parent('li').hide();
@@ -543,6 +554,27 @@ function show_correct_ovals(formName) {
     $('a[data-href="#bookmark_breaks"]').parent('li').hide();
     $('a[data-href="#bookmark_end"]').parent('li').hide();
     $('a[data-href="#bookmark_review"]').parent('li').hide();
+  }
+  if (formName === 'task') {
+    $('a[data-href="#bookmark_condition"]').parent('li').hide();
+    $('a[data-href="#bookmark_contact"]').parent('li').hide();
+    $('a[data-href="#bookmark_location"]').parent('li').hide();
+    $('a[data-href="#bookmark_details"]').parent('li').hide();
+    $('a[data-href="#bookmark_notes"]').parent('li').hide();
+    $('a[data-href="#bookmark_closeout"]').parent('li').hide();
+
+    $('a[data-href="#bookmark_start"]').parent('li').hide();
+    $('a[data-href="#bookmark_work"]').parent('li').hide();
+    $('a[data-href="#bookmark_breaks"]').parent('li').hide();
+    $('a[data-href="#bookmark_end"]').parent('li').hide();
+    $('a[data-href="#bookmark_review"]').parent('li').hide();
+
+    $('a[data-href="#bookmark_taskdetails"]').parent('li').show();
+    $('a[data-href="#bookmark_extdetails"]').parent('li').show();
+    $('a[data-href="#bookmark_loe"]').parent('li').show();
+    $('a[data-href="#bookmark_wip"]').parent('li').show();
+    $('a[data-href="#bookmark_traffic"]').parent('li').show();
+    $('a[data-href="#bookmark_tasknotes"]').parent('li').show();
   }
   if (formName === 'timesheet') {
     $('a[data-href="#bookmark_condition"]').parent('li').hide();
