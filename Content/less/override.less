@@ -1521,7 +1521,20 @@ span.lookup:hover {
 }
 
 .history-tree-wrapper {
-  height: 50%;
+  .history-title {
+    font-size: 18px;
+    width: 150px;
+    height: 35px;
+    background-color: @form-highlight-colour;
+    opacity: 0.6;
+    color: @white;
+    border-radius: 5px;
+    margin-left: 10px;
+    line-height: 35px;
+    text-indent: 10px;
+    border: 1px solid @grey-light;
+    margin-bottom: 10px;
+  }
 }
 
 #accordion-15 {
@@ -1533,20 +1546,25 @@ span.lookup:hover {
 }
 
 #history-tree {
-  height: 50%;
+  .item {
+    position: absolute;
+    .menu {
+      position: absolute;
+      height: 80% !important;
+    }
+  }
   li {
     width: 150px;
+    line-height: 25px;
     background-color: @white-medium;
     color: black;
+    font-weight: bold;
     a.truncate {
       width: auto;
     }
   }
   a {
     color: black;
-  }
-  .item {
-    height: 95% !important;
   }
   ul  {
     background-color: @white-medium;
