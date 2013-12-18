@@ -1,7 +1,10 @@
 <div class="content_div">
 
   <div class="form-buttons">
-    <div class="form-title"><img class="form-head-icon" src="../Content/images/icons/icon-defect-white.png"><span>Defect</span><span class="status">Status: Programmed</span></div>
+    <div class="form-title"><img class="form-head-icon" src="../Content/images/icons/icon-task-white.png"><span>Task</span>
+      <span class="cr-id">1023.56</span>
+      <span class="status">Status: Completed</span>
+    </div>
     <input type="submit" value="Cancel" class="form-button cancel-button" data-role="button" />
     <input type="submit" value="Save" class="form-button save-button" data-role="button" />
   </div>
@@ -759,7 +762,7 @@
 
 <script src="../Scripts/js/forms.js"></script>
 <script>
-$('.form-container').on('DOMMouseScroll mousewheel', get_defect_page_position);
-$('.form-container').bind('swipemove',get_defect_page_position);
+$('.form-container').on('DOMMouseScroll mousewheel', get_task_page_position);
+$('.form-container').bind('swipemove',get_task_page_position);
 skip_to_details();
 </script>

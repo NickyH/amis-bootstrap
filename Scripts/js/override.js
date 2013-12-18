@@ -237,6 +237,30 @@ function get_inspection_page_position() {
   }
 }
 
+function get_task_page_position() {
+  // var location = $('#bookmark_location').offset().top;
+  // var details = $('#bookmark_details').offset().top;
+  // var contact = $('#bookmark_contact').offset().top;
+  // var notes = $('#bookmark_notes').offset().top;
+  // var closeout = $('#bookmark_closeout').offset().top;
+
+  // if ($(window).scrollTop() >= (location - topOffset -50) ) {
+  //   oval_border_highlight('#tab1');
+  // }
+  // if ($(window).scrollTop() >= (details - topOffset -50 ) ) {
+  //   oval_border_highlight('#tab2');
+  // }
+  // if ($(window).scrollTop() >= (contact - topOffset -50) ) {
+  //   oval_border_highlight('#tab3');
+  // }
+  // if ($(window).scrollTop() >= (notes - topOffset -50) ) {
+  //   oval_border_highlight('#tab4');
+  // }
+  // if ($(window).scrollTop() >= (closeout - topOffset -50) ) {
+  //   oval_border_highlight('#tab5');
+  // }
+}
+
 function get_timesheet_page_position() {
   var start = $('#bookmark_start').offset().top;
   var work = $('#bookmark_work').offset().top;
@@ -416,6 +440,17 @@ function insert_defect_form()
     $('#insert-form').html(data);
   });
   var formName = 'defect'
+  show_correct_ovals(formName);
+  $('html body').animate({ scrollTop: 0 });
+}
+
+function insert_task_form()
+{
+  $('#insert-form').empty();
+  $.get('forms/form_task.html', function(data) {
+    $('#insert-form').html(data);
+  });
+  var formName = 'task'
   show_correct_ovals(formName);
   $('html body').animate({ scrollTop: 0 });
 }
