@@ -10,6 +10,66 @@
   <div class="container-fluid form-container">
 
     <!-- form row 1 -->
+    <div class="row" id="bookmark_location">
+      <div class="col-12">
+        <div class="row-fluid">
+
+          <!-- form panel 1 -->
+          <div class="col-lg-6 col-md-6 col-sm-12">
+
+            <div class="form-panel">
+              <!-- numbered circle in each form panel-->
+              <div class="text-circle">
+                <div class="text-in-circle">
+                  Location
+                </div>
+              </div>
+
+              <form class="form-horizontal container" role="form">
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Location</label>
+                  <div class="col-sm-8">
+                    <textarea class="form-control" rows="7"></textarea>
+                  </div>
+                </div>
+                <span class="glyphicon insert-cross-icon"></span>
+              </form>
+
+            </div>
+          </div>
+          <!-- end form panel 1 -->
+
+          <!-- form panel 2 -->
+          <div class="col-lg-6 col-md-6 col-sm-12">
+
+            <div class="form-panel">
+              <!-- numbered circle in each form panel-->
+              <div class="text-circle">
+                <div class="text-in-circle">
+                  Map
+                </div>
+              </div>
+
+              <form class="form-horizontal container" role="form">
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Map</label>
+                  <div class="col-sm-8">
+                    <textarea class="form-control" rows="7"></textarea>
+                  </div>
+                </div>
+                <span class="glyphicon insert-cross-icon"></span>
+              </form>
+
+            </div>
+          </div>
+          <!-- end form panel 2 -->
+
+        </div>
+      </div>
+    </div>
+    <!-- end form row 1 -->
+
+    <!-- form row 2 -->
     <div class="row" id="bookmark_details">
       <div class="col-12">
         <div class="row-fluid">
@@ -26,36 +86,47 @@
               </div>
 
               <form class="form-horizontal container" role="form">
+
                 <div class="form-group">
-                  <label class="col-sm-4 control-label">Defect ID</label>
+                  <label class="col-sm-4 control-label">Received Date</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" disabled value="1023.763">
+                    <div class="input-group merged">
+                      <input type="text" class="form-control insert-picker" />
+                      <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                      </span>
+                    </div>
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label class="col-sm-4 control-label">Defect Category</label>
+                  <label class="col-sm-4 control-label">Incident Date</label>
                   <div class="col-sm-8">
-                    <select class="selectpicker show-tick form-control" title='' data-live-search="true" value="06_FP_KC" disabled>
+                    <div class="input-group merged">
+                      <input type="text" class="form-control insert-picker" />
+                      <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Category</label>
+                  <div class="col-sm-8">
+                    <select class="selectpicker show-tick form-control" title='' data-required="true" data-live-search="true" value="05-SR-CP">
                       <option data-hidden="true"></option>
                       <option>05-SR-CP</option>
-                      <option>2</option>
-                      <option>3</option>
+                      <option>06-SR-CP</option>
+                      <option>07-SR-CP</option>
                     </select>
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label class="col-sm-4 control-label">Location Description</label>
+                  <label class="col-sm-4 control-label">Type</label>
                   <div class="col-sm-8">
-                    <textarea class="form-control" rows="3" data-trigger="keyup" disabled></textarea>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Responsibility Of</label>
-                  <div class="col-sm-8">
-                    <select class="selectpicker show-tick form-control" title='' data-live-search="true" disabled>
+                    <select class="selectpicker show-tick form-control" title='' data-required="true" data-live-search="true" value="Footpath, Kerb & Channel">
                       <option data-hidden="true"></option>
                       <option>1</option>
                       <option>2</option>
@@ -65,13 +136,13 @@
                 </div>
 
                 <div class="form-group">
-                  <label class="col-sm-4 control-label">Position</label>
+                  <label class="col-sm-4 control-label">Priority</label>
                   <div class="col-sm-8">
-                    <select class="selectpicker show-tick form-control" title='' data-live-search="true">
+                    <select class="selectpicker show-tick form-control" title='' data-required="true" data-live-search="true" value="FP_KC - 5D" disabled>
                       <option data-hidden="true"></option>
-                      <option>L</option>
-                      <option>R</option>
-                      <option>M</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
                     </select>
                   </div>
                 </div>
@@ -79,7 +150,7 @@
                 <div class="form-group">
                   <label class="col-sm-4 control-label">Created By</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" value="Sam Lanza" disabled>
+                    <input type="text" class="form-control" data-required="true">
                   </div>
                 </div>
 
@@ -87,7 +158,7 @@
                   <label class="col-sm-4 control-label">Due Date</label>
                   <div class="col-sm-8">
                     <div class="input-group merged">
-                      <input type="text" class="form-control insert-picker" data-required="true" />
+                      <input type="text" class="form-control insert-picker" />
                       <span class="input-group-addon">
                         <span class="glyphicon glyphicon-calendar"></span>
                       </span>
@@ -96,17 +167,10 @@
                 </div>
 
                 <div class="form-group">
-                  <label class="col-sm-4 control-label">Created By</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" disabled>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Created Date</label>
+                  <label class="col-sm-4 control-label">Completed Date</label>
                   <div class="col-sm-8">
                     <div class="input-group merged">
-                      <input type="text" class="form-control insert-picker" disabled />
+                      <input type="text" class="form-control insert-picker" />
                       <span class="input-group-addon">
                         <span class="glyphicon glyphicon-calendar"></span>
                       </span>
@@ -135,26 +199,38 @@
               <form class="form-horizontal container" role="form">
 
                 <div class="form-group">
-                  <label class="col-sm-4 control-label">Due Date</label>
+                  <label class="col-sm-4 control-label">Location Description</label>
                   <div class="col-sm-8">
-                    <div class="input-group merged">
-                      <input type="text" class="form-control insert-picker" disabled />
-                      <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                      </span>
-                    </div>
+                    <textarea class="form-control" rows="3" data-trigger="keyup" data-required="true"></textarea>
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label class="col-sm-4 control-label">Completed By</label>
+                  <label class="col-sm-4 control-label">Incident Description</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" disabled>
+                    <textarea class="form-control" rows="4"></textarea>
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label class="col-sm-4 control-label">Completed Date</label>
+                  <label class="col-sm-4 control-label">Instructions</label>
+                  <div class="col-sm-8">
+                    <textarea class="form-control" rows="4"></textarea>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Assigned To</label>
+                  <div class="col-sm-5">
+                    <input type="text" class="form-control">
+                  </div>
+                  <div class="col-sm-3">
+                    <span class="btn btn-info form-control close-form email"><span class="glyphicon glyphicon-envelope"></span></span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Assigned Date</label>
                   <div class="col-sm-8">
                     <div class="input-group merged">
                       <input type="text" class="form-control insert-picker" />
@@ -162,77 +238,6 @@
                         <span class="glyphicon glyphicon-calendar"></span>
                       </span>
                     </div>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Defect Code</label>
-                  <div class="col-sm-8">
-                    <select class="selectpicker show-tick form-control" title='' data-live-search="true" data-required="true">
-                      <option data-hidden="true"></option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Class</label>
-                  <div class="col-sm-8">
-                    <select class="selectpicker show-tick form-control" title='' data-live-search="true" data-required="true">
-                      <option data-hidden="true"></option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Severity</label>
-                  <div class="col-sm-8">
-                    <select class="selectpicker show-tick form-control" title='' data-live-search="true" data-required="true">
-                      <option data-hidden="true"></option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Priority</label>
-                  <div class="col-sm-8">
-                    <select class="selectpicker show-tick form-control" title='' data-live-search="true" data-required="true">
-                      <option data-hidden="true"></option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Unit/Quantity</label>
-                  <div class="col-sm-4">
-                    <select class="selectpicker show-tick form-control" title='' data-live-search="true" data-required="true">
-                      <option data-hidden="true"></option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                    </select>
-                  </div>
-                  <div class="col-sm-4">
-                    <input class="form-control all-touchspin" data-required="true" value="1" type="number" pattern="\d*">
-                  </div>
-
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Defect Notes</label>
-                  <div class="col-sm-8">
-                    <textarea class="form-control" rows="4"></textarea>
                   </div>
                 </div>
 
@@ -245,9 +250,9 @@
         </div>
       </div>
     </div>
-    <!-- end form row 1 -->
+    <!-- end form row 2 -->
 
-    <!-- form row 2 -->
+    <!-- form row 3 -->
     <div class="row" id="bookmark_condition">
       <div class="col-12">
         <div class="row-fluid">
@@ -308,12 +313,6 @@
 
               <form class="form-horizontal container" role="form">
 
-                <div class="form-group" role="search">
-                  <div class="col-sm-12">
-                    <input type="text" class="form-control search" placeholder="Search">
-                  </div>
-                </div>
-
                 <table id="table-filter-3" class="table table-condensed table-striped">
                   <thead>
                     <tr>
@@ -357,9 +356,9 @@
         </div>
       </div>
     </div>
-    <!-- end form row 2 -->
+    <!-- end form row 3 -->
 
-    <!-- form row 3 -->
+    <!-- form row 4 -->
     <div class="row" id="bookmark_notes">
       <div class="col-12">
         <div class="row-fluid">
@@ -482,14 +481,14 @@
         </div>
       </div>
     </div>
-    <!-- end form row 3 -->
+    <!-- end form row 4 -->
 
-    <!-- form row 4 -->
+    <!-- form row 5 -->
     <div class="row">
       <div class="col-12">
         <div class="row-fluid">
 
-     <!-- form panel 1 -->
+          <!-- form panel 1 -->
           <div class="col-lg-12 col-md-12 col-sm-12">
 
             <div class="form-panel full-width">
@@ -501,12 +500,6 @@
               </div>
 
               <form class="form-horizontal container" role="form">
-
-                <div class="form-group" role="search">
-                  <div class="col-sm-12">
-                    <input type="text" class="form-control search" placeholder="Search">
-                  </div>
-                </div>
 
                 <table id="table-filter-4" class="table table-condensed table-striped">
                   <thead>
@@ -592,66 +585,6 @@
 
           </div>
           <!-- end form panel 1 -->
-
-        </div>
-      </div>
-    </div>
-    <!-- end form row 4 -->
-
-    <!-- form row 5 -->
-    <div class="row" id="bookmark_location">
-      <div class="col-12">
-        <div class="row-fluid">
-
-          <!-- form panel 1 -->
-          <div class="col-lg-6 col-md-6 col-sm-12">
-
-            <div class="form-panel">
-              <!-- numbered circle in each form panel-->
-              <div class="text-circle">
-                <div class="text-in-circle">
-                  Location
-                </div>
-              </div>
-
-              <form class="form-horizontal container" role="form">
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Location</label>
-                  <div class="col-sm-8">
-                    <textarea class="form-control" rows="7"></textarea>
-                  </div>
-                </div>
-                <span class="glyphicon insert-cross-icon"></span>
-              </form>
-
-            </div>
-          </div>
-          <!-- end form panel 1 -->
-
-          <!-- form panel 2 -->
-          <div class="col-lg-6 col-md-6 col-sm-12">
-
-            <div class="form-panel">
-              <!-- numbered circle in each form panel-->
-              <div class="text-circle">
-                <div class="text-in-circle">
-                  Map
-                </div>
-              </div>
-
-              <form class="form-horizontal container" role="form">
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Map</label>
-                  <div class="col-sm-8">
-                    <textarea class="form-control" rows="7"></textarea>
-                  </div>
-                </div>
-                <span class="glyphicon insert-cross-icon"></span>
-              </form>
-
-            </div>
-          </div>
-          <!-- end form panel 2 -->
 
         </div>
       </div>
@@ -747,7 +680,6 @@
             </div>
           </div>
           <!-- end form panel 1 -->
-
 
         </div>
       </div>

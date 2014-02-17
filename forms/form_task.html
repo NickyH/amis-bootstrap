@@ -55,7 +55,7 @@
                 </div>
 
                 <div class="form-group">
-                  <label class="col-sm-4 control-label">Task Category</label>
+                  <label class="col-sm-4 control-label">Category</label>
                   <div class="col-sm-8">
                     <select class="selectpicker show-tick form-control" title='' data-live-search="true" value="06_FP_KC" disabled>
                       <option data-hidden="true"></option>
@@ -67,7 +67,7 @@
                 </div>
 
                 <div class="form-group">
-                  <label class="col-sm-4 control-label">Task Component</label>
+                  <label class="col-sm-4 control-label">Component</label>
                   <div class="col-sm-8">
                     <select class="selectpicker show-tick form-control" title='' data-live-search="true" value="06_FP_KC" disabled>
                       <option data-hidden="true"></option>
@@ -79,7 +79,7 @@
                 </div>
 
                 <div class="form-group">
-                  <label class="col-sm-4 control-label">Task Code</label>
+                  <label class="col-sm-4 control-label">Code</label>
                   <div class="col-sm-8">
                     <select class="selectpicker show-tick form-control" title='' data-live-search="true" value="06_FP_KC" disabled>
                       <option data-hidden="true"></option>
@@ -91,7 +91,7 @@
                 </div>
 
                 <div class="form-group">
-                  <label class="col-sm-4 control-label">Task Class</label>
+                  <label class="col-sm-4 control-label">Class</label>
                   <div class="col-sm-8">
                     <select class="selectpicker show-tick form-control" title='' data-live-search="true" disabled>
                       <option data-hidden="true"></option>
@@ -101,6 +101,26 @@
                     </select>
                   </div>
                 </div>
+
+                <span class="glyphicon insert-cross-icon"></span>
+              </form>
+
+            </div>
+          </div>
+          <!-- end form panel 1 -->
+
+          <!-- form panel 2 -->
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="form-panel">
+
+              <!-- content circle in each form panel-->
+              <div class="text-circle">
+                <div class="text-in-circle">
+                  Details
+                </div>
+              </div>
+
+              <form class="form-horizontal container" role="form">
 
                 <div class="form-group">
                   <label class="col-sm-4 control-label">Repair Type</label>
@@ -125,26 +145,6 @@
                     </select>
                   </div>
                 </div>
-
-                <span class="glyphicon insert-cross-icon"></span>
-              </form>
-
-            </div>
-          </div>
-          <!-- end form panel 1 -->
-
-          <!-- form panel 2 -->
-          <div class="col-lg-6 col-md-6 col-sm-12">
-            <div class="form-panel">
-
-              <!-- content circle in each form panel-->
-              <div class="text-circle">
-                <div class="text-in-circle">
-                  Details
-                </div>
-              </div>
-
-              <form class="form-horizontal container" role="form">
 
                 <div class="form-group">
                   <label class="col-sm-4 control-label">Unit/Quantity</label>
@@ -194,13 +194,6 @@
 
                 <div class="form-group">
                   <label class="col-sm-4 control-label">Total Task Cost</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" />
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Total LOE Cost</label>
                   <div class="col-sm-8">
                     <input type="text" class="form-control" />
                   </div>
@@ -408,6 +401,26 @@
                   </div>
                 </div>
 
+                <span class="glyphicon insert-cross-icon"></span>
+              </form>
+
+            </div>
+          </div>
+          <!-- end form panel 1 -->
+
+          <!-- form panel 2 -->
+          <div class="col-lg-6 col-md-6 col-sm-12">
+
+            <div class="form-panel">
+              <!-- numbered circle in each form panel-->
+              <div class="text-circle">
+                <div class="text-in-circle">
+                  LOE
+                </div>
+              </div>
+
+              <form class="form-horizontal container" role="form">
+
                 <div class="form-group">
                   <label class="col-sm-4 control-label">Unit/Quantity</label>
                   <div class="col-sm-4">
@@ -424,11 +437,64 @@
                 </div>
 
                 <div class="form-group">
-                  <label class="col-sm-4 control-label">Unit rate</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
+                  <label class="col-sm-4 control-label">Cost Code Int/Ext</label>
+                  <div class="col-sm-4">
+                    <select class="selectpicker show-tick form-control" title='' data-live-search="true">
+                      <option data-hidden="true"></option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-4">
+                    <select class="selectpicker show-tick form-control" title='' data-live-search="true">
+                      <option data-hidden="true"></option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                    </select>
                   </div>
                 </div>
+
+                <div class="form-group">
+                  <div class="col-sm-4"></div>
+                  <div class="col-sm-4">
+                    <span class='btn btn-info'>Add Item</span>
+                  </div>
+                  <div class="col-sm-4">
+                    <span class='btn btn-info'>Update Item</span>
+                  </div>
+                </div>
+
+                <span class="glyphicon insert-cross-icon"></span>
+              </form>
+
+            </div>
+          </div>
+          <!-- end form panel 2 -->
+
+        </div>
+      </div>
+    </div>
+    <!-- end form row 3 -->
+
+    <!-- form row 4 -->
+    <div class="row">
+      <div class="col-12">
+        <div class="row-fluid">
+
+          <!-- form panel 1 -->
+          <div class="col-lg-12 col-md-12 col-sm-12">
+
+            <div class="form-panel full-width">
+              <!-- numbered circle in each form panel-->
+              <div class="text-circle">
+                <div class="text-in-circle">
+                  Level of Effort
+                </div>
+              </div>
+
+              <form class="form-horizontal container" role="form">
 
                 <div class="col-sm-12">
                   <table id="table-filter-" class="table table-condensed table-striped">
@@ -438,9 +504,9 @@
                         <th>Description</th>
                         <th>Rate</th>
                         <th>Unit</th>
-                        <th>Estimated Qty</th>
+                        <th>Estimate Qty</th>
                         <th>Actual Qty</th>
-                        <th>Sub Total Cost</th>
+                        <th>Cost</th>
                       </tr>
                     </thead>
                     <tr>
@@ -465,40 +531,10 @@
                 </div>
 
                 <div class="form-group">
-                  <label class="col-sm-4 control-label">Total Quantity</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Total Cost</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Internal Cost Code</label>
-                  <div class="col-sm-8">
-                    <select class="selectpicker show-tick form-control" title='' data-live-search="true">
-                      <option data-hidden="true"></option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">External Cost Code</label>
-                  <div class="col-sm-8">
-                    <select class="selectpicker show-tick form-control" title='' data-live-search="true">
-                      <option data-hidden="true"></option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                    </select>
+                  <div class="col-sm-8"></div>
+                  <label class="col-sm-2 control-label">Total Cost</label>
+                  <div class="col-sm-2">
+                    <input type="text" class="form-control" disabled>
                   </div>
                 </div>
 
@@ -506,74 +542,201 @@
               </form>
 
             </div>
+
           </div>
           <!-- end form panel 1 -->
 
-        </div>
-      </div>
-    </div>
-    <!-- end form row 3 -->
-
-    <!-- form row 4 -->
-    <div class="row" id="bookmark_wip">
-      <div class="col-12">
-        <div class="row-fluid">
-
-          <!-- form panel 1 -->
-          <div class="col-lg-6 col-md-6 col-sm-12">
-
-            <div class="form-panel">
-              <!-- numbered circle in each form panel-->
-              <div class="text-circle">
-                <div class="text-in-circle">
-                  Work in Progress
-                </div>
-              </div>
-
-              <form class="form-horizontal container" role="form">
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">WIP Item Name</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" disabled value="1023.763">
-                  </div>
-                </div>
-
-                <span class="glyphicon insert-cross-icon"></span>
-              </form>
-
-            </div>
           </div>
-          <!-- end form panel 1 -->
-
-          <!-- form panel 2 -->
-          <div class="col-lg-6 col-md-6 col-sm-12">
-
-            <div class="form-panel">
-              <!-- numbered circle in each form panel-->
-              <div class="text-circle">
-                <div class="text-in-circle">
-                  Work in Progress
-                </div>
-              </div>
-
-              <form class="form-horizontal container" role="form">
-
-
-
-                <span class="glyphicon insert-cross-icon"></span>
-              </form>
-
-            </div>
-          </div>
-          <!-- end form panel 2 -->
-
-        </div>
       </div>
     </div>
     <!-- end form row 4 -->
 
     <!-- form row 5 -->
+    <div class="row" id="bookmark_wip">
+      <div class="col-12">
+        <div class="row-fluid">
+
+          <!-- form panel 1 -->
+          <div class="col-lg-12 col-md-12 col-sm-12">
+
+            <div class="form-panel full-width">
+              <!-- numbered circle in each form panel-->
+              <div class="text-circle">
+                <div class="text-in-circle">
+                  Work in Progress
+                </div>
+              </div>
+
+              <form class="form-horizontal container" role="form">
+
+                <div class="col-sm-12">
+                  <table id="table-filter-" class="table table-condensed table-striped">
+                    <thead>
+                      <tr>
+                        <th>Item Code</th>
+                        <th>Description</th>
+                        <th>Rate</th>
+                        <th>Unit</th>
+                        <th>Estimate Qty</th>
+                        <th>Actual Qty</th>
+                        <th>Cost</th>
+                      </tr>
+                    </thead>
+                    <tr>
+                      <td>47389</td>
+                      <td>fjk fke</td>
+                      <td>200.00</td>
+                      <td>kg</td>
+                      <td>1</td>
+                      <td>0.8</td>
+                      <td>160.00</td>
+                    </tr>
+                    <tr>
+                      <td>47389</td>
+                      <td>fjk fke ewkf wmkl</td>
+                      <td>200.00</td>
+                      <td>kg</td>
+                      <td>1</td>
+                      <td>0.8</td>
+                      <td>160.00</td>
+                    </tr>
+                  </table>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">WIP Item Name</label>
+                  <div class="col-sm-2">
+                    <input type="text" class="form-control" />
+                  </div>
+                  <label class="col-sm-2 control-label">Action Date</label>
+                  <div class="col-sm-2">
+                    <div class="input-group merged">
+                      <input type="text" class="form-control insert-picker" />
+                      <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                      </span>
+                    </div>
+                  </div>
+                  <label class="col-sm-2 control-label">Complete</label>
+                  <div class="checkbox col-sm-2">
+                    <input class="control-label" type="checkbox"  name="noValidate1">
+                  </div>
+                </div>
+
+                <span class="glyphicon insert-cross-icon"></span>
+              </form>
+
+            </div>
+          </div>
+          <!-- end form panel 1 -->
+
+        </div>
+      </div>
+    </div>
+    <!-- end form row 5 -->
+
+    <!-- form row 6 -->
+    <div class="row">
+      <div class="col-12">
+        <div class="row-fluid">
+
+          <!-- form panel 1 -->
+          <div class="col-lg-12 col-md-12 col-sm-12">
+
+            <div class="form-panel full-width">
+              <!-- numbered circle in each form panel-->
+              <div class="text-circle">
+                <div class="text-in-circle">
+                  Work in Progress
+                </div>
+              </div>
+
+              <form class="form-horizontal container" role="form">
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Unit</label>
+                  <div class="col-sm-2">
+                    <input type="text" class="form-control">
+                  </div>
+                  <label class="col-sm-2 control-label">Dimension</label>
+                  <div class="col-sm-2">
+                    <input type="text" class="form-control">
+                  </div>
+                  <label class="col-sm-1 control-label">Quantity</label>
+                  <div class="col-sm-2">
+                    <input type="text" class="form-control">
+                  </div>
+                  <div class="col-sm-1"></div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Int Cost Code</label>
+                  <div class="col-sm-2">
+                    <input type="text" class="form-control">
+                  </div>
+                  <label class="col-sm-2 control-label">Ext Cost Code</label>
+                  <div class="col-sm-2">
+                    <input type="text" class="form-control">
+                  </div>
+                  <div class="col-sm-4"></div>
+                </div>
+
+                <div class="col-sm-12">
+                  <table id="table-filter-" class="table table-condensed table-striped">
+                    <thead>
+                      <tr>
+                        <th>Item Code</th>
+                        <th>Description</th>
+                        <th>Rate</th>
+                        <th>Unit</th>
+                        <th>Estimate Qty</th>
+                        <th>Actual Qty</th>
+                        <th>Cost</th>
+                      </tr>
+                    </thead>
+                    <tr>
+                      <td>47389</td>
+                      <td>fjk fke</td>
+                      <td>200.00</td>
+                      <td>kg</td>
+                      <td>1</td>
+                      <td>0.8</td>
+                      <td>160.00</td>
+                    </tr>
+                    <tr>
+                      <td>47389</td>
+                      <td>fjk fke ewkf wmkl</td>
+                      <td>200.00</td>
+                      <td>kg</td>
+                      <td>1</td>
+                      <td>0.8</td>
+                      <td>160.00</td>
+                    </tr>
+                  </table>
+                </div>
+
+                <div class="form-group">
+                  <div class="col-sm-8"></div>
+                  <label class="col-sm-2 control-label">Total Cost</label>
+                  <div class="col-sm-2">
+                    <input type="text" class="form-control" disabled>
+                  </div>
+                </div>
+
+                <span class="glyphicon insert-cross-icon"></span>
+              </form>
+
+            </div>
+
+          </div>
+          <!-- end form panel 1 -->
+
+          </div>
+      </div>
+    </div>
+    <!-- end form row 6 -->
+
+    <!-- form row 6 -->
     <div class="row" id="bookmark_traffic">
       <div class="col-12">
         <div class="row-fluid">
@@ -612,6 +775,26 @@
                   </div>
                 </div>
 
+                <span class="glyphicon insert-cross-icon"></span>
+              </form>
+
+            </div>
+          </div>
+          <!-- end form panel 1 -->
+
+          <!-- form panel 1 -->
+          <div class="col-lg-6 col-md-6 col-sm-12">
+
+            <div class="form-panel">
+              <!-- numbered circle in each form panel-->
+              <div class="text-circle">
+                <div class="text-in-circle">
+                  Traffic Mngmt
+                </div>
+              </div>
+
+              <form class="form-horizontal container" role="form">
+
                 <div class="form-group">
                   <label class="col-sm-4 control-label">Management Plan</label>
                   <div class="col-sm-8">
@@ -635,14 +818,14 @@
 
             </div>
           </div>
-          <!-- end form panel 1 -->
+          <!-- end form panel 2 -->
 
         </div>
       </div>
     </div>
-    <!-- end form row 5 -->
+    <!-- end form row 6 -->
 
-    <!-- form row 6 -->
+    <!-- form row 7 -->
     <div class="row" id="bookmark_tasknotes">
       <div class="col-12">
         <div class="row-fluid">
@@ -661,9 +844,14 @@
               <form class="form-horizontal container" role="form">
 
                 <div class="form-group">
-                  <label class="col-sm-4 control-label">Note ID</label>
+                  <label class="col-sm-4 control-label">Note Type</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" disabled value="1023.763">
+                    <select class="selectpicker show-tick form-control" title='' data-live-search="true">
+                      <option data-hidden="true"></option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                    </select>
                   </div>
                 </div>
 
@@ -687,18 +875,6 @@
                 </div>
 
                 <div class="form-group">
-                  <label class="col-sm-4 control-label">Note Type</label>
-                  <div class="col-sm-8">
-                    <select class="selectpicker show-tick form-control" title='' data-live-search="true">
-                      <option data-hidden="true"></option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="form-group">
                   <label class="col-sm-4 control-label">Last Modified By</label>
                   <div class="col-sm-8">
                     <input type="text" class="form-control">
@@ -717,10 +893,30 @@
                   </div>
                 </div>
 
+                <span class="glyphicon insert-cross-icon"></span>
+              </form>
+
+            </div>
+          </div>
+          <!-- end form panel 1 -->
+
+          <!-- form panel 2 -->
+          <div class="col-lg-6 col-md-6 col-sm-12">
+
+            <div class="form-panel">
+              <!-- numbered circle in each form panel-->
+              <div class="text-circle">
+                <div class="text-in-circle">
+                  Notes
+                </div>
+              </div>
+
+              <form class="form-horizontal container" role="form">
+
                 <div class="form-group">
                   <label class="col-sm-4 control-label">Note Description</label>
                   <div class="col-sm-8">
-                    <textarea class="form-control" rows="2"></textarea>
+                    <textarea class="form-control" rows="6"></textarea>
                   </div>
                 </div>
 
@@ -740,12 +936,12 @@
 
             </div>
           </div>
-          <!-- end form panel 1 -->
+          <!-- end form panel 2 -->
 
         </div>
       </div>
     </div>
-    <!-- end form row 6 -->
+    <!-- end form row 7 -->
 
   </div> <!-- end form container -->
 </div>

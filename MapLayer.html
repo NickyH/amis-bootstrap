@@ -4,17 +4,10 @@
     <title></title>
     <script src="../Scripts/js/jquery.qtip.js"></script>
 
-    <style>
-        /* Layers Action */
-        .actionRow {
-            background-color: lightblue;
-        }
-    </style>
-
     <script type="text/javascript">
 
         $(function(){
-            $("#map").on('click', showAssets_qtip);
+            $("#map").on('click', show_select_asset_dialog);
         });
 
         function openActionRow(row) {
@@ -44,10 +37,8 @@
 
 </head>
 <body>
-    <div data-role="page">
-        <a id="map" href="#featureInfoGridPopup" data-rel="popup" data-transition="pop">
-            <img id="mapstatic" src="../Content/images/OsmMap.jpg" alt="" />
-        </a>
-    </div>
+  <a id="map" href="#featureInfoGridPopup" data-rel="popup" data-transition="pop">
+    <img id="mapstatic" src="../Content/images/OsmMap.jpg" alt="" />
+  </a>
 </body>
 </html>
