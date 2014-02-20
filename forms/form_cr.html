@@ -19,9 +19,9 @@
         <div class="row-fluid">
 
           <!-- form panel 1 -->
-          <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="col-lg-12 col-md-12 col-sm-12">
 
-            <div class="form-panel">
+            <div class="form-panel full-width">
               <!-- numbered circle in each form panel-->
               <div class="text-circle">
                 <div class="text-in-circle">
@@ -30,44 +30,38 @@
               </div>
 
               <form class="form-horizontal container" role="form">
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Location</label>
-                  <div class="col-sm-8">
-                    <textarea class="form-control" rows="7"></textarea>
+
+                <div class="form-column col-lg-6 col-md-6 col-sm-12">
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Location</label>
+                    <div class="col-sm-8">
+                      <textarea class="form-control" rows="7"></textarea>
+                    </div>
                   </div>
+
                 </div>
+                <!-- end form-column-->
+
+                <div class="form-column col-lg-6 col-md-6 col-sm-12">
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Map</label>
+                    <div class="col-sm-8">
+                      <textarea class="form-control" rows="7"></textarea>
+                    </div>
+                  </div>
+
+                </div>
+                <!-- end form-column-->
+
                 <span class="glyphicon insert-cross-icon"></span>
               </form>
+
 
             </div>
           </div>
           <!-- end form panel 1 -->
-
-          <!-- form panel 2 -->
-          <div class="col-lg-6 col-md-6 col-sm-12">
-
-            <div class="form-panel">
-              <!-- numbered circle in each form panel-->
-              <div class="text-circle">
-                <div class="text-in-circle">
-                  Map
-                </div>
-              </div>
-
-              <form class="form-horizontal container" role="form">
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Map</label>
-                  <div class="col-sm-8">
-                    <textarea class="form-control" rows="7"></textarea>
-                  </div>
-                </div>
-
-                <span class="glyphicon insert-cross-icon"></span>
-              </form>
-
-            </div>
-          </div>
-          <!-- end form panel 2 -->
 
         </div>
       </div>
@@ -80,9 +74,9 @@
         <div class="row-fluid">
 
           <!-- form panel 1 -->
-          <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="col-lg-12 col-md-12 col-sm-12">
 
-            <div class="form-panel">
+            <div class="form-panel full-width">
               <!-- content circle in each form panel-->
               <div class="text-circle">
                 <div class="text-in-circle">
@@ -92,96 +86,149 @@
 
               <form class="form-horizontal container" role="form">
 
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Received Date</label>
-                  <div class="col-sm-8">
-                    <div class="input-group merged">
-                      <input type="text" class="form-control insert-picker" />
-                      <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                      </span>
+                <div class="form-column col-lg-6 col-md-6 col-sm-12">
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Received Date</label>
+                    <div class="col-sm-8">
+                      <div class="input-group merged">
+                        <input type="text" class="form-control insert-picker" />
+                        <span class="input-group-addon">
+                          <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Incident Date</label>
-                  <div class="col-sm-8">
-                    <div class="input-group merged">
-                      <input type="text" class="form-control insert-picker" />
-                      <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                      </span>
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Incident Date</label>
+                    <div class="col-sm-8">
+                      <div class="input-group merged">
+                        <input type="text" class="form-control insert-picker" />
+                        <span class="input-group-addon">
+                          <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Category</label>
-                  <div class="col-sm-8">
-                    <select class="selectpicker show-tick form-control" title='' data-required="true" data-live-search="true" value="05-SR-CP">
-                      <option data-hidden="true"></option>
-                      <option>05-SR-CP</option>
-                      <option>06-SR-CP</option>
-                      <option>07-SR-CP</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Type</label>
-                  <div class="col-sm-8">
-                    <select class="selectpicker show-tick form-control" title='' data-required="true" data-live-search="true" value="Footpath, Kerb & Channel">
-                      <option data-hidden="true"></option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Priority</label>
-                  <div class="col-sm-8">
-                    <select class="selectpicker show-tick form-control" title='' data-required="true" data-live-search="true" value="FP_KC - 5D" disabled>
-                      <option data-hidden="true"></option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Created By</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" data-required="true">
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Due Date</label>
-                  <div class="col-sm-8">
-                    <div class="input-group merged">
-                      <input type="text" class="form-control insert-picker" />
-                      <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                      </span>
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Category</label>
+                    <div class="col-sm-8">
+                      <select class="selectpicker show-tick form-control" title='' data-required="true" data-live-search="true" value="05-SR-CP">
+                        <option data-hidden="true"></option>
+                        <option>05-SR-CP</option>
+                        <option>06-SR-CP</option>
+                        <option>07-SR-CP</option>
+                      </select>
                     </div>
                   </div>
-                </div>
 
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Completed Date</label>
-                  <div class="col-sm-8">
-                    <div class="input-group merged">
-                      <input type="text" class="form-control insert-picker" />
-                      <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                      </span>
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Type</label>
+                    <div class="col-sm-8">
+                      <select class="selectpicker show-tick form-control" title='' data-required="true" data-live-search="true" value="Footpath, Kerb & Channel">
+                        <option data-hidden="true"></option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                      </select>
                     </div>
                   </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Priority</label>
+                    <div class="col-sm-8">
+                      <select class="selectpicker show-tick form-control" title='' data-required="true" data-live-search="true" value="FP_KC - 5D" disabled>
+                        <option data-hidden="true"></option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Created By</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" data-required="true">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Due Date</label>
+                    <div class="col-sm-8">
+                      <div class="input-group merged">
+                        <input type="text" class="form-control insert-picker" />
+                        <span class="input-group-addon">
+                          <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Completed Date</label>
+                    <div class="col-sm-8">
+                      <div class="input-group merged">
+                        <input type="text" class="form-control insert-picker" />
+                        <span class="input-group-addon">
+                          <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
+                <!-- end form-column-->
+
+                <div class="form-column col-lg-6 col-md-6 col-sm-12">
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Location Description</label>
+                    <div class="col-sm-8">
+                      <textarea class="form-control" rows="3" data-trigger="keyup" data-required="true"></textarea>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Incident Description</label>
+                    <div class="col-sm-8">
+                      <textarea class="form-control" rows="4"></textarea>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Instructions</label>
+                    <div class="col-sm-8">
+                      <textarea class="form-control" rows="4"></textarea>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Assigned To</label>
+                    <div class="col-sm-4">
+                      <input type="text" class="form-control">
+                    </div>
+                    <div class="col-sm-4">
+                      <span class="btn btn-info form-control close-form email"><span class="glyphicon glyphicon-envelope"></span></span>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Assigned Date</label>
+                    <div class="col-sm-8">
+                      <div class="input-group merged">
+                        <input type="text" class="form-control insert-picker" />
+                        <span class="input-group-addon">
+                          <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <!-- end form-column-->
 
                 <span class="glyphicon insert-cross-icon"></span>
               </form>
@@ -190,72 +237,10 @@
           </div>
           <!-- end form panel 1 -->
 
-          <!-- form panel 2 -->
-          <div class="col-lg-6 col-md-6 col-sm-12">
-            <div class="form-panel">
-
-              <!-- content circle in each form panel-->
-              <div class="text-circle">
-                <div class="text-in-circle">
-                  Details
-                </div>
-              </div>
-
-              <form class="form-horizontal container" role="form">
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Location Description</label>
-                  <div class="col-sm-8">
-                    <textarea class="form-control" rows="3" data-trigger="keyup" data-required="true"></textarea>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Incident Description</label>
-                  <div class="col-sm-8">
-                    <textarea class="form-control" rows="4"></textarea>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Instructions</label>
-                  <div class="col-sm-8">
-                    <textarea class="form-control" rows="4"></textarea>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Assigned To</label>
-                  <div class="col-sm-5">
-                    <input type="text" class="form-control">
-                  </div>
-                  <div class="col-sm-3">
-                    <span class="btn btn-info form-control close-form email"><span class="glyphicon glyphicon-envelope"></span></span>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Assigned Date</label>
-                  <div class="col-sm-8">
-                    <div class="input-group merged">
-                      <input type="text" class="form-control insert-picker" />
-                      <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <span class="glyphicon insert-cross-icon"></span>
-              </form>
-
-            </div>
-          </div>
-          <!-- end form panel 2 -->
         </div>
       </div>
     </div>
-    <!-- end form row 2 -->
+    <!-- end form row 2-->
 
     <!-- form row 3 -->
     <div class="row" id="bookmark_contact">
@@ -376,9 +361,9 @@
         <div class="row-fluid">
 
           <!-- form panel 1 -->
-          <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="col-lg-12 col-md-12 col-sm-12">
 
-            <div class="form-panel">
+            <div class="form-panel full-width">
               <!-- numbered circle in each form panel-->
               <div class="text-circle">
                 <div class="text-in-circle">
@@ -388,101 +373,172 @@
 
               <form class="form-horizontal container" role="form">
 
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Reference No.</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" disabled value="0000.00">
+                <div class="form-column col-lg-6 col-md-6 col-sm-12">
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Reference No.</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" disabled value="0000.00">
+                    </div>
                   </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Contact Name</label>
+                    <div class="col-sm-2 names">
+                      <select class="selectpicker form-control show-tick" title='Mr'>
+                        <option data-hidden="true"></option>
+                        <option>Ms</option>
+                        <option>Mrs</option>
+                        <option>Miss</option>
+                        <option>Mr</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-2 names">
+                      <input type="text" class="form-control" placeholder="First">
+                    </div>
+                    <div class="col-sm-3 names">
+                      <input type="text" class="form-control" placeholder="Last">
+                    </div>
+
+                    <div class="col-sm-1 names">
+                      <span class="glyphicon glyphicon-book lookup"></span>
+                    </div>
+
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Organisation</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Street Address</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Suburb</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Postcode/State</label>
+                    <div class="col-sm-4">
+                      <input type="text" class="form-control" placeholder="Postcode">
+                    </div>
+                    <div class="col-sm-4">
+                    <select class="selectpicker form-control show-tick" title='NSW'>
+                        <option data-hidden="true"></option>
+                        <option>ACT</option>
+                        <option>NSW</option>
+                        <option>NT</option>
+                        <option>QLD</option>
+                        <option>SA</option>
+                        <option>TAS</option>
+                        <option>VIC</option>
+                        <option>WA</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Work/Home Phone</label>
+                    <div class="col-sm-4">
+                      <input type="text" class="form-control" placeholder="Work">
+                    </div>
+                    <div class="col-sm-4">
+                      <input type="text" class="form-control" placeholder="Home">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Mobile</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Email</label>
+                    <div class="col-sm-8">
+                      <input type="email" class="form-control">
+                    </div>
+                  </div>
+
                 </div>
+                <!-- end form-column-->
 
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Contact Name</label>
-                  <div class="col-sm-2 names">
-                    <select class="selectpicker form-control show-tick" title='Mr'>
-                      <option data-hidden="true"></option>
-                      <option>Ms</option>
-                      <option>Mrs</option>
-                      <option>Miss</option>
-                      <option>Mr</option>
-                    </select>
-                  </div>
-                  <div class="col-sm-2 names">
-                    <input type="text" class="form-control" placeholder="First">
-                  </div>
-                  <div class="col-sm-3 names">
-                    <input type="text" class="form-control" placeholder="Last">
+                <div class="form-column col-lg-6 col-md-6 col-sm-12">
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Type</label>
+                    <div class="col-sm-8">
+                      <select id="temp" class="selectpicker show-tick form-control" title='' data-live-search="true" value="Resident">
+                        <option data-hidden="true"></option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                      </select>
+                    </div>
                   </div>
 
-                  <div class="col-sm-1 names">
-                    <span class="glyphicon glyphicon-book lookup"></span>
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Nature/Source</label>
+                    <div class="col-sm-4">
+                      <select class="selectpicker show-tick form-control" title='Complaint' data-live-search="true">
+                        <option data-hidden="true"></option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                      </select>
+                    </div>
+
+                    <div class="col-sm-4">
+                      <select class="selectpicker show-tick form-control" title='Email' data-live-search="true">
+                        <option data-hidden="true"></option>
+                        <option>Email</option>
+                        <option>Fax</option>
+                        <option>Phone</option>
+                        <option>Mail</option>
+                      </select>
+                    </div>
                   </div>
 
-                </div>
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Contacted Date</label>
+                    <div class="col-sm-8">
+                      <div class="input-group merged">
+                        <input type="text" class="form-control insert-picker" />
+                        <span class="input-group-addon">
+                          <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
 
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Organisation</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Comments</label>
+                    <div class="col-sm-8">
+                      <textarea type="text" class="form-control" rows="3"></textarea>
+                    </div>
                   </div>
-                </div>
 
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Street Address</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Attachment</label>
+                    <div class="col-sm-8">
+                      <input type="file" class="form-control">
+                      <span class='btn btn-info file-select'>Select File</span>
+                      <span class='btn btn-primary attachment'><span class="glyphicon glyphicon-plus"></span></span>
+                      <span class='btn btn-success attachment'><span class="glyphicon glyphicon-ok"></span></span>
+                      <span class='btn btn-danger attachment'><span class="glyphicon glyphicon-remove"></span></span>
+                    </div>
                   </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Suburb</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Postcode/State</label>
-                  <div class="col-sm-4">
-                    <input type="text" class="form-control" placeholder="Postcode">
-                  </div>
-                  <div class="col-sm-4">
-                  <select class="selectpicker form-control show-tick" title='NSW'>
-                      <option data-hidden="true"></option>
-                      <option>ACT</option>
-                      <option>NSW</option>
-                      <option>NT</option>
-                      <option>QLD</option>
-                      <option>SA</option>
-                      <option>TAS</option>
-                      <option>VIC</option>
-                      <option>WA</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Work/Home Phone</label>
-                  <div class="col-sm-4">
-                    <input type="text" class="form-control" placeholder="Work">
-                  </div>
-                  <div class="col-sm-4">
-                    <input type="text" class="form-control" placeholder="Home">
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Mobile</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Email</label>
-                  <div class="col-sm-8">
-                    <input type="email" class="form-control">
-                  </div>
-                </div>
 
                 <span class="glyphicon insert-cross-icon"></span>
               </form>
@@ -491,90 +547,6 @@
 
           </div>
           <!-- end form panel 1 -->
-
-          <!-- form panel 2 -->
-          <div class="col-lg-6 col-md-6 col-sm-12">
-
-            <div class="form-panel">
-              <!-- numbered circle in each form panel-->
-              <div class="text-circle">
-                <div class="text-in-circle">
-                  Contact
-                </div>
-              </div>
-
-              <form class="form-horizontal container" role="form">
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Type</label>
-                  <div class="col-sm-8">
-                    <select id="temp" class="selectpicker show-tick form-control" title='' data-live-search="true" value="Resident">
-                      <option data-hidden="true"></option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Nature/Source</label>
-                  <div class="col-sm-4">
-                    <select class="selectpicker show-tick form-control" title='Complaint' data-live-search="true">
-                      <option data-hidden="true"></option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                    </select>
-                  </div>
-                  <div class="col-sm-4">
-                    <select class="selectpicker show-tick form-control" title='Email' data-live-search="true">
-                      <option data-hidden="true"></option>
-                      <option>Email</option>
-                      <option>Fax</option>
-                      <option>Phone</option>
-                      <option>Mail</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Contacted Date</label>
-                  <div class="col-sm-8">
-                    <div class="input-group merged">
-                      <input type="text" class="form-control insert-picker" />
-                      <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Comments</label>
-                  <div class="col-sm-8">
-                    <textarea type="text" class="form-control" rows="3"></textarea>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Attachment</label>
-                  <div class="col-sm-8">
-                    <input type="file" class="form-control">
-                    <span class='btn btn-info file-select'>Select File</span>
-                    <span class='btn btn-primary attachment'><span class="glyphicon glyphicon-plus"></span></span>
-                    <span class='btn btn-success attachment'><span class="glyphicon glyphicon-ok"></span></span>
-                    <span class='btn btn-danger attachment'><span class="glyphicon glyphicon-remove"></span></span>
-                  </div>
-                </div>
-
-                <span class="glyphicon insert-cross-icon"></span>
-              </form>
-
-            </div>
-
-          </div>
-          <!-- end form panel 2 -->
 
         </div>
       </div>
@@ -587,9 +559,9 @@
         <div class="row-fluid">
 
           <!-- form panel 1 -->
-          <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="col-lg-12 col-md-12 col-sm-12">
 
-            <div class="form-panel">
+            <div class="form-panel full-width">
               <!-- numbered circle in each form panel-->
               <div class="text-circle">
                 <div class="text-in-circle">
@@ -599,55 +571,83 @@
 
               <form class="form-horizontal container" role="form">
 
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Note Type</label>
-                  <div class="col-sm-8">
-                    <select class="selectpicker show-tick form-control" title='' data-live-search="true">
-                      <option data-hidden="true"></option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                    </select>
-                  </div>
-                </div>
+                <div class="form-column col-lg-6 col-md-6 col-sm-12">
 
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Created By</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Created Date</label>
-                  <div class="col-sm-8">
-                    <div class="input-group merged">
-                      <input type="text" class="form-control insert-picker" />
-                      <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                      </span>
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Note Type</label>
+                    <div class="col-sm-8">
+                      <select class="selectpicker show-tick form-control" title='' data-live-search="true">
+                        <option data-hidden="true"></option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                      </select>
                     </div>
                   </div>
-                </div>
 
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Last Modified By</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Last Modified Date</label>
-                  <div class="col-sm-8">
-                    <div class="input-group merged">
-                      <input type="text" class="form-control insert-picker" />
-                      <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                      </span>
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Created By</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
                     </div>
                   </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Created Date</label>
+                    <div class="col-sm-8">
+                      <div class="input-group merged">
+                        <input type="text" class="form-control insert-picker" />
+                        <span class="input-group-addon">
+                          <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Last Modified By</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Last Modified Date</label>
+                    <div class="col-sm-8">
+                      <div class="input-group merged">
+                        <input type="text" class="form-control insert-picker" />
+                        <span class="input-group-addon">
+                          <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
+                <!-- end form-column-->
+
+                <div class="form-column col-lg-6 col-md-6 col-sm-12">
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Note Description</label>
+                    <div class="col-sm-8">
+                      <textarea class="form-control" rows="7"></textarea>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Attachment</label>
+                    <div class="col-sm-8">
+                      <input type="file" class="form-control">
+                      <span class='btn btn-info file-select'>Select File</span>
+                      <span class='btn btn-primary attachment'><span class="glyphicon glyphicon-plus"></span></span>
+                      <span class='btn btn-success attachment'><span class="glyphicon glyphicon-ok"></span></span>
+                      <span class='btn btn-danger attachment'><span class="glyphicon glyphicon-remove"></span></span>
+                    </div>
+                  </div>
+
+                </div>
+                <!-- end form-column-->
 
                 <span class="glyphicon insert-cross-icon"></span>
               </form>
@@ -655,44 +655,6 @@
             </div>
           </div>
           <!-- end form panel 1 -->
-
-          <!-- form panel 2 -->
-          <div class="col-lg-6 col-md-6 col-sm-12">
-
-            <div class="form-panel">
-              <!-- numbered circle in each form panel-->
-              <div class="text-circle">
-                <div class="text-in-circle">
-                  Notes
-                </div>
-              </div>
-
-              <form class="form-horizontal container" role="form">
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Note Description</label>
-                  <div class="col-sm-8">
-                    <textarea class="form-control" rows="7"></textarea>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Attachment</label>
-                  <div class="col-sm-8">
-                    <input type="file" class="form-control">
-                    <span class='btn btn-info file-select'>Select File</span>
-                    <span class='btn btn-primary attachment'><span class="glyphicon glyphicon-plus"></span></span>
-                    <span class='btn btn-success attachment'><span class="glyphicon glyphicon-ok"></span></span>
-                    <span class='btn btn-danger attachment'><span class="glyphicon glyphicon-remove"></span></span>
-                  </div>
-                </div>
-
-                <span class="glyphicon insert-cross-icon"></span>
-              </form>
-
-            </div>
-          </div>
-          <!-- end form panel 2 -->
 
         </div>
       </div>
