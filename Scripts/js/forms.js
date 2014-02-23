@@ -498,38 +498,38 @@ function check_this_panel_required(thisObj) {
 
 
 // datetimepicker
-$('.insert-time-picker').datetimepicker({
-  language: 'en',
-  weekStart: 0,
-  todayBtn: 0,
-    autoClose: 1,
-    todayHighlight: 1,
-    startView: 1,
-    minView: 0,
-    maxView: 1,
-    forceParse: 0
-});
+// $('.insert-time-picker').datetimepicker({
+//   language: 'en',
+//   weekStart: 0,
+//   todayBtn: 0,
+//     autoClose: 1,
+//     todayHighlight: 1,
+//     startView: 1,
+//     minView: 0,
+//     maxView: 1,
+//     forceParse: 0
+// });
 
-$('.insert-date-picker').datetimepicker({
-  language: 'en',
-  weekStart: 1,
-  todayBtn: 1,
-    autoClose: 0,
-    todayHighlight: 1,
-    startView: 2,
-    forceParse: 1
-});
+// $('.insert-date-picker').datetimepicker({
+//   language: 'en',
+//   weekStart: 1,
+//   todayBtn: 1,
+//     autoClose: 0,
+//     todayHighlight: 1,
+//     startView: 2,
+//     forceParse: 1
+// });
 
-$('.insert-picker').datetimepicker({
-    language: 'en',
-    weekStart: 1,
-    todayBtn: 1,
-      autoClose: 1,
-      todayHighlight: 1,
-      startView: 2,
-      forceParse: 0,
-    showMeridian: 1
-});
+// $('.insert-picker').datetimepicker({
+//     language: 'en',
+//     weekStart: 1,
+//     todayBtn: 1,
+//       autoClose: 1,
+//       todayHighlight: 1,
+//       startView: 2,
+//       forceParse: 0,
+//     showMeridian: 1
+// });
 
 
 //task form functions
