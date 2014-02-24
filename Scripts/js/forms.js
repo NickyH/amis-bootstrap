@@ -17,6 +17,9 @@ $('span.lookup').on('click', open_address_book);
 $('.input-group-addon').on('click', calendar_icon_click); //activate calendar on icon click
 $('.history-button .button').on('click', toggle_history_button);
 
+function calendar_icon_click() {
+  $(this).parent().children('.form-control').datetimepicker('show');
+}
 
 function toggle_history_button() {
   if ($(this).hasClass('active')) {
@@ -223,7 +226,7 @@ function change_selectpicker_values() {
 
 function disable_datepickers() {
   $('.input-group-addon').each( function() {
-    var disabled = $(this).parents('.input-group').children('.insert-picker').attr('disabled');
+    var disabled = $(this).parents('.input-group').children('.insert-date-picker').attr('disabled');
     if (disabled === 'disabled') {
       $(this).parents('.input-group').children('.input-group-addon').css('pointer-events', 'none');
     }
@@ -498,38 +501,39 @@ function check_this_panel_required(thisObj) {
 
 
 // datetimepicker
-// $('.insert-time-picker').datetimepicker({
-//   language: 'en',
-//   weekStart: 0,
-//   todayBtn: 0,
-//     autoClose: 1,
-//     todayHighlight: 1,
-//     startView: 1,
-//     minView: 0,
-//     maxView: 1,
-//     forceParse: 0
-// });
+$('.insert-time-picker').datetimepicker({
+  format: 'hh:ii',
+  language: 'en',
+    autoClose: "true",
+    startView: 1,
+    minView: 0,
+    maxView: 1,
+    forceParse: 0
+});
 
-// $('.insert-date-picker').datetimepicker({
-//   language: 'en',
-//   weekStart: 1,
-//   todayBtn: 1,
-//     autoClose: 0,
-//     todayHighlight: 1,
-//     startView: 2,
-//     forceParse: 1
-// });
+$('.insert-date-picker').datetimepicker({
+  format: 'dd/mm/yyyy',
+  language: 'en',
+  todayBtn: "linked",
+  startView: 3,
+    minView: 2,
+    maxView: 4,
+    autoClose: "true",
+    todayHighlight: 1,
+    startView: 2,
+    forceParse: 1
+});
 
-// $('.insert-picker').datetimepicker({
-//     language: 'en',
-//     weekStart: 1,
-//     todayBtn: 1,
-//       autoClose: 1,
-//       todayHighlight: 1,
-//       startView: 2,
-//       forceParse: 0,
-//     showMeridian: 1
-// });
+$('.insert-picker').datetimepicker({
+    language: 'en',
+    weekStart: 1,
+    todayBtn: 1,
+      autoClose: 1,
+      todayHighlight: 1,
+      startView: 2,
+      forceParse: 0,
+    showMeridian: 1
+});
 
 
 //task form functions

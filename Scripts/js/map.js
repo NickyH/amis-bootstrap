@@ -489,10 +489,6 @@ function openActionRow(row) {
   }
 }
 
-function calendar_icon_click() {
-  $(this).parent().children('.form-control').datetimepicker('show');
-}
-
 function goto_forms() {
   form_navbar();
   $('#insert-map').empty();
