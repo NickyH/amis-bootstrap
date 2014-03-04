@@ -16,6 +16,8 @@ $('.cancel-button').on('click', warn_cancel_form);
 $('span.lookup').on('click', open_address_book);
 $('.input-group-addon').on('click', calendar_icon_click); //activate calendar on icon click
 $('.history-button .button').on('click', toggle_history_button);
+$('.icon-raise').on('click', show_raise_qtip);
+
 
 function calendar_icon_click() {
   $(this).parent().children('.form-control').datetimepicker('show');
@@ -295,6 +297,47 @@ function history_qtip() {
       }
   });
   $('#process-history').removeClass('hidden');
+}
+
+function show_raise_qtip() {
+  $(this).qtip({
+      content: {
+        text: $('#raise-buttons').clone(),
+        button: 'Close'
+      },
+      show: {
+          modal: {
+              on: true,
+              solo: true
+          },
+          ready: true,
+          event: 'click',
+          effect: function (offset) {
+              $(this).slideDown(300);
+              $('.raise-buttons').removeClass('invisible');
+          }
+      },
+      style: {
+          classes: 'qtip-raise-buttons qtip-rounded qtip-shadow qtip-light',
+          tip: {
+            width: 25,
+            height: 15,
+        }
+      },
+      hide: {
+          event: 'click',
+          effect: function () {
+              $(this).slideUp(300);
+          }
+      },
+      overwrite: false,
+      position: {
+          my: 'top left',
+          at: 'bottom right',
+          target: $(this)
+      },
+  });
+  $('#raise-buttons').removeClass('invisible');
 }
 
 function warn_cancel_form() {

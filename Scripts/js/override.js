@@ -116,9 +116,6 @@ $(function(){
     };
 })(jQuery);
 
-
-
-
   //prototype only functions - Benito can delete?
 
   function insert_map() {

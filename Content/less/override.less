@@ -163,33 +163,37 @@ li.active {
     background-color: @map-highlight-colour !important;
   }
   //form tool icons
+  &.icon-raise {
+    left: 130px;
+    background-color: @map-highlight-colour !important;
+  }
   &.icon-asset {
-    right: 430px;
+    right: 530px;
     background-color: @form-highlight-colour !important;
   }
   &.icon-request {
-    right: 350px;
+    right: 450px;
     background-color: @form-highlight-colour !important;
   }
   &.icon-inspect {
-    right: 270px;
+    right: 370px;
     background-color: @form-highlight-colour !important;
   }
   &.icon-defects {
-    right: 190px;
+    right: 290px;
     background-color: @form-highlight-colour !important;
   }
   &.icon-task {
-    right: 110px;
+    right: 210px;
     background-color: @form-highlight-colour !important;
   }
   &.icon-clock {
-    right: 30px;
+    right: 130px;
     background-color: @form-highlight-colour !important;
   }
   &.icon-history {
-    left: 120px;
-    background-color: @form-highlight-colour !important;
+    right: 30px;
+    background-color: @map-highlight-colour !important;
   }
 }
 
@@ -280,6 +284,76 @@ li.active {
   div {
     font-size: 11px;
     color: @map-highlight-colour;
+    text-align: center;
+  }
+}
+
+.raise-icons {
+  background-color: @form-highlight-colour !important;
+  border-radius: 8px;
+  position: relative;
+  top: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  width: 50px;
+  opacity: 0.9;
+  &.inactive {
+    opacity: 0.2;
+    pointer-events: none;
+  }
+  &.icon-asset {
+    left: 20px;
+    top: 0px;
+  }
+  &.icon-request {
+    left: 40px;
+    top: 0;
+  }
+  &.icon-inspect {
+    top: 0;
+    left: 60px;
+  }
+  &.icon-defects {
+    top: 0;
+    left: 80px;
+  }
+  &.icon-task {
+    top: 0;
+    left: 100px;
+  }
+}
+
+.raise-icon-text {
+  position: absolute;
+  width: 99px;
+  padding: 0;
+  margin-left: 0;
+  margin-right: auto;
+  &.icon-asset {
+    left: 10px;
+    top: 80px;
+  }
+  &.icon-request {
+    left: 103px;
+    top: 80px;
+  }
+  &.icon-inspect {
+    left: 197px;
+    top: 80px;
+  }
+  &.icon-defects {
+    left: 289px;
+    top: 80px;
+  }
+  &.icon-task {
+    left: 382px;
+    top: 80px;
+  }
+  div {
+    font-size: 11px;
+    color: darken(@form-highlight-colour, 10%);
     text-align: center;
   }
 }
@@ -769,6 +843,23 @@ li.active {
 .qtip {
   &.qtip-category-select-options {
     width: 450px;
+    height: 120px;
+    background-color: @qtip-background !important;
+    opacity: 0.95;
+    z-index: 70000 !important;
+    .qtip-content {
+      width: auto;
+      height: 120px;
+      margin-left: 10px !important;
+      padding-left: 5px;
+      padding-right: 30px;
+    }
+  }
+}
+
+.qtip {
+  &.qtip-raise-buttons {
+    width: 550px;
     height: 120px;
     background-color: @qtip-background !important;
     opacity: 0.95;
