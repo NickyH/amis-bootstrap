@@ -9,6 +9,7 @@ $(function(){
   $("#insert-left").on('click', '#layers-button', layers_qtip);
   $("#insert-left").on('click', '#search-by-category-button', search_by_category_qtip);
   $("#insert-left").on('click', '.search-icon', search_by_number_qtip);
+  $("#insert-left").on('click', '#tools-button', tools_options_qtip);
   $("#insert-top").on('click', '#search-by-address-button', searchByAddress_qtip);
   $("#map").on('click', show_select_asset_dialog);
   $('.qtip-layers-panel li.dcjq-parent-li').on('click', mimic_anchor_click);
@@ -219,6 +220,48 @@ function search_by_number_qtip() {
       }
   });
   $('#search-by-number').removeClass('invisible');
+}
+
+function tools_options_qtip() {
+  $(this).qtip({
+      content: {
+        text: $('#tools-options').clone(),
+        button: 'Close'
+      },
+      show: {
+          modal: {
+              on: true,
+              solo: true
+          },
+          ready: true,
+          event: 'click',
+          effect: function (offset) {
+              $(this).slideDown(300);
+              $('.tools-options-icons').removeClass('hidden');
+          }
+      },
+      style: {
+          classes: 'qtip-tools-options qtip-rounded qtip-shadow qtip-light',
+          tip: {
+            width: 25,
+            height: 15,
+        }
+      },
+      hide: {
+          event: 'click',
+          effect: function () {
+              $(this).slideUp(300);
+              $('.tools-options-icons').addClass('hidden');
+          }
+      },
+      overwrite: false,
+      position: {
+          my: 'center left',
+          at: 'center right',
+          target: $(this)
+      },
+  });
+  $('#tools-options').removeClass('invisible');
 }
 
 function searchByAddress_qtip() {
