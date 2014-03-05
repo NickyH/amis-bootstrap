@@ -8,7 +8,7 @@
 
     <!--form icons-->
     <img class="top-bar-icons icon-form icon-raise hidden" src="../Content/images/icons/icon-raise-white.png">
-    <img class="top-bar-icons icon-form icon-asset hidden" src="../Content/images/icons/icon-asset-white.png">
+    <img class="top-bar-icons icon-form icon-asset icon-scaffold hidden" src="../Content/images/icons/icon-asset-white.png">
     <img class="top-bar-icons icon-form icon-request hidden" src="../Content/images/icons/icon-cr-white.png">
     <img class="top-bar-icons icon-form icon-inspect hidden" src="../Content/images/icons/icon-inspection-white.png">
     <img class="top-bar-icons icon-form icon-defects hidden" src="../Content/images/icons/icon-defect-white.png">
@@ -21,8 +21,6 @@
   </div>
 
 </div>
-
-
 
 
 <!--  <!-- history tree -->
@@ -399,31 +397,19 @@
 <!-- raise-->
 <div id="raise-buttons" class="invisible">
   <div>
-    <a href="#"><img class="raise-icons icon-asset" src="../Content/images/icons/icon-asset-white.png">
-    <div class="raise-icon-text icon-asset"><div>ASSET</div></div>
-    </a>
-
-    <a href="#"><img class="raise-icons icon-request" src="../Content/images/icons/icon-cr-white.png">
-    <div class="raise-icon-text icon-request"><div>REQUEST</div></div>
-    </a>
-
-    <a href="#"><img class="raise-icons icon-inspect" src="../Content/images/icons/icon-inspection-white.png">
-    <div class="raise-icon-text icon-inspect"><div>INSPECT</div></div>
-    </a>
-
-    <a href="#"><img class="raise-icons icon-defects" src="../Content/images/icons/icon-defect-white.png">
-    <div class="raise-icon-text icon-defects"><div>DEFECT</div></div>
-    </a>
-
-    <a href="#"><img class="raise-icons icon-task inactive" src="../Content/images/icons/icon-task-white.png">
-    <div class="raise-icon-text icon-task"><div>TASK</div></div>
-    </a>
+    <a href="#"><img class="raise-icons icon-asset" src="../Content/images/icons/icons-raise-asset.png"></a>
+    <a href="#"><img class="raise-icons icon-request" src="../Content/images/icons/icons-raise-cr.png"></a>
+    <a href="#"><img class="raise-icons icon-inspect" src="../Content/images/icons/icons-raise-inspect.png"></a>
+    <a href="#"><img class="raise-icons icon-defects" src="../Content/images/icons/icons-raise-defect.png"></a>
+    <a href="#"><img class="raise-icons icon-task" src="../Content/images/icons/icons-raise-task.png"></a>
+    <a href="#"><img class="raise-icons icon-task inactive" src="../Content/images/icons/icons-raise-complete.png"></a>
 </div>
 <!--raise-->
 
 
 <script>
   $('.icon-form').on('click', show_correct_ovals);
+  $('.icon-scaffold').on('click', insert_scaffold_form);
   $('.icon-request').on('click', insert_CR_form);
   $('.icon-defects').on('click', insert_defect_form);
   $('.icon-inspect').on('click', insert_inspection_form);

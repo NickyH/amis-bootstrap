@@ -291,8 +291,8 @@ function history_qtip() {
       },
       overwrite: false,
       position: {
-          my: 'top left',
-          at: 'bottom right',
+          my: 'top right',
+          at: 'bottom left',
           target: $(this)
       }
   });

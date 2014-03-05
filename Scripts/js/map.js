@@ -511,6 +511,13 @@ function insert_inspection_form() {
   oval_border_highlight('#tab2');
 }
 
+function insert_scaffold_form() {
+  $('#insert-form').empty();
+  $.get('forms/form_scaffold.html', function(data) {
+    $('#insert-form').html(data);
+  });
+}
+
 function insert_CR_form() {
   $('#insert-form').empty();
   $.get('forms/form_cr.html', function(data) {
