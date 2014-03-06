@@ -563,26 +563,6 @@ li.active {
   padding-left: 2%;
   padding-right: 4%;
   z-index: 2;
-  &.incomplete {
-    border: 3px solid @cancel-button-colour;
-    background-color: @cancel-button-colour;
-    .text-in-circle {
-      margin-top: 5px;
-      color: @white;
-      font-style: normal;
-      letter-spacing: 2px;
-    }
-  }
-  &.complete {
-    border: 3px solid @save-button-colour;
-    background-color: @save-button-colour;
-    .text-in-circle {
-      margin-top: 5px;
-      color: @white;
-      font-style: normal;
-      letter-spacing: 2px;
-    }
-  }
 }
 
 #details-page {
@@ -1601,6 +1581,17 @@ li.active {
   float: right;
 }
 
+.form-control[readonly] {
+  background-color: white;
+  cursor: text;
+}
+
+.picker__holder {
+  th {
+    text-align: center;
+  }
+}
+
 .search {
   width: 50%;
   float: left;
@@ -1827,13 +1818,17 @@ a.oval-last:after {
   }
 }
 
-tr:first-child th {
-  font-size: 13px;
-  color: @black;
-  font-weight: bold;
-  background-color: lighten(@form-highlight-colour, 50%);
-  border-bottom: 1px solid @form-highlight-colour !important;
+
+.reference-history {
+    tr:first-child th {
+    font-size: 13px;
+    color: @black;
+    font-weight: bold;
+    background-color: lighten(@form-highlight-colour, 50%);
+    border-bottom: 1px solid @form-highlight-colour !important;
+  }
 }
+
 
 // file upload attachment styling
 input[type="file"] {

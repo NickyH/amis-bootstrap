@@ -3,6 +3,9 @@ var topOffset = 170;
 add_cross_to_required_forms();
 change_selectpicker_values();
 disable_datepickers();
+disable_timepickers();
+$('.datepicker').pickadate();
+
 $('.form-horizontal').on('keyup', this, check_panel_valid);
 $('.form-horizontal').on('change', this, check_panel_valid);
 $( '.form-horizontal .container' ).parsley( 'validate');
@@ -14,13 +17,20 @@ $('.icon-history').on('click', history_qtip);
 $('.close-form').on('click', warn_close_form);
 $('.cancel-button').on('click', warn_cancel_form);
 $('span.lookup').on('click', open_address_book);
-$('.input-group-addon').on('click', calendar_icon_click); //activate calendar on icon click
+$('.input-group-addon .glyphicon-calendar').on('click', calendar_icon_click); //activate calendar on icon click
+$('.input-group-addon .glyphicon-time').on('click', clock_icon_click); //activate timepicker on icon click
 $('.history-button .button').on('click', toggle_history_button);
 $('.icon-raise').on('click', show_raise_qtip);
 
 
 function calendar_icon_click() {
-  $(this).parent().children('.form-control').datetimepicker('show');
+  // $('.date.datepicker').trigger('focus');
+  // console.log($(this).parent().parent().children('input'));
+  $(this).parent().parent().children('input').trigger('click');
+}
+
+function clock_icon_click() {
+  $(this).parent().parent('.input-group').children('.insert-time-picker').trigger('focus');
 }
 
 function toggle_history_button() {
@@ -92,7 +102,6 @@ function add_cross_to_required_forms() {
     if (required) {
       $(this).find('.insert-cross-icon').addClass('glyphicon-remove panel-cross');
       toggle_oval_colour( $(this), 'incomplete' );
-      toggle_panel_num_colour( $(this), 'incomplete' );
     }
   });
 }
@@ -109,7 +118,6 @@ function check_panel_valid() {
   var required = check_this_panel_required( $(this) );
   if (panelValid && required ) {
     $(icon).removeClass('glyphicon-remove panel-remove glyphicon-ok panel-ok').addClass('glyphicon-ok panel-ok');
-    toggle_panel_num_colour( (this), 'complete' );
     $(this).parent().parent().parent().find('.form-panel').each(function() {
       if (!$(this).children('form').parsley('isValid')) {
         rowValid = false;
@@ -127,7 +135,6 @@ function check_panel_valid() {
 
   if (panelValid === false) {
     $(icon).removeClass('glyphicon-remove panel-remove glyphicon-ok panel-ok').addClass('glyphicon-remove panel-remove');
-    toggle_panel_num_colour( $(this), 'incomplete' );
   }
 }
 
@@ -198,10 +205,6 @@ function oval_border_highlight(tab_id) {
   $(tab_id).addClass('current');
 }
 
-function toggle_panel_num_colour( thisObj, className) {
-  $(thisObj).parent().find('.text-circle').removeClass('incomplete complete').addClass(className);
-}
-
 function toggle_oval_colour( thisObj, className) {
   $(thisObj).parent().find('.text-circle').removeClass('incomplete complete').addClass(className);
   ovalName = '#' + $(thisObj).parents("div[id^='bookmark_']" ).attr('id');
@@ -228,9 +231,20 @@ function change_selectpicker_values() {
 
 function disable_datepickers() {
   $('.input-group-addon').each( function() {
-    var disabled = $(this).parents('.input-group').children('.insert-date-picker').attr('disabled');
+    var disabled = $(this).parents('.input-group').children('.datepicker').attr('disabled');
     if (disabled === 'disabled') {
       $(this).parents('.input-group').children('.input-group-addon').css('pointer-events', 'none');
+      $(this).parents('.input-group').children('.date').removeClass('datepicker picker__input');
+    }
+  });
+}
+
+function disable_timepickers() {
+  $('.input-group-addon').each( function() {
+    var disabled = $(this).parents('.input-group').children('.timepicker').attr('disabled');
+    if (disabled === 'disabled') {
+      $(this).parents('.input-group').children('.input-group-addon').css('pointer-events', 'none');
+      $(this).parents('.input-group').children('.time').removeClass('timepicker picker__input');
     }
   });
 }
@@ -545,38 +559,33 @@ function check_this_panel_required(thisObj) {
 
 // datetimepicker
 $('.insert-time-picker').datetimepicker({
-  format: 'hh:ii',
-  language: 'en',
-    autoClose: "true",
-    startView: 1,
-    minView: 0,
-    maxView: 1,
-    forceParse: 0
+  pickDate: false,
+  language:'en'
 });
 
-$('.insert-date-picker').datetimepicker({
-  format: 'dd/mm/yyyy',
-  language: 'en',
-  todayBtn: "linked",
-  startView: 3,
-    minView: 2,
-    maxView: 4,
-    autoClose: "true",
-    todayHighlight: 1,
-    startView: 2,
-    forceParse: 1
-});
+// $('.insert-date-picker').datetimepicker({
+//   format: 'dd/mm/yyyy',
+//   language: 'en',
+//   todayBtn: "linked",
+//   startView: 3,
+//     minView: 2,
+//     maxView: 4,
+//     autoClose: "true",
+//     todayHighlight: 1,
+//     startView: 2,
+//     forceParse: 1
+// });
 
-$('.insert-picker').datetimepicker({
-    language: 'en',
-    weekStart: 1,
-    todayBtn: 1,
-      autoClose: 1,
-      todayHighlight: 1,
-      startView: 2,
-      forceParse: 0,
-    showMeridian: 1
-});
+// $('.insert-picker').datetimepicker({
+//     language: 'en',
+//     weekStart: 1,
+//     todayBtn: 1,
+//       autoClose: 1,
+//       todayHighlight: 1,
+//       startView: 2,
+//       forceParse: 0,
+//     showMeridian: 1
+// });
 
 
 //task form functions
