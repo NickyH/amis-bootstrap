@@ -559,6 +559,7 @@ function insert_scaffold_form() {
   $.get('forms/form_scaffold.html', function(data) {
     $('#insert-form').html(data);
   });
+  $('html body').animate({ scrollTop: 0 });
 }
 
 function insert_CR_form() {
